@@ -1,20 +1,24 @@
+# Getting Started
 
-# Ontimize Boot
-This branch contains the project that generates the Ontimize Boot backend for Ontimize Web Tutorial.
+## First init
+```
+mvn clean install
+```
+## Launch database
+```
+cd *-model
+mvn exec:java -Prun_database
+```
+## Launch backend
 
-- Enter the parent directory and run an install:
-	
-		mvn install
+We strongly recommend launching the server in debug mode when you are doing active development. To do this, go to the ServerApplication class inside your <code>src/main/java</code> folder.
 
-## Start the database
+![Launch in debug](https://i.imgur.com/92VUWTI.gif)
 
- Enter the `model` folder and execute the command
+If you are no longer doing active development on the backend (e.g.: you are developing the frontend), you can launch the backend by running the <code>mvn spring-boot:run</code> command. To make sure that you are launching the backend with the source code up to date, you can first run a <code>mvn clean install</code> command.
 
-		mvn exec:java -Prun_database
-	
-## Start the server: 
- - Go to the `boot` folder and run the command
-
-		mvn spring-boot:run
-	
-Use the following URL to access the [https://localhost:8080/bankmanager-jee/services/rest/](https://localhost:8080/bankmanager-jee/services/rest/) application 
+```
+mvn clean install
+cd *-boot
+mvn spring-boot:run
+```
