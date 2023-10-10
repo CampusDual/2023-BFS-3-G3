@@ -55,7 +55,7 @@ ontimize:
          role-name-column: ROLENAME
 server:
    servlet:
-      context-path: /gym/services/rest
+      context-path: /whegym/services/rest
    port: 8080
    tomcat:
       uri-encoding: UTF-8
