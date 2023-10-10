@@ -14,14 +14,14 @@ ontimize:
             allowed-headers: "*"
             exposed-headers: ["X-Auth-Token","Content-disposition","X-Requested-With"]
             allowed-methods:
-            - GET
-            - POST
-            - PUT
-            - OPTIONS
-            - DELETE
+               - GET
+               - POST
+               - PUT
+               - OPTIONS
+               - DELETE
    jdbc:
-      name-convention: upper
-      sqlhandler: hsqldb
+      name-convention: lower
+      sqlhandler: postgresql
       sql-condition-processor:
          uppper-string: true
          upper-like: true
@@ -37,7 +37,7 @@ ontimize:
          client-permission-column: XMLCLIENTPERMISSION
       user-information-service:
          user-repository: UserDao
-         user-login-column: USER_
+         user-login-colum: USER_
          user-password-column: PASSWORD
          query-id: login
          other-data:
@@ -54,7 +54,9 @@ ontimize:
          role-login-column: USER_
          role-name-column: ROLENAME
 server:
-   port: 33333
+   servlet:
+      context-path: /gym/services/rest
+   port: 8080
    tomcat:
       uri-encoding: UTF-8
    compression:
@@ -62,12 +64,10 @@ server:
       mime-types: application/json, application/xml
 spring:
    datasource:
-      driver-class-name: org.hsqldb.jdbcDriver
-      jdbc-url: jdbc:hsqldb:hsql://localhost:9013/templateDB
-      username: SA
-      password:
-      initial-size: 10
-      test-on-borrow: true
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://45.84.210.174:65432/2023_BFS_3_G3
+      username: 2023_BFS_3_G3
+      password: b2f34VKzTvt2
    main:
       banner-mode: 'off'
    session:
