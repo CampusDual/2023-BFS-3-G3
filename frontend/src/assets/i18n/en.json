@@ -18,5 +18,14 @@
   "REMEMBER_ME": "Remember me",
   "FORGOT_PWD": "Forgot your password?",
   "FOOTER_CREATED_BY": "Created by Imatia Innovation",
-  "FOOTER_RIGHTS": "All rights reserved"
+  "FOOTER_RIGHTS": "All rights reserved",
+  "GYMS": "Gyms",
+  "gym_name": "Name",
+  "gym_address": "Adress",
+  "gym_city": "City",
+  "gym_phone": "Phone",
+  "gym_email": "Email",
+  "gym_schedule": "Schedule",
+  "gym_description": "Description"
+
 }
