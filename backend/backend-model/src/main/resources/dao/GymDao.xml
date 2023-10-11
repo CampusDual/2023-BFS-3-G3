@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JdbcEntitySetup
+    xmlns="http://www.ontimize.com/schema/jdbc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
+    catalog="" schema="${mainschema}" table="gyms"
+    datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
+    <DeleteKeys>
+        <Column>gym_id</Column>
+    </DeleteKeys>
+    <UpdateKeys>
+        <Column>gym_id</Column>
+    </UpdateKeys>
+    <Queries>
+        <Query id="default">
+            <ValidColumns>
+                <Column>gym_id</Column>
+                <Column>gym_name</Column>
+                <Column>gym_address</Column>
+                <Column>gym_city</Column>
+                <Column>gym_cif</Column>
+                <Column>gym_phone</Column>
+                <Column>gym_email</Column>
+                <Column>gym_schedule</Column>
+                <Column>gym_description</Column>
+                <Column>gym_state</Column>
+                <Column>user_</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+                    SELECT
+                        #COLUMNS#
+                    FROM
+                        ${mainschema}.gyms
+                    #WHERE#
+                ]]>
+            </Sentence>
+        </Query>
+    </Queries>
+</JdbcEntitySetup>
