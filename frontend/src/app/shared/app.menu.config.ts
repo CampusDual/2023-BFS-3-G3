@@ -7,7 +7,7 @@ export const MENU_CONFIG: MenuRootItem[] = [
     name: "GYMS",
     route: "/main/gyms",
     icon: "fitness_center",
-    confirm: "yes",
+
   },
   {
     id: "logout",

@@ -1,30 +1,13 @@
 <div fxFill fxLayout="column" fxLayoutAlign="start">
   <o-table
-    attr="gymstable"
+    attr="gymsTable"
     service="gyms"
-    entity="gyms"
+    entity="gym"
     keys="gym_id"
-    columns="gym_id;gym_name;gym_address;gym_city;gym_cif;gym_phone;gym_email;gym_schedule;gym_description;gym_state;user_"
+    columns="gym_id;gym_name;gym_address;gym_city;gym_phone;gym_email;gym_schedule;gym_description;"
     visible-columns="gym_name;gym_address;gym_city;gym_phone;gym_email;gym_schedule;gym_description"
-    query-rows="10"
+    query-rows="20"
   >
-
-
-
-
-    <o-table-column
-      attr="gymname"
-      title="Nombre gimnasio"
-      orderable="no"
-      searchable="no"
-      type="text"
-    ></o-table-column>
-    <o-table-column
-      attr="STARTDATE"
-      title="STARTDATE"
-      type="date"
-      format="LL"
-    ></o-table-column>
-    <o-table-column attr="ID" title="ID" width="100px"></o-table-column>
   </o-table>
+
 </div>
