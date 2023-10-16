@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GymsDetailComponent } from './main/gyms/gyms-detail/gyms-detail.component';
 
 export const routes: Routes = [
   { path: 'main', loadChildren: () => import('./main/main.module').then(m => m.MainModule) },
