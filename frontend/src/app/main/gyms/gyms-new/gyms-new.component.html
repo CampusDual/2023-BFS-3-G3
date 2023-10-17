@@ -1,0 +1,73 @@
+<o-form
+  service="gyms"
+  entity="gym"
+  keys="gymid"
+  header-actions="R;I;U;D"
+  show-header-navigation="no"
+>
+  <o-row>
+    <!-- Photo Column -->
+    <o-column title-label="Photo">
+      <o-image
+        id="photo"
+        attr="photo"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+      ></o-image>
+    </o-column>
+
+    <!-- Name Column -->
+    <o-column title-label="Name" fxFlex>
+      <o-text-input
+        class="input-padding"
+        attr="name"
+        fxFlex="40"
+        required="yes"
+      ></o-text-input>
+    </o-column>
+
+    <!-- Address Column -->
+    <o-column title-label="Address" fxFlex>
+      <o-text-input attr="adress" fxFlex></o-text-input>
+    </o-column>
+
+    <!-- City Column -->
+    <o-column title-label="City" fxFlex>
+      <o-text-input
+        class="input-padding"
+        attr="city"
+        fxFlex="20"
+      ></o-text-input>
+    </o-column>
+
+    <!-- Phone Column -->
+    <o-column title-label="Phone" fxFlex>
+      <o-integer-input
+        attr="phone"
+        class="input-padding"
+        step="0"
+        grouping="no"
+        fxFlex="40"
+      ></o-integer-input>
+    </o-column>
+
+    <!-- Email Column -->
+    <o-column title-label="Email" fxFlex>
+      <o-email-input attr="email" fxFlex></o-email-input>
+    </o-column>
+
+    <!-- Schedule Column (assuming it's a text input) -->
+    <o-column title-label="Schedule" fxFlex>
+      <o-text-input
+        class="input-padding"
+        attr="schedule"
+        fxFlex="20"
+      ></o-text-input>
+    </o-column>
+
+    <!-- Description Column -->
+    <o-column title-label="Description" fxFlex>
+      <o-textarea-input attr="description" fxFlex></o-textarea-input>
+    </o-column>
+  </o-row>
+</o-form>

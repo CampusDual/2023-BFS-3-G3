@@ -29,7 +29,6 @@ public class GymService implements IGymService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public EntityResult gymInsert(Map<String, Object> attributes) throws OntimizeJEERuntimeException {
-        attributes = this.adaptBase64ImageField(gymDao.ATTR_PHOTO, attributes);
         return this.daoHelper.insert(this.gymDao, attributes);
     }
 
@@ -37,7 +36,6 @@ public class GymService implements IGymService {
     @Transactional(rollbackFor = Exception.class)
     public EntityResult gymUpdate(Map<String, Object> attributes, Map<String, Object> keyValues)
             throws OntimizeJEERuntimeException {
-        attributes = this.adaptBase64ImageField(GymDao.ATTR_PHOTO, attributes);
         return this.daoHelper.update(this.gymDao, attributes, keyValues);
     }
 
@@ -46,32 +44,9 @@ public class GymService implements IGymService {
         return this.daoHelper.query(gymDao, keyMap, attrList);
     }
 
-    /*@Override
-    public EntityResult gymInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-        return this.daoHelper.insert(gymDao, attrMap);
-    }
-
-    @Override
-    public EntityResult gymUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
-        return this.daoHelper.update(gymDao, attrMap, keyMap);
-    }*/
-
     @Override
     public EntityResult gymDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.gymDao, keyMap);
     }
-
-    public Map<String, Object> adaptBase64ImageField(String field, Map<String, Object> attributes) {
-        if (attributes.get(field) instanceof String) {
-            String objectPhoto = (String) attributes.remove(field);
-            Map<String, Object> mapAttr = new HashMap<>();
-            mapAttr.putAll((Map<String, Object>) attributes);
-            mapAttr.put(field, Base64.getDecoder().decode(objectPhoto));
-            return mapAttr;
-        } else {
-            return attributes;
-        }
-    }
-
 
 }
