@@ -1,13 +1,16 @@
-
-  <o-form-layout-manager title="{{'GYMS' | oTranslate }}"  separator=" " mode="tab" label-columns="name">
-    <div fxFill>
-
+<o-form-layout-manager
+  title="{{ 'GYMS' | oTranslate }}"
+  separator=" "
+  mode="tab"
+  label-columns="name"
+>
+  <div fxFill>
     <o-table
       attr="gymsTable"
       service="gyms"
       entity="gym"
       keys="gymid"
-      columns="gymid;photo;name;address;city;phone;email;schedule;description;"
+      columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;"
       visible-columns="photo;name;address;city;phone;email;schedule;description"
       query-rows="20"
     >

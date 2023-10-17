@@ -13,6 +13,7 @@
     ></o-text-input>
   </div>
   <o-row>
+    <!-- Photo Column -->
     <o-column>
       <o-image
         id="photo"
@@ -21,6 +22,7 @@
         sql-type="OTHER"
       ></o-image>
     </o-column>
+    <!-- Name Column -->
     <o-column fxFlex>
       <o-row>
         <o-text-input
@@ -29,12 +31,14 @@
           fxFlex="40"
           required="yes"
         ></o-text-input>
+        <!-- Address Column -->
         <o-text-input
           class="input-padding"
           attr="address"
           fxFlex="40"
           required="yes"
         ></o-text-input>
+        <!-- City Column -->
         <o-text-input
           class="input-padding"
           attr="city"
@@ -43,6 +47,8 @@
       </o-row>
       <o-row>
         <!-- <o-nif-input attr="ID" class="input-padding" fxFlex="40" required="yes"></o-nif-input> -->
+
+       <!-- Phone Column -->
         <o-integer-input
           attr="phone"
           class="input-padding"
@@ -57,9 +63,11 @@
         ></o-text-input>
       </o-row>
       <o-row>
+        <!-- Email Column -->
         <o-email-input attr="email" fxFlex></o-email-input>
       </o-row>
       <o-row>
+         <!-- Description Column -->
         <o-textarea-input attr="description" fxFlex></o-textarea-input>
       </o-row>
       <!-- <o-row>

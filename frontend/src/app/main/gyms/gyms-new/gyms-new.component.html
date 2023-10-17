@@ -17,31 +17,39 @@
     </o-column>
 
     <!-- Name Column -->
-    <o-column title-label="Name" fxFlex>
+    <o-column fxFlex>
+      <o-row>
       <o-text-input
         class="input-padding"
         attr="name"
         fxFlex="40"
         required="yes"
       ></o-text-input>
-    </o-column>
+<!-- CIF Column -->
+      <o-text-input
+        class="input-padding"
+        attr="cif"
+        fxFlex="20"
+      ></o-text-input>
+
 
     <!-- Address Column -->
-    <o-column title-label="Address" fxFlex>
-      <o-text-input attr="adress" fxFlex></o-text-input>
-    </o-column>
+
+      <o-text-input attr="address" fxFlex></o-text-input>
+
 
     <!-- City Column -->
-    <o-column title-label="City" fxFlex>
+
       <o-text-input
         class="input-padding"
         attr="city"
         fxFlex="20"
       ></o-text-input>
-    </o-column>
+    </o-row>
+    <o-row>
 
     <!-- Phone Column -->
-    <o-column title-label="Phone" fxFlex>
+
       <o-integer-input
         attr="phone"
         class="input-padding"
@@ -49,25 +57,30 @@
         grouping="no"
         fxFlex="40"
       ></o-integer-input>
-    </o-column>
-
-    <!-- Email Column -->
-    <o-column title-label="Email" fxFlex>
-      <o-email-input attr="email" fxFlex></o-email-input>
-    </o-column>
-
     <!-- Schedule Column (assuming it's a text input) -->
-    <o-column title-label="Schedule" fxFlex>
+
       <o-text-input
         class="input-padding"
         attr="schedule"
         fxFlex="20"
       ></o-text-input>
-    </o-column>
+    </o-row>
+    <o-row>
+    <!-- Email Column -->
+
+      <o-email-input attr="email" fxFlex></o-email-input>
+
+    </o-row>
+    <o-row>
+
+
 
     <!-- Description Column -->
-    <o-column title-label="Description" fxFlex>
+
       <o-textarea-input attr="description" fxFlex></o-textarea-input>
+    </o-row>
     </o-column>
   </o-row>
 </o-form>
+
+
