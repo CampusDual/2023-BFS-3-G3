@@ -1,49 +1,50 @@
 <o-form
   service="gyms"
   entity="gym"
-  keys="gym_id"
+  keys="gymid"
   header-actions="R;I;U;D"
   show-header-navigation="no"
->
-
-<!-- Está dentro de un div para ppoder ocultar el id -->
-<div style="display: none;">
-  <o-text-input
-      attr="gym_id"
+  ><div style="display: none">
+    <o-text-input
+      attr="gymid"
       sql-type="INTEGER"
       enabled="no"
-  ></o-text-input>
-</div>
-
-
+      visible="no"
+    ></o-text-input>
+  </div>
   <o-row>
-    <!-- <o-column>
-      <o-image id="gym_PHOTO" attr="PHOTO" empty-image="assets/images/no-image.png" sql-type="OTHER"></o-image>
-    </o-column> -->
-    <o-column title-label="gym_description" fxFlex>
+    <o-column>
+      <o-image
+        id="photo"
+        attr="photo"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+      ></o-image>
+    </o-column>
+    <o-column fxFlex>
       <o-row>
         <o-text-input
           class="input-padding"
-          attr="gym_name"
+          attr="name"
           fxFlex="40"
           required="yes"
         ></o-text-input>
         <o-text-input
           class="input-padding"
-          attr="gym_address"
+          attr="address"
           fxFlex="40"
           required="yes"
         ></o-text-input>
         <o-text-input
           class="input-padding"
-          attr="gym_city"
+          attr="city"
           fxFlex="20"
         ></o-text-input>
       </o-row>
       <o-row>
         <!-- <o-nif-input attr="ID" class="input-padding" fxFlex="40" required="yes"></o-nif-input> -->
         <o-integer-input
-          attr="gym_phone"
+          attr="phone"
           class="input-padding"
           step="0"
           grouping="no"
@@ -51,15 +52,15 @@
         ></o-integer-input>
         <o-text-input
           class="input-padding"
-          attr="gym_schedule"
+          attr="schedule"
           fxFlex="20"
         ></o-text-input>
       </o-row>
       <o-row>
-        <o-email-input attr="gym_email" fxFlex></o-email-input>
+        <o-email-input attr="email" fxFlex></o-email-input>
       </o-row>
       <o-row>
-        <o-textarea-input attr="gym_description" fxFlex></o-textarea-input>
+        <o-textarea-input attr="description" fxFlex></o-textarea-input>
       </o-row>
       <!-- <o-row>
         <o-real-input attr="LONGITUDE" decimal-separator="," max-decimal-digits="10" min-decimal-digits="0"

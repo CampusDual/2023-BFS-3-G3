@@ -12,16 +12,16 @@ import org.springframework.stereotype.Repository;
         configurationFilePlaceholder = "dao/placeholders.properties")
 
 public class GymDao extends OntimizeJdbcDaoSupport {
-    public static final String ID = "gym_id";
-    public static final String NAME = "gym_name";
-    public static final String ADDRESS = "gym_address";
-    public static final String  CITY= "gym_city";
-    public static final String  CIF= "gym_cif";
-    public static final String  PHONE= "gym_phone";
-    public static final String  EMAIL= "gym_email";
-    public static final String  SCHEDULE= "gym_schedule";
-    public static final String  DESCRIPTION= "gym_description";
-    public static final String  STATE= "gym_state";
+    public static final String ID = "gymid";
+    public static final String NAME = "name";
+    public static final String ADDRESS = "address";
+    public static final String  CITY= "city";
+    public static final String  CIF= "cif";
+    public static final String  PHONE= "phone";
+    public static final String  EMAIL= "email";
+    public static final String  SCHEDULE= "schedule";
+    public static final String  DESCRIPTION= "description";
+    public static final String  STATE= "state";
     public static final String  USER_= "user_";
     public static final String  ATTR_PHOTO= "photo";
 

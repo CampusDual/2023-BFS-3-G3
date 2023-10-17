@@ -6,24 +6,24 @@
     catalog="" schema="${mainschema}" table="gyms"
     datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
     <DeleteKeys>
-        <Column>gym_id</Column>
+        <Column>gymid</Column>
     </DeleteKeys>
     <UpdateKeys>
-        <Column>gym_id</Column>
+        <Column>gymid</Column>
     </UpdateKeys>
     <Queries>
         <Query id="default">
             <ValidColumns>
-                <Column>gym_id</Column>
-                <Column>gym_name</Column>
-                <Column>gym_address</Column>
-                <Column>gym_city</Column>
-                <Column>gym_cif</Column>
-                <Column>gym_phone</Column>
-                <Column>gym_email</Column>
-                <Column>gym_schedule</Column>
-                <Column>gym_description</Column>
-                <Column>gym_state</Column>
+                <Column>gymid</Column>
+                <Column>name</Column>
+                <Column>address</Column>
+                <Column>city</Column>
+                <Column>cif</Column>
+                <Column>phone</Column>
+                <Column>email</Column>
+                <Column>schedule</Column>
+                <Column>description</Column>
+                <Column>state</Column>
                 <Column>user_</Column>
                 <Column>photo</Column>
             </ValidColumns>

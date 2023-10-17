@@ -20,12 +20,14 @@
   "FOOTER_CREATED_BY": "Created by Imatia Innovation",
   "FOOTER_RIGHTS": "All rights reserved",
   "GYMS": "Gyms",
-  "gym_name": "Name",
-  "gym_address": "Adress",
-  "gym_city": "City",
-  "gym_phone": "Phone",
-  "gym_email": "Email",
-  "gym_schedule": "Schedule",
-  "gym_description": "Description"
+  "name": "Name",
+  "address": "Adress",
+  "city": "City",
+  "phone": "Phone",
+  "email": "Email",
+  "schedule": "Schedule",
+  "description": "Description",
+  "photo": "Photo"
+
 
 }

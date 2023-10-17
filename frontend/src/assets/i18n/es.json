@@ -20,11 +20,12 @@
   "FOOTER_CREATED_BY": "Creado por Imatia Innovation",
   "FOOTER_RIGHTS": "Todos los derechos reservados",
   "GYMS": "Gimnasios",
-  "gym_name": "Nombre",
-  "gym_address": "Dirección",
-  "gym_city": "Ciudad",
-  "gym_phone": "Teléfono",
-  "gym_email": "Email",
-  "gym_schedule": "Horario",
-  "gym_description": "Descripción"
+  "name": "Nombre",
+  "address": "Dirección",
+  "city": "Ciudad",
+  "phone": "Teléfono",
+  "email": "Email",
+  "schedule": "Horario",
+  "description": "Descripción",
+  "photo": "Foto"
 }
