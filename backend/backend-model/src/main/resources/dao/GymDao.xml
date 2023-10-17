@@ -25,6 +25,7 @@
                 <Column>gym_description</Column>
                 <Column>gym_state</Column>
                 <Column>user_</Column>
+                <Column>photo</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[

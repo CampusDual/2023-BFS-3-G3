@@ -1,15 +1,29 @@
-<o-form-layout-manager title="{{'GYMS' | oTranslate }}" separator=" " mode="tab" label-columns="gym_name;gym_city">
-<div fxFill fxLayout="column" fxLayoutAlign="start">
-  <o-table
-    attr="gymsTable"
-    service="gyms"
-    entity="gym"
-    keys="gym_id"
-    columns="gym_id;gym_name;gym_address;gym_city;gym_phone;gym_email;gym_schedule;gym_description;"
-    visible-columns="gym_name;gym_address;gym_city;gym_phone;gym_email;gym_schedule;gym_description"
-    query-rows="20"
-  >
-  </o-table>
-
-</div>
+<o-form-layout-manager
+  title="{{ 'GYMS' | oTranslate }}"
+  separator=" "
+  mode="tab"
+  label-columns="gym_name;gym_city"
+>
+  <div fxFill fxLayout="column" fxLayoutAlign="start">
+    <o-table
+      attr="gymsTable"
+      service="gyms"
+      entity="gym"
+      keys="gym_id"
+      columns="gym_id;photo;gym_name;gym_address;gym_city;gym_phone;gym_email;gym_schedule;gym_description;"
+      visible-columns="photo;gym_name;photo;gym_address;gym_city;gym_phone;gym_email;gym_schedule;gym_description"
+      query-rows="20"
+    >
+      <o-table-column
+        attr="photo"
+        title="photo"
+        orderable="no"
+        searchable="no"
+        type="image"
+        avatar="yes"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+      ></o-table-column>
+    </o-table>
+  </div>
 </o-form-layout-manager>
