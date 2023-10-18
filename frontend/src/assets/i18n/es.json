@@ -28,5 +28,6 @@
   "schedule": "Horario",
   "description": "Descripción",
   "photo": "Foto",
-  "rate": "Valoración"
+  "rate": "Valoración",
+  "categories": "Categorías"
 }

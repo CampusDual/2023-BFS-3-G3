@@ -28,5 +28,6 @@
   "schedule": "Schedule",
   "description": "Description",
   "photo": "Photo",
-  "rate": "Rate"
+  "rate": "Rate",
+  "categories": "Categories"
 }

@@ -32,12 +32,17 @@
             </ValidColumns>
             <Sentence>
                 <![CDATA[
-                    select #COLUMNS#, round(avg(r.rate), 1) as rate
+                    select #COLUMNS#, round(avg(r.rate), 1) as rate,
+                        (select string_agg(distinct c.name, ', ')
+                           from ${mainschema}.categories c
+                           join ${mainschema}.services s on c.categoryid = s.categoryid
+                           where s.gymid = g.gymid
+                          ) as categories
                     from ${mainschema}.gyms g
                     left join ${mainschema}.reviews r
                     on g.gymid = r.gymid
                     #WHERE#
-                    group by g.gymid ;
+                    group by g.gymid;
                 ]]>
             </Sentence>
         </Query>
