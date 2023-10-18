@@ -6,14 +6,14 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Repository;
 
 @Lazy
-@Repository(value = "GymDao")
+@Repository(value = "ReviewDao")
 @ConfigurationFile(
-        configurationFile = "dao/GymDao.xml",
+        configurationFile = "dao/ReviewDao.xml",
         configurationFilePlaceholder = "dao/placeholders.properties")
 
-public class GymDao extends OntimizeJdbcDaoSupport {
-    public static final String ID = "gymid";
-    public static final String NAME = "name";
+public class ReviewDao extends OntimizeJdbcDaoSupport {
+    public static final String ID = "reviewid";
+    public static final String CONTENT = "content";
     public static final String ADDRESS = "address";
     public static final String  CITY= "city";
     public static final String  CIF= "cif";

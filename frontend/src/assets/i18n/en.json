@@ -27,7 +27,6 @@
   "email": "Email",
   "schedule": "Schedule",
   "description": "Description",
-  "photo": "Photo"
-
-
+  "photo": "Photo",
+  "rate": "Rate"
 }

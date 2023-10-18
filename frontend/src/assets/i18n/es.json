@@ -27,5 +27,6 @@
   "email": "Email",
   "schedule": "Horario",
   "description": "Descripción",
-  "photo": "Foto"
+  "photo": "Foto",
+  "rate": "Valoración"
 }

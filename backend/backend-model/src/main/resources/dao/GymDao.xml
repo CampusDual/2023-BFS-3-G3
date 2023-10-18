@@ -13,6 +13,9 @@
     </UpdateKeys>
     <Queries>
         <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="gymid" prefix="g" databaseName="gymid" />
+            </AmbiguousColumns>
             <ValidColumns>
                 <Column>gymid</Column>
                 <Column>name</Column>
@@ -29,11 +32,12 @@
             </ValidColumns>
             <Sentence>
                 <![CDATA[
-                    SELECT
-                        #COLUMNS#
-                    FROM
-                        ${mainschema}.gyms
+                    select #COLUMNS#, round(avg(r.rate), 1) as rate
+                    from ${mainschema}.gyms g
+                    left join ${mainschema}.reviews r
+                    on g.gymid = r.gymid
                     #WHERE#
+                    group by g.gymid ;
                 ]]>
             </Sentence>
         </Query>
