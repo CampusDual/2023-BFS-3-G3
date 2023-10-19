@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { GymsHomeComponent } from "./gyms-home/gyms-home.component";
 import { GymsDetailComponent } from "./gyms-detail/gyms-detail.component";
 import { GymsNewComponent } from "./gyms-new/gyms-new.component";
+import { GymsServiceComponent } from "./gyms-detail/gyms-service/gyms-service.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: ":gymid",
     component: GymsDetailComponent,
+  },
+  {
+    path: ":gymid",
+    component: GymsServiceComponent,
   },
 ];
 

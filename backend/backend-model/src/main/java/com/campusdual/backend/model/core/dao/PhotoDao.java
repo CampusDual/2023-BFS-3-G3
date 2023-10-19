@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
 public class PhotoDao extends OntimizeJdbcDaoSupport {
     public static final String ID = "photoid";
     public static final String PHOTO = "photo";
-    public static final String GYMID = "gymid";
+    public static final String GYM_ID = "gymid";
 }
