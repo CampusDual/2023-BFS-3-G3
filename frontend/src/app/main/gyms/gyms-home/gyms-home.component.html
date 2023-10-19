@@ -10,13 +10,46 @@
       service="gyms"
       entity="gym"
       keys="gymid"
-      columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;"
+      columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;image1;image2;image3;"
       visible-columns="photo;name;city;schedule;rate;categories;"
       query-rows="20"
     >
       <o-table-column
         attr="photo"
         title="photo"
+        orderable="no"
+        searchable="no"
+        type="image"
+        avatar="yes"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+      ></o-table-column>
+
+      <o-table-column
+        attr="image1"
+        title="image1"
+        orderable="no"
+        searchable="no"
+        type="image"
+        avatar="yes"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+      ></o-table-column>
+
+      <o-table-column
+        attr="image2"
+        title="image2"
+        orderable="no"
+        searchable="no"
+        type="image"
+        avatar="yes"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+      ></o-table-column>
+
+      <o-table-column
+        attr="image3"
+        title="image3"
         orderable="no"
         searchable="no"
         type="image"

@@ -29,10 +29,13 @@
                 <Column>state</Column>
                 <Column>user_</Column>
                 <Column>photo</Column>
+                <Column>image1</Column>
+                <Column>image2</Column>
+                <Column>image3</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[
-                    select #COLUMNS#, round(avg(r.rate), 1) as rate,
+                    select #COLUMNS#, round(avg(r.rate), 0) as rate,
                         (select string_agg(distinct c.name, ', ')
                            from ${mainschema}.categories c
                            join ${mainschema}.services s on c.categoryid = s.categoryid

@@ -24,4 +24,8 @@ public class GymDao extends OntimizeJdbcDaoSupport {
     public static final String  STATE= "state";
     public static final String  USER_= "user_";
     public static final String  ATTR_PHOTO= "photo";
+    public static final String  IMAGE1= "image1";
+    public static final String  IMAGE2= "image2";
+    public static final String  IMAGE3= "image3";
+
 }
