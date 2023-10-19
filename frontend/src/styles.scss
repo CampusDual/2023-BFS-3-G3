@@ -1,6 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 #photo > div > div > img {
-    height: 20rem;
-    width:20rem;
-    border-radius: 10rem;
-  }
+  height: 20rem;
+  width: 20rem;
+  border-radius: 10rem;
+}
+
+.images {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  gap: 16px;
+
+  right: 20%;
+}
+
+.o-image .o-image-content.o-image-auto-fit .o-image-display-container > img {
+  border-radius: 8px;
+
+  width: 100%;
+
+  height: auto;
+
+  box-shadow: 0px 0px 30px #000;
+}

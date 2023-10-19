@@ -48,7 +48,7 @@
       <o-row>
         <!-- <o-nif-input attr="ID" class="input-padding" fxFlex="40" required="yes"></o-nif-input> -->
 
-       <!-- Phone Column -->
+        <!-- Phone Column -->
         <o-integer-input
           attr="phone"
           class="input-padding"
@@ -67,7 +67,7 @@
         <o-email-input attr="email" fxFlex></o-email-input>
       </o-row>
       <o-row>
-         <!-- Description Column -->
+        <!-- Description Column -->
         <o-textarea-input attr="description" fxFlex></o-textarea-input>
       </o-row>
       <!-- <o-row>
@@ -78,28 +78,30 @@
       </o-row> -->
     </o-column>
   </o-row>
-  <o-column>
-    <o-image
-      id="image1"
-      attr="image1"
-      empty-image="assets/images/no-image.png"
-      sql-type="OTHER"
-    ></o-image>
-  </o-column>
-  <o-column>
-    <o-image
-      id="image2"
-      attr="image2"
-      empty-image="assets/images/no-image.png"
-      sql-type="OTHER"
-    ></o-image>
-  </o-column>
-  <o-column>
-    <o-image
-      id="image3"
-      attr="image3"
-      empty-image="assets/images/no-image.png"
-      sql-type="OTHER"
-    ></o-image>
-  </o-column>
+  <div class="images">
+    <o-column>
+      <o-image
+        id="image1"
+        attr="image1"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+      ></o-image>
+    </o-column>
+    <o-column>
+      <o-image
+        id="image2"
+        attr="image2"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+      ></o-image>
+    </o-column>
+    <o-column>
+      <o-image
+        id="image3"
+        attr="image3"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+      ></o-image>
+    </o-column>
+  </div>
 </o-form>
