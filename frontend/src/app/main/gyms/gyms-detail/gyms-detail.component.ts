@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { OFormComponent, OTextInputComponent, OTextInputModule } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-gyms-detail',
@@ -11,5 +12,12 @@ export class GymsDetailComponent implements OnInit {
 
   ngOnInit() {
   }
+  @ViewChild('form',{static:true})
+   form:OFormComponent;
+ public serviceRoute:string;
+loadRoute(){
+   this.serviceRoute = "/main/gyms/"+ this.form.getDataValue('gymid').value + "/gymservices";
+ 
+}
 
 }

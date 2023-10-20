@@ -1,15 +1,16 @@
-<o-form
+<o-form #form
   service="gyms"
   entity="gym"
   keys="gymid"
   header-actions="R;I;U;D"
   show-header-navigation="no"
   ><div style="display: none">
-    <o-text-input
+    <o-text-input 
       attr="gymid"
       sql-type="INTEGER"
       enabled="no"
       visible="no"
+      (onChange)="loadRoute()"
     ></o-text-input>
   </div>
   <o-row>
@@ -70,14 +71,13 @@
         <!-- Description Column -->
         <o-textarea-input attr="description" fxFlex></o-textarea-input>
       </o-row>
-      <!-- <o-row>
-        <o-real-input attr="LONGITUDE" decimal-separator="," max-decimal-digits="10" min-decimal-digits="0"
-          class="input-padding" fxFlex="50"></o-real-input>
-        <o-real-input attr="LATITUDE" decimal-separator="," max-decimal-digits="10" min-decimal-digits="0"
-          fxFlex="50"></o-real-input>
-      </o-row> -->
+    
     </o-column>
   </o-row>
+  <div class="div_button_services">
+  <o-button id="botton_service"type="RAISED" label="services" layout-padding color="primary" [routerLink] ="serviceRoute"></o-button>
+</div>
+
   <div class="images">
     <o-column>
       <o-image

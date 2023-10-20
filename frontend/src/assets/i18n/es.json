@@ -29,5 +29,6 @@
   "description": "Descripción",
   "photo": "Foto",
   "rate": "Valoración",
-  "categories": "Categorías"
+  "categories": "Categorías",
+  "services":"Servicios"
 }

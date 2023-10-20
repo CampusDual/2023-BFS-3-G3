@@ -1,1 +1,48 @@
-<p>gyms-service works!</p>
+<!-- <o-grid #servicesGrid attr="servicesGrid" service="gymservices" entity="service" keys="serviceid"
+
+  columns="serviceid;name;description;price;duration;categoryid;gymid"
+
+  query-rows="8" show-page-size="true" page-size-options="4;8;16" orderable="true" quick-filter="true"
+
+  sortable-columns="name" controls="true" gutter-size="18px" detail-mode="none">
+
+  <o-grid-item *ngFor="let list of servicesGrid.dataArray">
+
+    <div (click)="openDetail(list)" fxLayout="column" fxLayoutAlign="space-evenly center" class="mat-elevation-z1">
+
+        <!-- <img [src]="getImageSrc(list.EMPLOYEEPHOTO)" width="144px" height="200px"> -->
+<!-- 
+        <span><b>{{ list.name }} </b></span>
+
+        <span><i>{{ list.description }}</i></span>
+
+        <span>{{ list.duration }}</span>
+
+    </div>
+
+  </o-grid-item>
+
+</o-grid> -->
+
+
+<o-form-layout-manager
+  title="{{ 'SERVICES' | oTranslate }}"
+  separator=" "
+  mode="tab"
+  label-columns="name"
+>
+  <div fxFill>
+    <o-table
+      attr="servicesTable"
+      service="gymservices"
+      entity="service"
+      keys="serviceid"
+      columns="serviceid;name;description;price;duration;categoryid;gymid"
+      visible-columns="name;description"
+      query-rows="20"
+    >
+    
+      
+    </o-table>
+  </div>
+</o-form-layout-manager>

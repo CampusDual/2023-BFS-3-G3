@@ -541,3 +541,9 @@ $theme: o-mat-light-theme($primary, $accent);
 
 /* Dark theme */
 $dark-theme: o-mat-dark-theme($primary, $accent);
+
+
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: rgb(124, 43, 230) ;
+   }

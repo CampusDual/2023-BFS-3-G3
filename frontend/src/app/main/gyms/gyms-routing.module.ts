@@ -10,19 +10,23 @@ const routes: Routes = [
     path: "",
     component: GymsHomeComponent,
   },
+
   {
     path: "new",
     component: GymsNewComponent,
   },
-  {
-    path: ":gymid",
-    component: GymsDetailComponent,
-  },
-  {
-    path: ":gymid",
-    component: GymsServiceComponent,
-  },
-];
+  {path: ":gymid/gymservices",
+  component: GymsServiceComponent,
+},
+
+  { path: ":gymid",   
+    component: GymsDetailComponent,  }   
+  //   children: [       
+  // {   path: "gymservices",      
+  //  component: GymsServiceComponent  }
+  //  ]},},
+  
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
