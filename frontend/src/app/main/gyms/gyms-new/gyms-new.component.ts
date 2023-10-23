@@ -12,4 +12,7 @@ export class GymsNewComponent implements OnInit {
   ngOnInit() {
   }
 
+  getValue() {
+    return true;
+  }
 }

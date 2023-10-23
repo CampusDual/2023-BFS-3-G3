@@ -32,5 +32,6 @@
   "categories": "Categorías",
   "services":"Servicios",
   "price": "Precio",
-  "duration":"Duración"
+  "duration":"Duración",
+  "state": "Activo"
 }

@@ -1,4 +1,4 @@
-<o-form
+<o-form #form
   service="gyms"
   entity="gym"
   keys="gymid"
@@ -58,12 +58,19 @@
         fxFlex="40"
       ></o-integer-input>
     <!-- Schedule Column (assuming it's a text input) -->
-
       <o-text-input
         class="input-padding"
         attr="schedule"
-        fxFlex="20"
+        fxFlex="40"
       ></o-text-input>
+      <!-- State Column -->
+      <o-slide-toggle 
+      class="input-padding"
+      attr="state" 
+      label="{{ 'state' | oTranslate }}" 
+      [data]="getValue()" 
+      read-only="no"
+      ></o-slide-toggle>
     </o-row>
     <o-row>
     <!-- Email Column -->
@@ -81,6 +88,43 @@
     </o-row>
     </o-column>
   </o-row>
+
+  <div class="div_button_services">
+    <o-button id="botton_service"type="RAISED" label="services" layout-padding color="primary" [routerLink] ="serviceRoute"></o-button>
+  </div>
+
+  <div class="images">
+    <o-column>
+      <o-image
+        id="image1"
+        attr="image1"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+        type="image"
+        image-type="base64"
+      ></o-image>
+    </o-column>
+    <o-column>
+      <o-image
+        id="image2"
+        attr="image2"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+        type="image"
+        image-type="base64"
+      ></o-image>
+    </o-column>
+    <o-column>
+      <o-image
+        id="image3"
+        attr="image3"
+        empty-image="assets/images/no-image.png"
+        sql-type="OTHER"
+        type="image"
+        image-type="base64"
+      ></o-image>
+    </o-column>
+  </div>
 </o-form>
 
 

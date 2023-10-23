@@ -20,4 +20,8 @@ loadRoute(){
  
 }
 
+getValue() {
+  return true;
+}
+
 }
