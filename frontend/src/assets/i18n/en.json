@@ -30,5 +30,7 @@
   "photo": "Photo",
   "rate": "Rate",
   "categories": "Categories",
-  "services": "Services"
+  "services": "Services",
+  "price": "Price",
+  "duration":"Duration"
 }

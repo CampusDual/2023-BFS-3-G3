@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { OTableComponent, OTextInputComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-gyms-service',
@@ -7,20 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GymsServiceComponent implements OnInit {
 
-  constructor( ) { }
+  @ViewChild('servicesTable', { static: false }) servicesTable: OTableComponent;
+  @ViewChild('gymIdField', { static: false }) gymIdField: OTextInputComponent;
+  gymid: number;
+  constructor(
+    private route:ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.gymid = Number(params.get("gymid"));
+    });
+  }
+  ngAfterViewInit() {
+    this.gymIdField.setValue(this.gymid);
+    this.servicesTable.refresh();
   }
     
-  // public getImageSrc(base64: any): any {
-  //   return base64 ? this.sanitizer.bypassSecurityTrustResourceUrl('data:image/*;base64,' + base64.bytes) : './assets/images/no-image-transparent.png';
-  // }
-
-  // public openDetail(data: any): void {
-  //   this.dialog.open(EmployeeDetailComponent, {
-  //     height: '330px',
-  //     width: '520px',
-  //     data: data
-  //   });
   
 }

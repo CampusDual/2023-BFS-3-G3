@@ -24,7 +24,6 @@
 
 </o-grid> -->
 
-
 <o-form-layout-manager
   title="{{ 'SERVICES' | oTranslate }}"
   separator=" "
@@ -32,17 +31,21 @@
   label-columns="name"
 >
   <div fxFill>
-    <o-table
+    <o-form fxFill service="gyms" entity="gym" keys="gymid" header-actions="R" keys-sql-types="INTEGER" show-header="no">
+      <o-text-input #gymIdField oHidden attr="gymid" sql-type="INTEGER" enabled="no"></o-text-input>   
+      <o-table
+      #servicesTable
       attr="servicesTable"
       service="gymservices"
       entity="service"
       keys="serviceid"
+      parent-keys="gymid"
       columns="serviceid;name;description;price;duration;categoryid;gymid"
-      visible-columns="name;description"
+      visible-columns="name;description;price;duration"
       query-rows="20"
     >
-    
-      
+    <o-table-column attr="price" title="price" type="currency" currency-symbol="€" currency-symbol-position="right"></o-table-column>
     </o-table>
+  </o-form>
   </div>
 </o-form-layout-manager>
