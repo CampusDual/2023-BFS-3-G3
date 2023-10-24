@@ -1,13 +1,7 @@
-<o-form-layout-manager
-  title="{{ 'GYMS' | oTranslate }}"
-  separator=" "
-  mode="tab"
-  label-columns="name"
->
 <div fxFill>
   <o-grid #gymsGrid
     attr="gymsGrid"
-    service="gyms"
+    service="gymsuser"
     entity="gym"
     keys="gymid"
     columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;image1;image2;image3;"
@@ -49,4 +43,3 @@
     </o-grid-item>
   </o-grid>
 </div>
-</o-form-layout-manager>

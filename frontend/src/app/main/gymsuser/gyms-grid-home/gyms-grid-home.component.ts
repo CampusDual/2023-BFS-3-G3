@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { GymsGridDetailComponent } from '../gyms-grid-detail/gyms-grid-detail.component';
 
 @Component({
   selector: 'app-gyms-grid-home',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GymsGridHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    protected dialog: MatDialog,
+  ) { }
 
   ngOnInit() {
+  }
+
+  public openDetail(list: any): void {
+    this.dialog.open(GymsGridDetailComponent, {
+      height: '70%',
+      width: '70%',
+      data: list
+    });
   }
 
 }

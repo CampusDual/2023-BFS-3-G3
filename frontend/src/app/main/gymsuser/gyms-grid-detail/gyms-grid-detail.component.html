@@ -1,0 +1,59 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly stretch" class="gyms-detail" fxFill>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="24px">
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="40">
+      <!--<div class="image">
+        <img [src]="getImageSrc(data.EMPLOYEEPHOTO)">
+      </div> -->
+
+      <div class="containerphoto">
+        <o-image class = "image1" attr="photo" data="{{ data.photo }}" read-only = "true" show-controls = "false" 
+        type="image"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+        ></o-image>
+      </div>
+
+      <span class="name"><b>{{ data.name }}</b></span>
+      <mat-divider></mat-divider>
+      <span class="city"><i>{{ data.city }}</i></span>
+      <mat-divider></mat-divider>
+    </div>
+    <div fxLayout="column" fxFlex="60" class="gym-data">
+      <span *ngIf="data.schedule">
+        <mat-icon>schedule</mat-icon>{{ data.schedule }}
+      </span>
+      <span *ngIf="data.rate">
+        <mat-icon>star</mat-icon>{{ data.rate }}
+      </span>
+      <span *ngIf="data.categories">
+        <mat-icon>checklist</mat-icon>{{ data.categories }}
+      </span>
+    </div>
+
+    <div fxLayout="column" fxFlex="60" class="gym-data">
+      <div class="containerphoto">
+        <o-image class = "image1" attr="image1" data="{{ data.image1 }}" read-only = "true" show-controls = "false" 
+        type="image"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+        ></o-image>
+      </div>
+      <div class="containerphoto">
+        <o-image class = "image1" attr="image2" data="{{ data.image2 }}" read-only = "true" show-controls = "false" 
+        type="image"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+        ></o-image>
+      </div>
+      <div class="containerphoto">
+        <o-image class = "image1" attr="image3" data="{{ data.image3 }}" read-only = "true" show-controls = "false" 
+        type="image"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+        ></o-image>
+      </div>
+    </div>
+  </div>
+
+</div>
