@@ -15,7 +15,6 @@
       </div>
 
       <span class="name"><b>{{ data.name }}</b></span>
-      <mat-divider></mat-divider>
       <span class="city"><i>{{ data.city }}</i></span>
       <mat-divider></mat-divider>
     </div>
@@ -28,6 +27,12 @@
       </span>
       <span *ngIf="data.categories">
         <mat-icon>checklist</mat-icon>{{ data.categories }}
+      </span>
+      <span *ngIf="data.address">
+        <mat-icon>checklist</mat-icon>{{ data.address }}
+      </span>
+      <span *ngIf="data.address">
+        <mat-icon>checklist</mat-icon>{{ data.address }}
       </span>
     </div>
 

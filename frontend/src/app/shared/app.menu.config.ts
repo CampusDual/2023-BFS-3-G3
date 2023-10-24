@@ -4,7 +4,7 @@ export const MENU_CONFIG: MenuRootItem[] = [
   { id: "home", name: "HOME", icon: "home", route: "/main/home" },
   {
     id: "gyms",
-    name: "GYMS",
+    name: "MY_GYMS",
     route: "/main/gyms",
     icon: "fitness_center",
 

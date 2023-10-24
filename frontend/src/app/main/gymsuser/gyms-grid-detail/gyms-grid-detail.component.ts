@@ -1,7 +1,5 @@
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
-import { OFormComponent } from 'ontimize-web-ngx';
-import { GalleryImage, GalleryOptions } from 'ontimize-web-ngx-gallery';
 
 @Component({
   selector: 'app-gyms-grid-detail',
@@ -14,9 +12,10 @@ export class GymsGridDetailComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
-  galleryImages: GalleryImage[];
+ 
   ngOnInit() {
   }
+
   /*@ViewChild('form',{static:true})
    form:OFormComponent;
  public serviceRoute:string;

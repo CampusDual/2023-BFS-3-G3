@@ -20,6 +20,7 @@
   "FOOTER_CREATED_BY": "Equipo WheGym Innovation ->>",
   "FOOTER_RIGHTS": " <<-Todos los derechos reservados",
   "GYMS": "Gimnasios",
+  "MY_GYMS": "Mis gimnasios",
   "name": "Nombre",
   "address": "Dirección",
   "city": "Ciudad",
@@ -34,5 +35,8 @@
   "price": "Precio",
   "duration":"Duración",
   "state": "Activo",
-  "stars": "estrellas"
+  "stars": "estrellas",
+  "image1": "Imagen 1",
+  "image2": "Imagen 2",
+  "image3": "Imagen 3"
 }
