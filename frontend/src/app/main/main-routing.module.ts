@@ -21,6 +21,11 @@ export const routes: Routes = [
         loadChildren: () =>
           import("./gyms/gyms.module").then((m) => m.GymsModule),
       },
+      {
+        path: "gymsuser",
+        loadChildren: () =>
+          import("./gymsuser/gymsuser.module").then((m) => m.GymsuserModule),
+      },
     ],
   },
 ];

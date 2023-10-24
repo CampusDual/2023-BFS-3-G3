@@ -10,6 +10,13 @@ export const MENU_CONFIG: MenuRootItem[] = [
 
   },
   {
+    id: "gymsuser",
+    name: "GYMS",
+    route: "/main/gymsuser",
+    icon: "fitness_center",
+
+  },
+  {
     id: "logout",
     name: "LOGOUT",
     route: "/login",

@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    box-shadow: 0 2px 5px;
+    padding: 12px;
+    width: 70%;
+}
+.image1{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.containerphoto {
+    margin: 0 auto;
+}

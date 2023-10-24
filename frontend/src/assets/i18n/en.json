@@ -33,5 +33,6 @@
   "services": "Services",
   "price": "Price",
   "duration":"Duration",
-  "state": "Active"
+  "state": "Active",
+  "stars": "stars"
 }

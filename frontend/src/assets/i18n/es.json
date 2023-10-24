@@ -33,5 +33,6 @@
   "services":"Servicios",
   "price": "Precio",
   "duration":"Duración",
-  "state": "Activo"
+  "state": "Activo",
+  "stars": "estrellas"
 }
