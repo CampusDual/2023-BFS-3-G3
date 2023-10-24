@@ -4,6 +4,54 @@
   mode="tab"
   label-columns="name"
 >
+  <o-grid #gymsGrid
+    attr="gymsGrid"
+    service="gyms"
+    entity="gym"
+    keys="gymid"
+    columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;image1;image2;image3;"
+    query-rows="8" show-page-size="true" page-size-options="4;8;16" orderable="true" quick-filter="true"
+    sortable-columns="name" controls="true" gutter-size="18px" detail-mode="none"
+    >
+  <o-grid-item *ngFor="let list of gymsGrid.dataArray">
+  <div
+  attr="photo"
+        title="photo"
+        orderable="no"
+        searchable="no"
+        type="image"
+        avatar="yes"
+        empty-image="assets/images/no-image.png"
+        image-type="base64">
+  </div>
+  <div class= "container">
+      <div class="name">
+        <span><b>{{ list.name }}</b></span>
+      </div>
+      <div class="city">
+        <mat-icon>location_city</mat-icon><span><i>{{ list.city }}</i></span>
+      </div>
+      <div class="schedule">
+        <mat-icon>schedule</mat-icon><span>{{ list.schedule }}</span>
+      </div>
+      
+      <div class="rate">
+        <mat-icon>star</mat-icon><span>{{ list.rate }}</span>
+      </div>
+      <div class="categories">
+        <mat-icon>checklist</mat-icon><span>{{ list.categories }}</span>
+      </div>
+  </div>
+    </o-grid-item>
+  </o-grid>
+</o-form-layout-manager>
+
+<!-- <o-form-layout-manager
+  title="{{ 'GYMS' | oTranslate }}"
+  separator=" "
+  mode="tab"
+  label-columns="name"
+>
   <div fxFill>
     <o-table
       attr="gymsTable"
@@ -27,4 +75,4 @@
       
     </o-table>
   </div>
-</o-form-layout-manager>
+</o-form-layout-manager> -->
