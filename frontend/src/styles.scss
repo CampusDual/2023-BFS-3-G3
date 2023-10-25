@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 #photo > div > div > img {
-  height: 20rem;
-  width: 20rem;
+  height: 15rem;
+  width: 15rem;
   border-radius: 10rem;
 }
 
@@ -25,10 +25,67 @@
   box-shadow: 0px 0px 30px #000;
 }
 
-
+//botón servicios
 .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
   background-color: #B2A000 ;
  }
+ 
 
+//  detalle gym usuario
 
+ .containerGridDetail{
+ 
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+ .container_log_datos{
+  display: flex;
+ 
+  gap:20px;
+ 
+ }
+ .logo{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+ 
+ }
+ 
+ .titulo{
+  margin-top:2rem;
+  font-size: 5rem;
+  text-shadow: 8px 8px 8px #b2a00093;
+ }
+ 
+ 
+ .datos{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+ }
+ 
+ 
+.spanDescription{
+  font-size: 2.5rem;
+  color:#B2A000;
+}
+ 
+ .images_carro{
+ 
+   
+    display: grid;
+ 
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+ 
+    gap: 10px;}
+ 
+ 
+    .image1{
+      width: 90%;
+    }
  

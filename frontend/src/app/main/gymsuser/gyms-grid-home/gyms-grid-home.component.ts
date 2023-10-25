@@ -18,7 +18,7 @@ export class GymsGridHomeComponent implements OnInit {
 
   public openDetail(list: any): void {
     this.dialog.open(GymsGridDetailComponent, {
-      height: '70%',
+      height: '90%',
       width: '70%',
       data: list
     });

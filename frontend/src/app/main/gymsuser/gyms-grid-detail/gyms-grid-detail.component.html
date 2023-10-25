@@ -1,64 +1,80 @@
-<div fxLayout="column" fxLayoutAlign="space-evenly stretch" class="gyms-detail" fxFill>
+<div class="containerGridDetail">
+ 
+  <!-- container 1 -->  
+<div class="container_log_datos">
 
-  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="24px">
-    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="40">
-      <!--<div class="image">
-        <img [src]="getImageSrc(data.EMPLOYEEPHOTO)">
-      </div> -->
+      <div class="logo">
+                 <o-image
+            class="logo_gym"
+            attr="photo"
+            data="{{ data.photo }}"
+            read-only="true"
+            show-controls="false"
+            type="image"
+            empty-image="assets/images/no-image.png"
+            image-type="base64" >
+             </o-image>
 
-      <div class="containerphoto">
-        <o-image class = "image1" attr="photo" data="{{ data.photo }}" read-only = "true" show-controls = "false" 
-        type="image"
-        empty-image="assets/images/no-image.png"
-        image-type="base64"
-        ></o-image>
-      </div>
+           </div>   <!-- cierre  div logo -->
+             <div class="titulo">
+             <span class="name"
+             ><b id="name1">{{ data.name }}</b></span
+           >
+         </div>         <!--  cierre div titulo -->
+  
+                 </div>       <!--  cierre logo+  titulo -->
+     <div class="datos">
+      
+       <span *ngIf="data.description" class="spanDescription">
+         <mat-icon>checklist</mat-icon>{{ data.description }}
+       </span>
+        <span class="city"
+          ><i>{{ data.city }}</i></span
+        >
+      
 
-      <span class="name"><b>{{ data.name }}</b></span>
-      <span class="city"><i>{{ data.city }}</i></span>
-      <mat-divider></mat-divider>
-    </div>
-    <div fxLayout="column" fxFlex="60" class="gym-data">
-      <span *ngIf="data.schedule">
-        <mat-icon>schedule</mat-icon>{{ data.schedule }}
-      </span>
-      <span *ngIf="data.rate">
-        <mat-icon>star</mat-icon>{{ data.rate }}
-      </span>
-      <span *ngIf="data.categories">
-        <mat-icon>checklist</mat-icon>{{ data.categories }}
-      </span>
-      <span *ngIf="data.address">
-        <mat-icon>checklist</mat-icon>{{ data.address }}
-      </span>
-      <span *ngIf="data.address">
-        <mat-icon>checklist</mat-icon>{{ data.address }}
-      </span>
-    </div>
+        <span *ngIf="data.schedule">
+          <mat-icon>schedule</mat-icon>{{ data.schedule }}
+        </span>
+        <span *ngIf="data.rate"> <mat-icon>star</mat-icon> {{ data.rate }} {{ 'stars' | oTranslate }}</span>
+        <span *ngIf="data.categories">
+          <mat-icon>checklist</mat-icon>{{ data.categories }}
+        </span>
+      </div>      <!--  cierre div datos -->
 
-    <div fxLayout="column" fxFlex="60" class="gym-data">
-      <div class="containerphoto">
-        <o-image class = "image1" attr="image1" data="{{ data.image1 }}" read-only = "true" show-controls = "false" 
-        type="image"
-        empty-image="assets/images/no-image.png"
-        image-type="base64"
-        ></o-image>
-      </div>
-      <div class="containerphoto">
-        <o-image class = "image1" attr="image2" data="{{ data.image2 }}" read-only = "true" show-controls = "false" 
-        type="image"
-        empty-image="assets/images/no-image.png"
-        image-type="base64"
-        ></o-image>
-      </div>
-      <div class="containerphoto">
-        <o-image class = "image1" attr="image3" data="{{ data.image3 }}" read-only = "true" show-controls = "false" 
-        type="image"
-        empty-image="assets/images/no-image.png"
-        image-type="base64"
-        ></o-image>
-      </div>
-    </div>
-  </div>
 
+   <div class="images_carro">
+
+ <o-image
+   class="image1"
+   attr="image1"
+   data="{{ data.image1 }}"
+   read-only="true"
+   show-controls="false"
+   type="image"
+   empty-image="assets/images/no-image.png"
+   image-type="base64">
+ </o-image>
+ <o-image
+   class="image1"
+   attr="image2"
+   data="{{ data.image2 }}"
+   read-only="true"
+   show-controls="false"
+   type="image"
+   empty-image="assets/images/no-image.png"
+   image-type="base64"
+ ></o-image>
+
+ <o-image
+   class="image1"
+   attr="image3"
+   data="{{ data.image3 }}"
+   read-only="true"
+   show-controls="false"
+   type="image"
+   empty-image="assets/images/no-image.png"
+   image-type="base64"
+ ></o-image>
+</div>
 </div>
