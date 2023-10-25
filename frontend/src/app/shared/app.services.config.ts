@@ -8,4 +8,7 @@ export const SERVICE_CONFIG: Object = {
   gymservices: {
     path: "/gymservices"
   },
+  categories: {
+    path: "/categories"
+  },
 };

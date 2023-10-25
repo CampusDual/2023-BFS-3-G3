@@ -17,6 +17,13 @@ export const MENU_CONFIG: MenuRootItem[] = [
 
   },
   {
+    id: "servicesgymadmin",
+    name: "MY_SERVICES",
+    route: "/main/gymservices",
+    icon: "sports_tennis",
+
+  },
+  {
     id: "logout",
     name: "LOGOUT",
     route: "/login",

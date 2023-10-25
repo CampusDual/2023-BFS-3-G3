@@ -3,6 +3,7 @@
     box-shadow: 0 2px 5px;
     padding: 12px;
     width: 70%;
+    cursor: pointer;
 }
 .image1{
     width: 100%;

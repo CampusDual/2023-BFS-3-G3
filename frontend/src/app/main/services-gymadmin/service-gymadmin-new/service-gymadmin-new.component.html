@@ -1,0 +1,40 @@
+<o-form #form
+  service="gymservices"
+  entity="service"
+  keys="serviceid"
+  header-actions="R;I;U;D"
+  show-header-navigation="no"
+>
+  <o-row>
+
+    <!-- Name Column -->
+    <o-column fxFlex>
+        <o-text-input
+        class="input-padding"
+        attr="name"
+        fxFlex="40"
+        required="yes"
+        ></o-text-input>
+
+       <!-- Description Column -->
+        <o-textarea-input attr="description" fxFlex></o-textarea-input>
+
+        <!-- Price Column -->
+
+        <o-integer-input attr="price" label="price"></o-integer-input>
+
+        <!-- Duration Column -->
+
+        <o-integer-input attr="duration" label="duration"></o-integer-input>
+
+        <o-row>
+            <o-combo attr="categoryid" label="category" fxFlex="50" service="categories" entity="category" keys="categoryid" columns="categoryid;name"
+                    visible-columns="name" value-column="categoryid" class="input-padding"></o-combo>
+        </o-row>
+    
+    </o-column>
+  </o-row>
+</o-form>
+
+
+

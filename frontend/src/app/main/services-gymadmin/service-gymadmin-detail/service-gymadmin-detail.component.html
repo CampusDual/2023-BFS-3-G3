@@ -1,0 +1,70 @@
+<o-form #form
+  service="gymservices"
+  entity="service"
+  keys="serviceid"
+  header-actions="R;I;U;D"
+  show-header-navigation="no"
+  ><div style="display: none">
+    <!-- Id Column -->
+    <o-integer-input
+          attr="serviceid"
+          class="input-padding"
+          grouping="no"
+          fxFlex="40"
+        ></o-integer-input>
+    <o-text-input 
+      attr="serviceid"
+      sql-type="INTEGER"
+      enabled="yes"
+      visible="yes"
+    ></o-text-input>
+  </div>
+  <o-row>
+    <!-- Name Column -->
+    <o-column fxFlex>
+      <o-row>
+        <o-text-input
+          class="input-padding"
+          attr="name"
+          fxFlex="40"
+          required="yes"
+        ></o-text-input>
+        <!-- Description Column -->
+        <o-text-input
+          class="input-padding"
+          attr="description"
+          fxFlex="40"
+          required="yes"
+        ></o-text-input>
+        
+      </o-row>
+      <o-row>
+        <!-- Price -->
+        <o-integer-input
+          attr="price"
+          class="input-padding"
+          grouping="no"
+          fxFlex="40"
+        ></o-integer-input>
+        <!-- Duration -->
+        <o-integer-input
+          class="input-padding"
+          attr="duration"
+          fxFlex="40"
+        ></o-integer-input>        
+      </o-row>
+      <o-row>
+        <!-- Description Column -->
+        <o-textarea-input attr="description" fxFlex></o-textarea-input>
+      </o-row>
+        <!-- Category -->
+      <o-row>
+        <o-combo attr="categoryid" label="category" fxFlex="50" service="categories" entity="category" keys="categoryid" columns="categoryid;name"
+                visible-columns="name" value-column="categoryid" class="input-padding"></o-combo>
+    </o-row>
+    
+    </o-column>
+  </o-row>
+  
+</o-form>
+

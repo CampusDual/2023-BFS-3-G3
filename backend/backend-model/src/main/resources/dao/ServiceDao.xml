@@ -13,6 +13,11 @@
     </UpdateKeys>
     <Queries>
         <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="categoryid" prefix="s" databaseName="categoryid" />
+                <AmbiguousColumn name="name" prefix="s" databaseName="name" />
+                <AmbiguousColumn name="description" prefix="s" databaseName="description" />
+            </AmbiguousColumns>
             <ValidColumns>
                 <Column>serviceid</Column>
                 <Column>name</Column>
@@ -25,9 +30,10 @@
             <Sentence>
                 <![CDATA[
                     SELECT
-                        #COLUMNS#
+                        #COLUMNS#, c.name as categories
                     FROM
-                        ${mainschema}.services
+                        ${mainschema}.services s
+                        join ${mainschema}.categories c on c.categoryid = s.categoryid
                     #WHERE#
                 ]]>
             </Sentence>

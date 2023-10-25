@@ -1,0 +1,21 @@
+<o-form-layout-manager
+  attr="gymsLayoutManager"
+  title="{{ 'SERVICES' | oTranslate }}"
+  mode="tab"
+  label-columns="name"
+  store-state="no"
+>
+  <div fxFill>
+    <o-table
+      attr="servicesTable"
+      service="gymservices"
+      entity="service"
+      keys="serviceid"
+      columns="serviceid;name;description;duration;price;categoryid;gymid;categories"
+      visible-columns="name;description;duration;price;categories"
+      query-rows="20"
+      store-state="no"
+    >
+    </o-table>
+  </div>
+</o-form-layout-manager>

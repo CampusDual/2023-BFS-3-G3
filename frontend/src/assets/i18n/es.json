@@ -21,6 +21,8 @@
   "FOOTER_RIGHTS": " <<-Todos los derechos reservados",
   "GYMS": "Gimnasios",
   "MY_GYMS": "Mis gimnasios",
+  "MY_SERVICES": "Mis servicios",
+  "SERVICES": "Servicios",
   "name": "Nombre",
   "address": "Dirección",
   "city": "Ciudad",
@@ -38,5 +40,6 @@
   "stars": "estrellas",
   "image1": "Imagen 1",
   "image2": "Imagen 2",
-  "image3": "Imagen 3"
+  "image3": "Imagen 3",
+  "category": "Categoría"
 }
