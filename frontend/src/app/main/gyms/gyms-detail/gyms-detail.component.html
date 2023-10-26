@@ -5,9 +5,8 @@
   header-actions="R;I;U;D"
   show-header-navigation="no"
   >
-  
   <div style="display: none">
-    <o-text-input 
+    <o-text-input
       attr="gymid"
       sql-type="INTEGER"
       enabled="no"
@@ -15,10 +14,10 @@
       (onChange)="loadRoute()"
     ></o-text-input>
   </div>
-  <h2>{{ 'INFO' | oTranslate }}</h2>
-  <o-row>
-    <!-- Photo Column -->
-    <o-column>
+ 
+  <div class="containerform">
+    <!-- <o-column title="{{ 'name' | oTranslate }}"></o-column> -->
+  <div class="logoform">
       <o-image
         id="photo"
         attr="photo"
@@ -26,77 +25,85 @@
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
       ></o-image>
-    </o-column>
-    <!-- Name Column -->
-    <o-column fxFlex class="columndetails">
-      <o-row>
+    </div>
+    <h2>{{ 'INFO' | oTranslate }}</h2>
+    <!-- datos -->
+    <div class="datosform">
+      <!-- Name Column -->
+      <div class="nameform">
         <o-text-input
-          class="input-padding"
+        class="input-padding"
           attr="name"
           fxFlex="40"
           required="yes"
         ></o-text-input>
+
+        <!-- State Column -->
+        <o-slide-toggle
+        class="input-padding"
+        attr="state"
+        label="{{ 'state' | oTranslate }}"
+        [data]="getValue()"
+        read-only="no"
+        ></o-slide-toggle>
+      </div>
+      <div class="contactform">
         <!-- Address Column -->
         <o-text-input
-          class="input-padding"
+        class="input-padding"
           attr="address"
           fxFlex="40"
           required="yes"
         ></o-text-input>
+
         <!-- City Column -->
         <o-text-input
           class="input-padding"
           attr="city"
           fxFlex="20"
         ></o-text-input>
-      </o-row>
-      <o-row>
         <!-- <o-nif-input attr="ID" class="input-padding" fxFlex="40" required="yes"></o-nif-input> -->
 
-        <!-- Phone Column -->
-        <o-integer-input
-          attr="phone"
-          class="input-padding"
-          step="0"
-          grouping="no"
-          fxFlex="40"
-        ></o-integer-input>
+        
+        </div>
         <!-- Schedule Column -->
+        <div class="nameform">
+
+          <!-- Phone Column -->
+        <o-integer-input
+        attr="phone"
+        class="input-padding"
+        step="0"
+        grouping="no"
+        fxFlex="40"
+      ></o-integer-input>
+
         <o-text-input
-          class="input-padding"
+         
           attr="schedule"
           fxFlex="40"
         ></o-text-input>
-        <!-- State Column -->
-        <o-slide-toggle 
-        class="input-padding"
-        attr="state" 
-        label="{{ 'state' | oTranslate }}" 
-        [data]="getValue()" 
-        read-only="no"
-        ></o-slide-toggle>
-      </o-row>
-      <o-row>
+        </div>
+        
         <!-- Email Column -->
+        <div class="nameform">
         <o-email-input attr="email" fxFlex></o-email-input>
-      </o-row>
-      <o-row>
+        </div>
         <!-- Description Column -->
+        <div class="nameform">
         <o-textarea-input attr="description" fxFlex></o-textarea-input>
-      </o-row>
-    
-    </o-column>
-  </o-row>
+        </div>
   <!-- <div class="div_button_services">
-   <o-button id="botton_service"type="RAISED" label="services" layout-padding color="primary" [routerLink] ="serviceRoute"></o-button>
-  </div> -->
-  <h2>{{ 'gallery' | oTranslate }}</h2>
+  <o-button id="botton_service"type="RAISED" label="services" layout-padding color="primary" [routerLink] ="serviceRoute"></o-button>
+</div> -->
+</div>
+</div>
+<h2>{{ 'gallery' | oTranslate }}</h2>
   <div class="images">
     <o-column>
       <o-image
         id="image1"
         attr="image1"
-        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -107,7 +114,6 @@
       <o-image
         id="image2"
         attr="image2"
-        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -118,7 +124,6 @@
       <o-image
         id="image3"
         attr="image3"
-        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"

@@ -8,6 +8,7 @@
     quick-filter-columns="name;city;rate;categories"
     query-rows="8" show-page-size="true" page-size-options="4;8;16" orderable="true"
     sortable-columns="name" controls="true" gutter-size="18px" detail-mode="none"
+    refresh-button="no"
     >
   <o-grid-item *ngFor="let list of gymsGrid.dataArray">
   <div class= "container" (click)="openDetail(list)">
