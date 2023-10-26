@@ -4,8 +4,9 @@
     service="gymsuser"
     entity="gym"
     keys="gymid"
-    columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;image1;image2;image3;"
-    query-rows="8" show-page-size="true" page-size-options="4;8;16" orderable="true" quick-filter="true"
+    columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;image1;image2;image3"
+    quick-filter-columns="name;city;rate;categories"
+    query-rows="8" show-page-size="true" page-size-options="4;8;16" orderable="true"
     sortable-columns="name" controls="true" gutter-size="18px" detail-mode="none"
     >
   <o-grid-item *ngFor="let list of gymsGrid.dataArray">

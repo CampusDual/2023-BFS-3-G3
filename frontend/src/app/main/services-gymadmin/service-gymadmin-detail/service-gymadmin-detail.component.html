@@ -6,12 +6,12 @@
   show-header-navigation="no"
   ><div style="display: none">
     <!-- Id Column -->
-    <o-integer-input
+    <!-- <o-integer-input
           attr="serviceid"
           class="input-padding"
           grouping="no"
           fxFlex="40"
-        ></o-integer-input>
+        ></o-integer-input> -->
     <o-text-input 
       attr="serviceid"
       sql-type="INTEGER"
@@ -61,7 +61,12 @@
       <o-row>
         <o-combo attr="categoryid" label="category" fxFlex="50" service="categories" entity="category" keys="categoryid" columns="categoryid;name"
                 visible-columns="name" value-column="categoryid" class="input-padding"></o-combo>
-    </o-row>
+      </o-row>
+
+      <o-row>
+        <o-combo attr="gymid" label="gym" fxFlex="50" service="gyms" entity="gym" keys="gymid" columns="gymid;name"
+                visible-columns="name" value-column="gymid" class="input-padding"></o-combo>
+      </o-row>
     
     </o-column>
   </o-row>

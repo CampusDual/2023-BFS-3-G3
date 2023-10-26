@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { OTableComponent, OTextInputComponent } from 'ontimize-web-ngx';
+import { OGridComponent, OListComponent, OServiceBaseComponent, OServiceComponent, OTableComponent, OTextInputComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-gyms-service',
@@ -9,7 +9,10 @@ import { OTableComponent, OTextInputComponent } from 'ontimize-web-ngx';
 })
 export class GymsServiceComponent implements OnInit {
 
-  @ViewChild('servicesTable', { static: false }) servicesTable: OTableComponent;
+  //@ViewChild('servicesTable', { static: false }) servicesTable: OTableComponent;
+  //@ViewChild('serviceList', {static: false}) serviceList:  OListComponent;
+  @ViewChild('serviceGrid', {static: false}) serviceGrid:  OGridComponent;
+
   @ViewChild('gymIdField', { static: false }) gymIdField: OTextInputComponent;
   gymid: number;
   constructor(
@@ -23,8 +26,8 @@ export class GymsServiceComponent implements OnInit {
   }
   ngAfterViewInit() {
     this.gymIdField.setValue(this.gymid);
-    this.servicesTable.refresh();
-  }
-    
+    this.serviceGrid.reloadData();
+
+  } 
   
 }

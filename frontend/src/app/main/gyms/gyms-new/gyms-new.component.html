@@ -5,12 +5,14 @@
   header-actions="R;I;U;D"
   show-header-navigation="no"
 >
+<h2>{{ 'INFO' | oTranslate }}</h2>
   <o-row>
     <!-- Photo Column -->
     <o-column title-label="Photo">
       <o-image
         id="photo"
         attr="photo"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
       ></o-image>
@@ -89,15 +91,13 @@
     </o-column>
   </o-row>
 
-  <div class="div_button_services">
-    <o-button id="botton_service"type="RAISED" label="services" layout-padding color="primary" [routerLink] ="serviceRoute"></o-button>
-  </div>
-
+  <h2>{{ 'gallery' | oTranslate }}</h2>
   <div class="images">
     <o-column>
       <o-image
         id="image1"
         attr="image1"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -108,6 +108,7 @@
       <o-image
         id="image2"
         attr="image2"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -118,6 +119,7 @@
       <o-image
         id="image3"
         attr="image3"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"

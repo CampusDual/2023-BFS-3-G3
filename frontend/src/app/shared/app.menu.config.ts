@@ -13,15 +13,15 @@ export const MENU_CONFIG: MenuRootItem[] = [
     id: "gymsuser",
     name: "GYMS",
     route: "/main/gymsuser",
-    icon: "fitness_center",
-
+    icon: "directions_run",
+    pathMatch: "full"
   },
   {
     id: "servicesgymadmin",
     name: "MY_SERVICES",
     route: "/main/gymservices",
     icon: "sports_tennis",
-
+    pathMatch: "full"
   },
   {
     id: "logout",

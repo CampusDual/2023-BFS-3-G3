@@ -4,7 +4,9 @@
   keys="gymid"
   header-actions="R;I;U;D"
   show-header-navigation="no"
-  ><div style="display: none">
+  >
+  
+  <div style="display: none">
     <o-text-input 
       attr="gymid"
       sql-type="INTEGER"
@@ -13,18 +15,20 @@
       (onChange)="loadRoute()"
     ></o-text-input>
   </div>
+  <h2>{{ 'INFO' | oTranslate }}</h2>
   <o-row>
     <!-- Photo Column -->
     <o-column>
       <o-image
         id="photo"
         attr="photo"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
       ></o-image>
     </o-column>
     <!-- Name Column -->
-    <o-column fxFlex>
+    <o-column fxFlex class="columndetails">
       <o-row>
         <o-text-input
           class="input-padding"
@@ -83,15 +87,16 @@
     
     </o-column>
   </o-row>
-  <div class="div_button_services">
-  <o-button id="botton_service"type="RAISED" label="services" layout-padding color="primary" [routerLink] ="serviceRoute"></o-button>
-</div>
-
+  <!-- <div class="div_button_services">
+   <o-button id="botton_service"type="RAISED" label="services" layout-padding color="primary" [routerLink] ="serviceRoute"></o-button>
+  </div> -->
+  <h2>{{ 'gallery' | oTranslate }}</h2>
   <div class="images">
     <o-column>
       <o-image
         id="image1"
         attr="image1"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -102,6 +107,7 @@
       <o-image
         id="image2"
         attr="image2"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -112,6 +118,7 @@
       <o-image
         id="image3"
         attr="image3"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"

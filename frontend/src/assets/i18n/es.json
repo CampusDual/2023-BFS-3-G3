@@ -41,5 +41,8 @@
   "image1": "Imagen 1",
   "image2": "Imagen 2",
   "image3": "Imagen 3",
-  "category": "Categoría"
+  "category": "Categoría",
+  "minutes": "minutos",
+  "gallery": "Galería",
+  "gym": "Gimnasio"
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material';
 import { OFormComponent, OTextInputComponent, OTextInputModule } from 'ontimize-web-ngx';
 
 @Component({
@@ -8,7 +9,9 @@ import { OFormComponent, OTextInputComponent, OTextInputModule } from 'ontimize-
 })
 export class GymsDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    protected dialog: MatDialog,
+  ) { }
 
   ngOnInit() {
   }
@@ -17,11 +20,9 @@ export class GymsDetailComponent implements OnInit {
  public serviceRoute:string;
 loadRoute(){
    this.serviceRoute = "/main/gyms/"+ this.form.getDataValue('gymid').value + "/gymservices";
- 
 }
 
 getValue() {
   return true;
 }
-
 }

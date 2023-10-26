@@ -15,3 +15,10 @@
     margin-left: 2rem;
 }
 
+h2 {
+    text-align: center;
+}
+
+.columndetails {
+    gap: 20px;
+}
