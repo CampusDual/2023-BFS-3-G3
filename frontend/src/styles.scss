@@ -31,24 +31,30 @@
  }
  
 
-//  detalle gym usuario
+/////////////////////////////  detalle del grid usuario usuario//////////////////////
 
  .containerGridDetail{
  
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap:10px;
 }
  .container_log_datos{
   display: flex;
+
+  gap:10px;
  
-  gap:20px;
- 
+ }
+ .container_log_datos>.logo{
+   width: 150px;
+   height: 150px;
+   
+
  }
  
  .titulo{
-  margin-top:2rem;
-  font-size: 5rem;
+  margin-top:1.5rem;
+  font-size: 2rem;
   text-shadow: 8px 8px 8px #b2a00093;
  }
  
@@ -57,21 +63,21 @@
   display: flex;
   flex-direction: column;
   gap:10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   justify-content: center;
   align-items: center;
   align-content: center;
  }
- 
+
  
 .spanDescription{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color:#B2A000;
 }
  
  .images_carro{
  
-   
+   margin-top: 2rem;
     display: grid;
  
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -86,12 +92,13 @@
     ///////////////////////GYM DETAIL FORM///////////////////////
     .containerform{
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
       margin:5px
     }
     .datosform{
       display: flex;
       flex-direction: column;
+      margin-top: 40px;
       gap:30px;
       width: 80%;
       justify-content: center;
@@ -102,3 +109,15 @@
       height: 500px;
       margin: -16px;
      }
+.title_info{
+  align-items: center;
+}
+
+.o-table-menu-button .mat-menu-trigger.mat-icon-button .mat-button-base .ng-tns-c13-1 .ng-star-inserted{
+  display: none;
+}
+
+.galery_title{
+  margin-top: 3rem;
+}
+

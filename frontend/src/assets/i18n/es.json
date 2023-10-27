@@ -44,5 +44,6 @@
   "category": "Categoría",
   "minutes": "minutos",
   "gallery": "Galería",
-  "gym": "Gimnasio"
+  "gym": "Gimnasio",
+  "MESSAGES.CONFIRM_DELETE": "¿Está seguro de querer realizar esta operación?"
 }

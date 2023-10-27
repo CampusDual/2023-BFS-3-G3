@@ -6,11 +6,13 @@
     keys="gymid"
     columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;image1;image2;image3"
     quick-filter-columns="name;city;rate;categories"
-    query-rows="8" show-page-size="true" page-size-options="4;8;16" orderable="true"
-    sortable-columns="name" controls="true" gutter-size="18px" detail-mode="none"
-    refresh-button="no"
-    >
+    query-rows="8" show-page-size="false" orderable="false" cols="2"
+    controls="true"  detail-mode="none" 
+    refresh-button="no" 
+   
+    > <!-- grid-item-height="1:2"  -->
   <o-grid-item *ngFor="let list of gymsGrid.dataArray">
+    
   <div class= "container" (click)="openDetail(list)">
 
     <div class="containerphoto">
@@ -34,7 +36,7 @@
     </div>
     
     <div class="rate">
-      <mat-icon>star</mat-icon><span>{{ list.rate }} {{ 'stars' | oTranslate }}</span>
+      <mat-icon [ngStyle]="{'color':'#B2A000'}">star</mat-icon><span>{{ list.rate }} {{ 'stars' | oTranslate }}</span>
     </div>
     
     <div class="categories">

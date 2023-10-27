@@ -3,9 +3,10 @@
   separator=" "
   mode="tab"
   label-columns="name"
+  
 >
   <div fxFill>
-    <o-form fxFill service="gyms" entity="gym" keys="gymid" header-actions="R" keys-sql-types="INTEGER" show-header="no">
+    <o-form fxFill service="gyms" entity="gym" keys="gymid" header-actions="R" keys-sql-types="INTEGER" show-header="no" >
       <o-text-input #gymIdField oHidden attr="gymid" sql-type="INTEGER" enabled="no"></o-text-input>   
       <!-- <o-table
       #servicesTable> -->

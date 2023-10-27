@@ -19,24 +19,26 @@
              <div class="titulo">
              <span class="name"
              ><b id="name1">{{ data.name }}</b></span
-           >
+           > <br>
+           <span *ngIf="data.description" class="spanDescription">
+            <!-- <mat-icon>checklist</mat-icon> -->
+            {{ data.description }}
+          </span>
          </div>         <!--  cierre div titulo -->
   
                  </div>       <!--  cierre logo+  titulo -->
      <div class="datos">
       
-       <span *ngIf="data.description" class="spanDescription">
-         <mat-icon>checklist</mat-icon>{{ data.description }}
-       </span>
+      
         <span class="city"
           ><i>{{ data.city }}</i></span
         >
       
 
         <span *ngIf="data.schedule">
-          <mat-icon>schedule</mat-icon>{{ data.schedule }}
+          <mat-icon>schedule</mat-icon>Horario: {{ data.schedule }}
         </span>
-        <span *ngIf="data.rate"> <mat-icon>star</mat-icon> {{ data.rate }} {{ 'stars' | oTranslate }}</span>
+        <span *ngIf="data.rate"> <mat-icon [ngStyle]="{'color':'#B2A000'}">star</mat-icon> {{ data.rate }} {{ 'stars' | oTranslate }}</span>
         <span *ngIf="data.categories">
           <mat-icon>checklist</mat-icon>{{ data.categories }}
         </span>

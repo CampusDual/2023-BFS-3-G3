@@ -517,20 +517,21 @@ $mat-custom-primary: (
     A700 : #F5D969,
   contrast: (50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #ffffff, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #ffffff, A700 : #ffffff));
 
-$mat-custom-accent: (50 : #e3ecf4,
-  100 : #b9d1e4,
-  200 : #8ab2d2,
-  300 : #5b93c0,
-  400 : #377bb3,
-  500 : #1464a5,
-  600 : #125c9d,
-  700 : #0e5293,
-  800 : #0b488a,
-  900 : #063679,
-  A100 : #a8c7ff,
-  A200 : #75a7ff,
-  A400 : #4286ff,
-  A700 : #2876ff,
+$mat-custom-accent: (ç
+50 : #FFFFFF,
+100 : #d1d1d1,
+200 : #F2F2F2,
+300 : #E5E5E5,
+400 : #C9C9C9,
+500 : #7f7f7f,
+600 : #8F8F8F,
+700 : #737676,
+800 : #333535,
+900 : #393E46,
+A100 : #9CA1A9,
+A200 : #B0B4BB,
+A400 : #C3C5CD,
+A700 : #D7D9DE,
   contrast: (50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #ffffff, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #ffffff, A700 : #ffffff));
 
 $primary: mat-palette($mat-custom-primary);

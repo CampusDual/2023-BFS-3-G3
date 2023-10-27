@@ -2,7 +2,7 @@
   service="gyms"
   entity="gym"
   keys="gymid"
-  header-actions="R;I;U;D"
+  header-actions="I;U;D"
   show-header-navigation="no"
   >
   <div style="display: none">
@@ -26,14 +26,23 @@
         sql-type="OTHER"
       ></o-image>
     </div>
-    <h2>{{ 'INFO' | oTranslate }}</h2>
+  
     <!-- datos -->
     <div class="datosform">
+      <h2 class ="title_info">{{ 'INFO' | oTranslate }}</h2>
+
       <!-- Name Column -->
       <div class="nameform">
         <o-text-input
         class="input-padding"
           attr="name"
+          fxFlex="40"
+          required="yes"
+        ></o-text-input>
+
+        <o-text-input
+        class="input-padding"
+          attr="cif"
           fxFlex="40"
           required="yes"
         ></o-text-input>
@@ -98,12 +107,13 @@
 </div> -->
 </div>
 </div>
-<h2>{{ 'gallery' | oTranslate }}</h2>
+<h2 class="galery_title">{{ 'gallery' | oTranslate }}</h2>
   <div class="images">
     <o-column>
       <o-image
         id="image1"
         attr="image1"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -114,6 +124,7 @@
       <o-image
         id="image2"
         attr="image2"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
@@ -124,6 +135,7 @@
       <o-image
         id="image3"
         attr="image3"
+        label=""
         empty-image="assets/images/no-image.png"
         sql-type="OTHER"
         type="image"
