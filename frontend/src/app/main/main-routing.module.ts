@@ -14,22 +14,22 @@ export const routes: Routes = [
       {
         path: "home",
         loadChildren: () =>
-          import("./home/home.module").then((m) => m.HomeModule),
+          import("./home/home.module").then((m) => m.HomeModule), data: { oPermission: { permissionId: 'home'}}
       },
       {
         path: "gyms",
         loadChildren: () =>
-          import("./gyms/gyms.module").then((m) => m.GymsModule),
+          import("./gyms/gyms.module").then((m) => m.GymsModule), data: { oPermission: { permissionId: 'gymadmin', restrictedPermissionsRedirect: '/main/home' }}
       },
       {
         path: "gymsuser",
         loadChildren: () =>
-          import("./gymsuser/gymsuser.module").then((m) => m.GymsuserModule),
+          import("./gymsuser/gymsuser.module").then((m) => m.GymsuserModule),  data: { oPermission: { permissionId: 'gymuser', restrictedPermissionsRedirect: '/main/home' }}
       },
       {
         path: "gymservices",
         loadChildren: () =>
-          import("./services-gymadmin/services-gymadmin.module").then((m) => m.ServicesGymadminModule),
+          import("./services-gymadmin/services-gymadmin.module").then((m) => m.ServicesGymadminModule), data: { oPermission: { permissionId: 'serviceadmin', restrictedPermissionsRedirect: '/main/home' }}
       },
     ],
   },

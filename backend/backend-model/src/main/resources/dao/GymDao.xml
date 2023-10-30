@@ -15,6 +15,7 @@
         <Query id="default">
             <AmbiguousColumns>
                 <AmbiguousColumn name="gymid" prefix="g" databaseName="gymid" />
+                <AmbiguousColumn name="user_" prefix="g" databaseName="user_" />
             </AmbiguousColumns>
             <ValidColumns>
                 <Column>gymid</Column>
