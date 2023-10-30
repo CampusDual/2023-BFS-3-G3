@@ -11,4 +11,7 @@ export const SERVICE_CONFIG: Object = {
   categories: {
     path: "/categories"
   },
+  permissions: {
+    path:'/permissions/permission'
+  },
 };
