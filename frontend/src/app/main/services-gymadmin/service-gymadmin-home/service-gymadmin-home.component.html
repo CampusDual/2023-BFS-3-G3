@@ -19,6 +19,15 @@
       store-state="no"
 
     >
+
+    <o-table-column attr="price" title="price" type="currency"
+      currency-symbol="€" currency-symbol-position="right" grouping="yes"
+      thousand-separator="." decimal-separator="," max-decimal-digits="0">
+    </o-table-column>
+
+    <o-table-column attr="duration" title="duration" type="currency"
+      currency-symbol="min" currency-symbol-position="right" max-decimal-digits="0">
+    </o-table-column>
     </o-table>
   </div>
 </o-form-layout-manager>

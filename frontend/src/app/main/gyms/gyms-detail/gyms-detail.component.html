@@ -2,7 +2,7 @@
   service="gyms"
   entity="gym"
   keys="gymid"
-  header-actions="I;U;D"
+  header-actions="U;D"
   show-header-navigation="no"
   >
   <div style="display: none">
@@ -40,12 +40,20 @@
           required="yes"
         ></o-text-input>
 
-        <o-text-input
+        <!-- cif Column -->
+        <!-- <o-text-input
         class="input-padding"
           attr="cif"
           fxFlex="40"
           required="yes"
-        ></o-text-input>
+        ></o-text-input> -->
+
+        <!-- <o-nif-input
+          attr="cif"
+          class="input-padding"
+          fxFlex="40"
+          required="yes">
+        </o-nif-input> -->
 
         <!-- State Column -->
         <o-slide-toggle
@@ -71,11 +79,9 @@
           attr="city"
           fxFlex="20"
         ></o-text-input>
-        <!-- <o-nif-input attr="ID" class="input-padding" fxFlex="40" required="yes"></o-nif-input> -->
 
-        
         </div>
-        <!-- Schedule Column -->
+        
         <div class="nameform">
 
           <!-- Phone Column -->
@@ -87,8 +93,17 @@
         fxFlex="40"
       ></o-integer-input>
 
+      <o-phone-input
+        attr="phone"
+        label="phone"
+        countries="+34"
+        data="+34"
+        read-only="no"
+        required="yes">
+      </o-phone-input>
+
+      <!-- Schedule Column -->
         <o-text-input
-         
           attr="schedule"
           fxFlex="40"
         ></o-text-input>

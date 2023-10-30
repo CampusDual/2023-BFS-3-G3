@@ -2,7 +2,7 @@
   service="gymservices"
   entity="service"
   keys="serviceid"
-  header-actions="R;I;U;D"
+  header-actions="U;D"
   show-header-navigation="no"
   ><div style="display: none">
     <!-- Id Column -->
@@ -30,13 +30,12 @@
           required="yes"
         ></o-text-input>
       
-       
-        
       </o-row>
       <o-row>
         <!-- Price -->
         <o-integer-input
           attr="price"
+          label="pricelabel"
           class="input-padding"
           grouping="no"
           fxFlex="40"
@@ -45,6 +44,7 @@
         <o-integer-input
           class="input-padding"
           attr="duration"
+          label="durationlabel"
           fxFlex="40"
         ></o-integer-input>        
       </o-row>
