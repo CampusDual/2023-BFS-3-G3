@@ -15,6 +15,7 @@ const routes: Routes = [
     path: "new",
     component: GymsNewComponent,
   },
+  
   {path: ":gymid/gymservices",
   component: GymsServiceComponent,
   },

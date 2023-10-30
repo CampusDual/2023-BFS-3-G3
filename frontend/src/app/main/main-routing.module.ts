@@ -22,6 +22,11 @@ export const routes: Routes = [
           import("./gyms/gyms.module").then((m) => m.GymsModule), data: { oPermission: { permissionId: 'gymadmin', restrictedPermissionsRedirect: '/main/home' }}
       },
       {
+        path: "gymsmaster",
+        loadChildren: () =>
+          import("./gymsmaster/gymsmaster.module").then((m) => m.GymsmasterModule), data: { oPermission: { permissionId: 'gymsmaster', restrictedPermissionsRedirect: '/main/home' }}
+      },
+      {
         path: "gymsuser",
         loadChildren: () =>
           import("./gymsuser/gymsuser.module").then((m) => m.GymsuserModule),  data: { oPermission: { permissionId: 'gymuser', restrictedPermissionsRedirect: '/main/home' }}

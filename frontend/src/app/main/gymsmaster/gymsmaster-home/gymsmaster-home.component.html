@@ -1,0 +1,39 @@
+<o-form-layout-manager
+  attr="gymsLayoutManager"
+  title="{{ 'GYMS' | oTranslate }}"
+  mode="tab"
+  label-columns="name"
+  store-state="no"
+>
+  <div fxFill>
+    <o-table
+      attr="gymsTable"
+      service="gyms"
+      entity="gym"
+      keys="gymid"
+      columns="gymid;photo;name;address;city;cif;phone;email;schedule;description;rate;categories;image1;image2;image3"
+      visible-columns="photo;name;city;schedule;rate;categories"
+      delete-button="false"
+      refresh-button="false" 
+      query-rows="20"
+      store-state="no"
+    >
+      <o-table-column
+        attr="photo"
+        title="photo"
+        orderable="no"
+        searchable="no"
+        type="image"
+        avatar="yes"
+        empty-image="assets/images/no-image.png"
+        image-type="base64"
+      ></o-table-column>
+     
+      <o-table-column attr="rate" title="rate" type="currency"
+      currency-symbol="★" currency-symbol-position="right" grouping="yes"
+      thousand-separator="." decimal-separator="," max-decimal-digits="0">
+      </o-table-column>
+
+    </o-table>
+  </div>
+</o-form-layout-manager>
