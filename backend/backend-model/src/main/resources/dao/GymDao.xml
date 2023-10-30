@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JdbcEntitySetup
+    xmlns="http://www.ontimize.com/schema/jdbc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
+    catalog="" schema="${mainschema}" table="gyms"
+    datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
+    <DeleteKeys>
+        <Column>gymid</Column>
+    </DeleteKeys>
+    <UpdateKeys>
+        <Column>gymid</Column>
+    </UpdateKeys>
+    <Queries>
+        <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="gymid" prefix="g" databaseName="gymid" />
+            </AmbiguousColumns>
+            <ValidColumns>
+                <Column>gymid</Column>
+                <Column>name</Column>
+                <Column>address</Column>
+                <Column>city</Column>
+                <Column>cif</Column>
+                <Column>phone</Column>
+                <Column>email</Column>
+                <Column>schedule</Column>
+                <Column>description</Column>
+                <Column>state</Column>
+                <Column>user_</Column>
+                <Column>photo</Column>
+                <Column>image1</Column>
+                <Column>image2</Column>
+                <Column>image3</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+                    select #COLUMNS#, round(avg(r.rate), 0) as rate,
+                        (select string_agg(distinct c.name, ', ')
+                           from ${mainschema}.categories c
+                           join ${mainschema}.services s on c.categoryid = s.categoryid
+                           where s.gymid = g.gymid
+                          ) as categories
+                    from ${mainschema}.gyms g
+                    left join ${mainschema}.reviews r
+                    on g.gymid = r.gymid
+                    #WHERE#
+                    group by g.gymid;
+                ]]>
+            </Sentence>
+        </Query>
+    </Queries>
+</JdbcEntitySetup>

@@ -1,0 +1,82 @@
+<div class="containerGridDetail">
+ 
+  <!-- container 1 -->  
+<div class="container_log_datos">
+
+      <div class="logo">
+                 <o-image
+            class="logo_gym"
+            attr="photo"
+            data="{{ data.photo }}"
+            read-only="true"
+            show-controls="false"
+            type="image"
+            empty-image="assets/images/no-image.png"
+            image-type="base64" >
+             </o-image>
+
+           </div>   <!-- cierre  div logo -->
+             <div class="titulo">
+             <span class="name"
+             ><b id="name1">{{ data.name }}</b></span
+           > <br>
+           <span *ngIf="data.description" class="spanDescription">
+            <!-- <mat-icon>checklist</mat-icon> -->
+            {{ data.description }}
+          </span>
+         </div>         <!--  cierre div titulo -->
+  
+                 </div>       <!--  cierre logo+  titulo -->
+     <div class="datos">
+      
+      
+        <span class="city"
+          ><i>{{ data.city }}</i></span
+        >
+      
+
+        <span *ngIf="data.schedule">
+          <mat-icon>schedule</mat-icon>Horario: {{ data.schedule }}
+        </span>
+        <span *ngIf="data.rate"> <mat-icon [ngStyle]="{'color':'#B2A000'}">star</mat-icon> {{ data.rate }} {{ 'stars' | oTranslate }}</span>
+        <span *ngIf="data.categories">
+          <mat-icon>checklist</mat-icon>{{ data.categories }}
+        </span>
+      </div>      <!--  cierre div datos -->
+
+
+   <div class="images_carro">
+
+ <o-image
+   class="image1"
+   attr="image1"
+   data="{{ data.image1 }}"
+   read-only="true"
+   show-controls="false"
+   type="image"
+   empty-image="assets/images/no-image.png"
+   image-type="base64">
+ </o-image>
+ <o-image
+   class="image1"
+   attr="image2"
+   data="{{ data.image2 }}"
+   read-only="true"
+   show-controls="false"
+   type="image"
+   empty-image="assets/images/no-image.png"
+   image-type="base64"
+ ></o-image>
+
+ <o-image
+   class="image1"
+   attr="image3"
+   data="{{ data.image3 }}"
+   read-only="true"
+   show-controls="false"
+   type="image"
+   empty-image="assets/images/no-image.png"
+   image-type="base64"
+ ></o-image>
+</div>
+</div>

@@ -1,0 +1,48 @@
+<o-form-layout-manager
+  title="{{ 'SERVICES' | oTranslate }}"
+  separator=" "
+  mode="tab"
+  label-columns="name"
+  
+>
+  <div fxFill>
+    <o-form fxFill service="gyms" entity="gym" keys="gymid" header-actions="R" keys-sql-types="INTEGER" show-header="no" >
+      <o-text-input #gymIdField oHidden attr="gymid" sql-type="INTEGER" enabled="no"></o-text-input>   
+      <!-- <o-table
+      #servicesTable> -->
+      <!-- attr="servicesTable"
+      service="gymservices"
+      entity="service"
+      keys="serviceid"
+      parent-keys="gymid"
+      columns="serviceid;name;description;price;duration;categoryid;gymid"
+      visible-columns="name;description;price;duration"
+      query-rows="20"
+      >
+    <o-table-column attr="price" title="price" type="currency" currency-symbol="€" currency-symbol-position="right"></o-table-column>
+    </o-table> -->
+
+    <!-- <o-list #serviceList attr="serviceList" title="SERVICES" service="gymservices" entity="service"
+  keys="serviceid" parent-keys="gymid" columns="serviceid;name;description;price;duration;categoryid;gymid">
+  <o-list-item *ngFor="let row of list.dataArray">
+    <o-list-item-text #item title="{{ row.name }}" primary-text="{{ row.description }}"
+      secondary-text="{{ row.price }} €, {{ row.duration }} {{ 'minutes' | oTranslate }}">
+    </o-list-item-text>
+  </o-list-item>
+</o-list> -->
+
+
+<o-grid #serviceGrid columns="serviceid;name;description;price;duration;categoryid;gymid" keys="serviceid" parent-keys="gymid" service="gymservices" entity="service"
+  show-page-size="yes" page-size-options="8" cols="1" gutter-size="0px" grid-item-height="5:1">
+  <o-grid-item *ngFor="let list of serviceGrid.dataArray">
+    <o-column layout-padding class="container-item">
+      <h4> {{list.name}} </h4>
+      <p>{{ list.description }}</p>
+      <p>{{ list.price }} €, {{ list.duration }} {{ 'minutes' | oTranslate }}</p>
+    </o-column>
+  </o-grid-item>
+</o-grid>
+<!-- </o-table> -->
+  </o-form>
+  </div>
+</o-form-layout-manager>

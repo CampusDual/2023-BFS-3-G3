@@ -1,0 +1,16 @@
+
+.div_button_services{
+    display: flex;
+    justify-content: center;
+
+}
+
+.o-button {
+    width: 80px;
+
+}
+
+.o-slide-toggle {
+    margin-left: 2rem;
+}
+

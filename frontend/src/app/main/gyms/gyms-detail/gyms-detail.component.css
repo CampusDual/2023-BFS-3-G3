@@ -1,0 +1,21 @@
+
+.div_button_services{
+    display: flex;
+    justify-content: center;
+}
+
+.o-button {
+    width: 150px;
+}
+
+.o-slide-toggle {
+    margin-left: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.columndetails {
+    gap: 20px;
+}

@@ -1,0 +1,33 @@
+<o-form-layout-manager
+  attr="gymsLayoutManager"
+  title="{{ 'SERVICES' | oTranslate }}"
+  mode="tab"
+  label-columns="name"
+  store-state="no"
+>
+  <div fxFill>
+    <o-table
+      attr="servicesTable"
+      service="gymservices"
+      entity="service"
+      keys="serviceid"
+      columns="serviceid;name;description;duration;price;categoryid;gymid;categories"
+      visible-columns="name;description;duration;price;categories"
+      delete-button="false"
+      refresh-button="false"
+      query-rows="20"
+      store-state="no"
+
+    >
+
+    <o-table-column attr="price" title="price" type="currency"
+      currency-symbol="€" currency-symbol-position="right" grouping="yes"
+      thousand-separator="." decimal-separator="," max-decimal-digits="0">
+    </o-table-column>
+
+    <o-table-column attr="duration" title="duration" type="currency"
+      currency-symbol="min" currency-symbol-position="right" max-decimal-digits="0">
+    </o-table-column>
+    </o-table>
+  </div>
+</o-form-layout-manager>
