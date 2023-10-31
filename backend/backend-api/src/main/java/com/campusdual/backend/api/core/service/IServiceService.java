@@ -11,4 +11,5 @@ public interface IServiceService {
     public EntityResult serviceInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
     public EntityResult serviceUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult serviceDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult myServiceQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 }

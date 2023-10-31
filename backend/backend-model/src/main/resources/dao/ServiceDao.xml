@@ -17,6 +17,7 @@
                 <AmbiguousColumn name="categoryid" prefix="s" databaseName="categoryid" />
                 <AmbiguousColumn name="name" prefix="s" databaseName="name" />
                 <AmbiguousColumn name="description" prefix="s" databaseName="description" />
+                <AmbiguousColumn name="gymid" prefix="s" databaseName="gymid" />
             </AmbiguousColumns>
             <ValidColumns>
                 <Column>serviceid</Column>
@@ -30,10 +31,11 @@
             <Sentence>
                 <![CDATA[
                     SELECT
-                        #COLUMNS#, c.name as categories
+                        #COLUMNS#, c.name as categories, g.user_
                     FROM
                         ${mainschema}.services s
                         join ${mainschema}.categories c on c.categoryid = s.categoryid
+                        join ${mainschema}.gyms g on s.gymid = g.gymid
                     #WHERE#
                 ]]>
             </Sentence>
