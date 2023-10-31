@@ -27,6 +27,7 @@
                 <Column>duration</Column>
                 <Column>categoryid</Column>
                 <Column>gymid</Column>
+                <Column>user_</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[

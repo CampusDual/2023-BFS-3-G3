@@ -1,6 +1,6 @@
 <o-form #form
   service="gymservices"
-  entity="service"
+  entity="myService"
   keys="serviceid"
   header-actions="R;I;U;D"
   show-header-navigation="no"
@@ -33,7 +33,7 @@
         </o-row>
 
         <o-row>
-          <o-combo attr="gymid" label="gym" fxFlex="50" service="gyms" entity="gym" keys="gymid" columns="gymid;name"
+          <o-combo attr="gymid" label="gym" fxFlex="50" service="gyms" entity="myGym" keys="gymid" columns="gymid;name"
                   visible-columns="name" value-column="gymid" class="input-padding"></o-combo>
         </o-row>
         

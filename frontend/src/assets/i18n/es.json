@@ -47,5 +47,7 @@
   "minutes": "minutos",
   "gallery": "Galería",
   "gym": "Gimnasio",
-  "MESSAGES.CONFIRM_DELETE": "¿Está seguro de querer realizar esta operación?"
+  "MESSAGES.CONFIRM_DELETE": "¿Está seguro de querer realizar esta operación?",
+  "REGISTER": "Apúntate",
+  "REGISTER_TITLE": "Apúntate y disfruta de WheGym!"
 }

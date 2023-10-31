@@ -14,4 +14,7 @@ export const SERVICE_CONFIG: Object = {
   permissions: {
     path:'/permissions/permission'
   },
+  users: {
+    path:'/users'
+  }
 };

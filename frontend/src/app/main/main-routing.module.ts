@@ -31,6 +31,11 @@ export const routes: Routes = [
         loadChildren: () =>
           import("./services-gymadmin/services-gymadmin.module").then((m) => m.ServicesGymadminModule), data: { oPermission: { permissionId: 'serviceadmin', restrictedPermissionsRedirect: '/main/home' }}
       },
+      {
+        path: "users",
+        loadChildren: () =>
+          import("./profiles/profiles.module").then((m) => m.ProfilesModule), data: { oPermission: { permissionId: 'profile'}}
+      }
     ],
   },
 ];
