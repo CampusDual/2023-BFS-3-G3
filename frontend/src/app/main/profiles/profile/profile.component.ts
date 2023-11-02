@@ -1,7 +1,5 @@
-import { Component, Inject, Injector, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, ValidatorFn } from '@angular/forms';
-import { MatDialogRef } from '@angular/material';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Injector, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { AuthService, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
 
 @Component({
@@ -11,76 +9,55 @@ import { AuthService, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
 })
 export class ProfileComponent implements OnInit {
 
-  protected userService: OntimizeService;
-  validatorsConfirmPasswordArray: ValidatorFn[] = []; //array para la validación de 2 contraseñas iguales.
+  @ViewChild('form',{static:true}) form:OFormComponent;
 
-  public pass: string | undefined;
-  public confirm_pass: string | undefined;
+  public validatorArray: ValidatorFn[] = [];
 
-  @ViewChild("form", { static: false }) form: OFormComponent;
-
-  dialogForm: FormGroup;
+  public admin:number;
+  public user:number;
 
   constructor(
-    public injector: Injector,
-    // private dialogRef: MatDialogRef<ProfileComponent>,
-    private router: Router,
-    private actRoute: ActivatedRoute,
-    @Inject(AuthService)
-    private authService: AuthService,
-    private fb: FormBuilder
-  ) {
-    this.validatorsConfirmPasswordArray.push(this.passwordMatchValidator);
-    this.userService = this.injector.get(OntimizeService);
+    private auth:AuthService,
+    private ontimizeService: OntimizeService,
+    ) {
   }
 
   ngOnInit() {
-    this.dialogForm = this.fb.group({});
-    this.configureUserService();
+    this.validatorArray.push(this.matchValidator);
   }
 
-  public async send() {
-    const password = this.form.formGroup.get("password").value;
-    const confirmPassword = this.form.formGroup.get("confirm_password").value;
-    const userName = this.form.formGroup.get("user").value;
-
-    if (password !== confirmPassword) {
-      console.log("pass no igual");
-      alert("Las contraseñas no coinciden");
-    } else {
-      this.form.insert();
-    }
+  ngAfterViewInit(){
+    this.form.queryData({user_:this.auth.getSessionInfo().user});
   }
 
-  public configureUserService() {
-    const conf = this.userService.getDefaultServiceConfiguration("users");
-    this.userService.configureService(conf);
+  formInit(){
+    this.form.setFieldValue("PASSWORDCONFIRM",this.form.getFieldValue("password"));
   }
 
-  public forceInsertMode(event: any) {
-    if (event != OFormComponent.Mode().INSERT) {
-      this.form.setInsertMode();
-    }
-  }
-
-  // public closeDialog(event: any) {
-  //   this.dialogRef.close();
-  // }
-
-  passwordMatchValidator(control: any): any {
+  public matchValidator(control: FormControl): ValidationErrors {
     try {
-      const password = control.parent
-        ? control.parent.controls["password"].value
-        : null;
-      const confirm_password = control.value;
-      return password === confirm_password
-        ? null
-        : { passwordsNotMatched: true };
-    } catch (e) {}
-  }
-  public reviewMatches(event: Event) {
-    this.form.formGroup.controls["confirm_password"].updateValueAndValidity();
-    this.form.formGroup.get("confirm_password").markAsTouched();
+      const password = control.parent ? control.parent.controls['password'].value : null
+      const passwordConfirm = control.parent ? control.parent.controls['PASSWORDCONFIRM'].value : null
+      if(password && passwordConfirm && password != passwordConfirm){
+        return { mustMatch: true }
+      }else{
+        return null;
+      }
+    }catch(e){
+      return null;
+    }
   }
 
+  public reviewMatches(event: Event){
+    this.form.formGroup.controls['PASSWORDCONFIRM'].updateValueAndValidity();
+    this.form.formGroup.get('PASSWORDCONFIRM').markAsTouched();
+  }
+
+
+  public deleteUser(){
+    this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
+    this.ontimizeService.query(undefined, ['id_rolename'], 'user').subscribe(
+      res => {
+  });
+}
 }

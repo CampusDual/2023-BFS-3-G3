@@ -13,6 +13,9 @@
     </UpdateKeys>
     <Queries>
         <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="user_" prefix="t" databaseName="user_" />
+            </AmbiguousColumns>
             <ValidColumns>
                 <Column>user_</Column>
                 <Column>password</Column>
@@ -26,13 +29,16 @@
                 <Column>city</Column>
                 <Column>phone</Column>
                 <Column>address</Column>
+                <Column>id_rolename</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[
                     SELECT
                         #COLUMNS#
                     FROM
-                        ${mainschema}.tuser
+                        ${mainschema}.tuser t
+                       JOIN ${mainschema}.tuser_role tr
+                       ON t.user_ = tr.user_
                     #WHERE#
                 ]]>
             </Sentence>

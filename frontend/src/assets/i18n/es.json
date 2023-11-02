@@ -52,5 +52,6 @@
   "REGISTER": "Apúntate",
   "REGISTER_TITLE": "Apúntate y disfruta de WheGym!",
   "USER_PROFILE": "Perfil de usuario",
-  "user_": "Alias"
+  "user_": "Alias",
+  "password": "Contraseña"
 }

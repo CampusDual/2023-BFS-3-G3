@@ -52,5 +52,6 @@
   "REGISTER": "Sign up",
   "REGISTER_TITLE": "Sign up and enjoy WheGym!",
   "USER_PROFILE": "User profile",
-  "user_": "Nickname"
+  "user_": "Nickname",
+  "password": "Password"
 }
