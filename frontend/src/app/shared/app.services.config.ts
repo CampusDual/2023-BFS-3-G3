@@ -12,9 +12,9 @@ export const SERVICE_CONFIG: Object = {
     path: "/categories"
   },
   permissions: {
-    path:'/permissions/permission'
+    path:"/permissions/permission"
   },
   users: {
-    path:'/users'
+    path:"/users"
   }
 };

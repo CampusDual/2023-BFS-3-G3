@@ -24,6 +24,7 @@
   "MY_SERVICES": "My services",
   "SERVICES": "Services",
   "name": "Name",
+  "surname": "Surname",
   "address": "Adress",
   "city": "City",
   "phone": "Phone",
@@ -49,5 +50,7 @@
   "gym": "Gym",
   "MESSAGES.CONFIRM_DELETE": "Are you sure you want to perform this operation?",
   "REGISTER": "Sign up",
-  "REGISTER_TITLE": "Sign up and enjoy WheGym!"
+  "REGISTER_TITLE": "Sign up and enjoy WheGym!",
+  "USER_PROFILE": "User profile",
+  "user_": "Nickname"
 }

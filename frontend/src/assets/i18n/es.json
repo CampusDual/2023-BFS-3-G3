@@ -24,6 +24,7 @@
   "MY_SERVICES": "Mis servicios",
   "SERVICES": "Servicios",
   "name": "Nombre",
+  "surname": "Apellido",
   "address": "Dirección",
   "city": "Ciudad",
   "phone": "Teléfono",
@@ -49,5 +50,7 @@
   "gym": "Gimnasio",
   "MESSAGES.CONFIRM_DELETE": "¿Está seguro de querer realizar esta operación?",
   "REGISTER": "Apúntate",
-  "REGISTER_TITLE": "Apúntate y disfruta de WheGym!"
+  "REGISTER_TITLE": "Apúntate y disfruta de WheGym!",
+  "USER_PROFILE": "Perfil de usuario",
+  "user_": "Alias"
 }
