@@ -49,15 +49,30 @@ export class ProfileComponent implements OnInit {
   }
 
   public reviewMatches(event: Event){
-    this.form.formGroup.controls['PASSWORDCONFIRM'].updateValueAndValidity();
-    this.form.formGroup.get('PASSWORDCONFIRM').markAsTouched();
+    this.form.formGroup.controls['passwordconfirm'].updateValueAndValidity();
+    this.form.formGroup.get('passwordconfirm').markAsTouched();
   }
 
 
   public deleteUser(){
     this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
-    this.ontimizeService.query(undefined, ['id_rolename'], 'user').subscribe(
+    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['id_rolename', 'activeGym'], 'deletableUser').subscribe(
       res => {
-  });
-}
+        if(res.data && res.data.length > 0) {
+          if(res.data[0].id_rolename == 1 && res.data[0].activeGym >0) {
+            alert("Para eliminar tus datos ponte en contacto con WheGym");
+          }
+          else{
+            this.ontimizeService.delete({user_:this.auth.getSessionInfo().user}, 'user').subscribe(
+              res => {
+                if(res.code == 0) {
+                  alert("Tus datos han sido borrados con éxito");
+                }
+              }
+            )
+          }
+
+        }
+    });
+  }
 }

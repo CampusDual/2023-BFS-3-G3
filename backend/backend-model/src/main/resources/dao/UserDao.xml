@@ -42,7 +42,31 @@
                     #WHERE#
                 ]]>
             </Sentence>
-        </Query>    
+        </Query>
+        <Query id="deletable">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="user_" prefix="t" databaseName="user_" />
+            </AmbiguousColumns>
+            <ValidColumns>
+                <Column>user_</Column>
+                <Column>id_rolename</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+                    SELECT
+                        #COLUMNS#, COUNT(g.state) AS activeGym
+                    FROM
+                        ${mainschema}.tuser t
+                       JOIN ${mainschema}.tuser_role tr
+                       ON t.user_ = tr.user_
+                       LEFT JOIN ${mainschema}.gyms g
+                       ON g.user_= tr.user_
+                       AND g.state = true
+                    #WHERE#
+                    GROUP BY t.user_, tr.id_rolename
+                ]]>
+            </Sentence>
+        </Query>
         <Query id="login">
             <ValidColumns>
                 <Column>user_</Column>
