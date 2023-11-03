@@ -49,6 +49,7 @@
   "gallery": "Gallery",
   "gym": "Gym",
   "MESSAGES.CONFIRM_DELETE": "Are you sure you want to perform this operation?",
+  "MESSAGES.FORM_VALIDATION_ERROR": "Check that there are no empty fields and confirm your password",
   "REGISTER": "Sign up",
   "REGISTER_TITLE": "Sign up and enjoy WheGym!",
   "USER_PROFILE": "User profile",

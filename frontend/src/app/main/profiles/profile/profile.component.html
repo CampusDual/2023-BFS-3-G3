@@ -5,28 +5,30 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
   <o-row>
     <o-column title="USER_PROFILE"  class="login-column">
       <o-row>
-        <o-text-input class="input-padding" attr="name" width="250px" required="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="name" width="375px" required="yes"></o-text-input>
       </o-row>
       <o-row>
-        <o-text-input class="input-padding" attr="surname" width="250px" required="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="surname" width="375px" required="yes"></o-text-input>
       </o-row>
       <o-row>
-        <o-text-input class="input-padding" attr="address" width="250px" required="no"></o-text-input>
+        <o-text-input class="input-padding" attr="address" width="375px" required="no"></o-text-input>
       </o-row>
       <o-row>
-        <o-text-input class="input-padding" attr="phone" width="250px" required="yes"></o-text-input>
+
+        <o-phone-input class="input-padding" attr="phone" width="375px" countries="+34" data="+34" read-only="no" required="yes"></o-phone-input>
+        <!-- <o-text-input class="input-padding" attr="phone" width="375px" required="yes"></o-text-input> -->
       </o-row>
       <o-row>
-        <o-email-input attr="email" width="250px"></o-email-input>
+        <o-email-input attr="email" width="375px"></o-email-input>
       </o-row>
       <o-row>   
-        <o-text-input class="input-padding" attr="user_"  required="yes" width="250px" read-only="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="user_"  required="yes" width="375px" read-only="yes"></o-text-input>
       </o-row>
       <o-row>
-        <o-password-input  class="input-padding" attr="password"  required="yes" width="250px" show-password-button="yes" (onChange)="reviewMatches($event)"></o-password-input>
+        <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes" (onChange)="reviewMatches($event)"></o-password-input>
       </o-row>
       <o-row>
-        <o-password-input  class="this.className" attr="passwordconfirm" width="250px" required="yes" show-password-button="yes" [validators]="validatorArray">
+        <o-password-input  class="this.className" attr="passwordconfirm" width="375px" required="yes" show-password-button="yes" [validators]="validatorArray">
           <o-validator error-name="mustMatch" error-text="Password must match"></o-validator>
         </o-password-input>
       </o-row> 

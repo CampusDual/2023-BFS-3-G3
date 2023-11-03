@@ -49,6 +49,7 @@
   "gallery": "Galería",
   "gym": "Gimnasio",
   "MESSAGES.CONFIRM_DELETE": "¿Está seguro de querer realizar esta operación?",
+  "MESSAGES.FORM_VALIDATION_ERROR": "Comprueba que no existan campos vacíos y confirma tu contraseña",
   "REGISTER": "Apúntate",
   "REGISTER_TITLE": "Apúntate y disfruta de WheGym!",
   "USER_PROFILE": "Perfil de usuario",
