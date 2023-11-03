@@ -58,7 +58,5 @@
   "password": "Password",
   "DELETE": "Delete",
   "GENERATE_QR": "Generate QR",
-  "active": "Activate membership",
-  "TABLE.DIALOG.TITLE_GROUPBY": "Agrupar / desagrupar por columnas",
-  "DIALOG.INFO_DIALOG": ""
+  "active": "Activate membership"
 }

@@ -1,7 +1,7 @@
 <o-form #form attr="profile_detail" service="users" entity="user" fxLayout="column"
 show-header="no" header-actions="U" keys="user_" keys-sql-types="VARCHAR"
 show-header-navigation="yes">
-            
+           
     <div class="ontimize-buttons">
         <button
             mat-raised-button
@@ -10,17 +10,16 @@ show-header-navigation="yes">
             (click)="showQr()">{{ 'GENERATE_QR' | oTranslate }}
         </button>
     </div>
-
+ 
     <div id="qrid" style="display: none;">
         <qrcode
-            [qrdata]="myAngularxQrCode"
+            [qrdata]="data.name + data.surname"
             [width]="300"
             [errorCorrectionLevel]="'M'"
             class="bshadow">
         </qrcode>
     </div>
 </o-form>
-
 
 
 
