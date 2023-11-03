@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { AuthService, DialogService, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
+import { AuthService, DialogService, OFormComponent, OntimizeService, OTranslateService } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-access-card',
@@ -17,6 +17,7 @@ export class AccessCardComponent implements OnInit {
     private auth:AuthService,
     private ontimizeService: OntimizeService,
     protected dialogService: DialogService,
+    protected translateService: OTranslateService
   ) {
     this.myAngularxQrCode = 'El usuario tiene el acceso permitido';
   }
