@@ -29,7 +29,7 @@ export const routes: Routes = [
       {
         path: "gymsuser",
         loadChildren: () =>
-          import("./gymsuser/gymsuser.module").then((m) => m.GymsuserModule),  data: { oPermission: { permissionId: 'gymuser', restrictedPermissionsRedirect: '/main/home' }}
+          import("./gymsuser/gymsuser.module").then((m) => m.GymsuserModule),  data: { oPermission: { permissionId: 'gymuser', restrictedPermissionsRedirect: '/main/gyms' }}
       },
       {
         path: "gymservices",
