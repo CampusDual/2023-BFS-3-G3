@@ -1,0 +1,19 @@
+<o-form #form attr="profile_detail" service="users" entity="user" fxLayout="column"
+show-header="no" header-actions="U" keys="user_" keys-sql-types="VARCHAR"
+show-header-navigation="yes">
+  
+<o-text-input class="input-padding" attr="name" width="375px" required="yes" enabled="no"></o-text-input>
+    <div class="ontimize-buttons">
+        <o-button attr="basic1" type="STROKED" label="GENERATE_QR" layout-padding color="primary" (click)="deleteUser()"></o-button>
+    </div>
+
+</o-form>
+<qrcode
+    [qrdata]="myAngularxQrCode"
+    [width]="256"
+    [errorCorrectionLevel]="'M'"
+    class="bshadow"
+>
+    </qrcode>
+
+

@@ -26,6 +26,10 @@ export class ProfileComponent implements OnInit {
     this.validatorArray.push(this.matchValidator);
   }
 
+  getValue() {
+    return true;
+  }
+
   ngAfterViewInit(){
     this.form.queryData({user_:this.auth.getSessionInfo().user});
   }

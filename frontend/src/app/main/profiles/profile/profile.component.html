@@ -22,7 +22,9 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
         <o-email-input attr="email" width="375px"></o-email-input>
       </o-row>
       <o-row>   
-        <o-text-input class="input-padding" attr="user_"  required="yes" width="375px" read-only="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="user_"  required="yes" width="180px" read-only="yes"></o-text-input>
+        <o-slide-toggle class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
+        ></o-slide-toggle>
       </o-row>
       <o-row>
         <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes" (onChange)="reviewMatches($event)"></o-password-input>
@@ -31,7 +33,7 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
         <o-password-input  class="this.className" attr="passwordconfirm" width="375px" required="yes" show-password-button="yes" [validators]="validatorArray">
           <o-validator error-name="mustMatch" error-text="Password must match"></o-validator>
         </o-password-input>
-      </o-row> 
+      </o-row>
       <div class="ontimize-buttons">
         <o-button attr="basic1" type="STROKED" label="DELETE" layout-padding color="primary" (click)="deleteUser()"></o-button>
       </div>  

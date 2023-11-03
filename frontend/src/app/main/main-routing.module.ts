@@ -17,6 +17,11 @@ export const routes: Routes = [
           import("./home/home.module").then((m) => m.HomeModule), data: { oPermission: { permissionId: 'home'}}
       },
       {
+        path: "accesscard",
+        loadChildren: () =>
+          import("./access-card/access-card.module").then((m) => m.AccessCardModule), data: { oPermission: { permissionId: 'home'}}
+      },
+      {
         path: "gyms",
         loadChildren: () =>
           import("./gyms/gyms.module").then((m) => m.GymsModule), data: { oPermission: { permissionId: 'gymadmin', restrictedPermissionsRedirect: '/main/home' }}

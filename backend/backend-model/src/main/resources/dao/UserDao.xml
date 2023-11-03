@@ -30,6 +30,7 @@
                 <Column>phone</Column>
                 <Column>address</Column>
                 <Column>id_rolename</Column>
+                <Column>active</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[
@@ -81,6 +82,7 @@
                 <Column>city</Column>
                 <Column>phone</Column>
                 <Column>address</Column>
+                <Column>active</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[

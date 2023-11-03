@@ -22,6 +22,7 @@
   "GYMS": "Gyms",
   "MY_GYMS": "My gyms",
   "MY_SERVICES": "My services",
+  "ACCESS_CARD": "Access card",
   "SERVICES": "Services",
   "name": "Name",
   "surname": "Surname",
@@ -55,5 +56,7 @@
   "USER_PROFILE": "User profile",
   "user_": "Nickname",
   "password": "Password",
-  "DELETE": "Delete"
+  "DELETE": "Delete",
+  "GENERATE_QR": "Generate QR",
+  "active": "Activate membership"
 }
