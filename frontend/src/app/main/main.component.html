@@ -1,5 +1,10 @@
 <o-app-layout show-language-selector="yes">
   <o-user-info-configuration show-profile="yes" show-settings="no" [routerLink] ="['./main/profile']">
   </o-user-info-configuration>
-  <router-outlet></router-outlet>
+  <router-outlet>
+    <o-card-menu-layout parent-menu-id="views">
+      <o-card-menu-item button-text="Show" title="Documentation"></o-card-menu-item>
+    </o-card-menu-layout>
+    
+  </router-outlet>
 </o-app-layout>

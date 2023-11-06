@@ -11,41 +11,68 @@
 
   .login-outer-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    overflow: auto;
-
+  
     .login-bg-container {
       background-image: url("^assets/images/fondo-login.jpg");
-      width: calc(100% - 640px);
-      background-repeat: no-repeat;
-      background-size:cover;
-      background-position: center;
-      position: relative;
-      z-index: 1;
+      width: calc(100% - 500px);
+      height: 100vh;
+   
     }
-
-    .login-bg-container::before {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: -1;
+ 
+    video{
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.1);
-      opacity: 0.8;
+      object-fit: fill;
     }
 
+  // .login-outer-container {
+  //   width: 100%;
+  //   height: 100%;
+  //   display: -webkit-box;
+  //   display: -webkit-flex;
+  //   display: -moz-box;
+  //   display: -ms-flexbox;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   align-items: stretch;
+  //   overflow: auto;
+
+  //   .login-bg-container {
+  //     // background-image: url("^assets/images/fondo-login.jpg");
+  //     width: calc(100% - 640px);
+  //     // background-repeat: no-repeat;
+  //     // background-size:cover;
+  //     // background-position: center;
+  //     position: relative;
+  //     z-index: 1;
+  //     height: 100vh;
+  //   }
+  //   video {
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+
+    // .login-bg-container::before {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   z-index: -1;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: 0;
+    //   background: rgba(0, 0, 0, 0.1);
+    //   opacity: 0.8;
+    // }
+
     .wrapp-login {
-      width: 640px;
+      width: 500px;
       min-height: 100%;
 
       .login-inner-container {
@@ -112,6 +139,8 @@
     width: 100%;
     height: 40px;
     z-index: 2;
+    display:flex;
+    justify-content: center;
 
     div {
       height: 40px;
