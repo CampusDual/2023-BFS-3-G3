@@ -1,6 +1,7 @@
-import { Component, Injector, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, Injector, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
-import { AuthService, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService, DialogService, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-profile',
@@ -19,6 +20,10 @@ export class ProfileComponent implements OnInit {
   constructor(
     private auth:AuthService,
     private ontimizeService: OntimizeService,
+    protected dialogService: DialogService,
+    private router: Router,
+    private actRoute: ActivatedRoute,
+    @Inject(AuthService) private authService: AuthService,
     ) {
   }
 
@@ -64,13 +69,14 @@ export class ProfileComponent implements OnInit {
       res => {
         if(res.data && res.data.length > 0) {
           if(res.data[0].id_rolename == 1 && res.data[0].activeGym >0) {
-            alert("Para eliminar tus datos ponte en contacto con WheGym");
+            this.dialogService.info('Tus datos no han podido ser borrados', 'Ponte en contacto con WheGym');
           }
           else{
             this.ontimizeService.delete({user_:this.auth.getSessionInfo().user}, 'user').subscribe(
               res => {
                 if(res.code == 0) {
-                  alert("Tus datos han sido borrados con éxito");
+                  this.dialogService.info('Tus datos han sido borrados con éxito', 'Esperamos volver a verte');
+                  this.authService.logout();
                 }
               }
             )

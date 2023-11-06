@@ -13,7 +13,7 @@ show-header-navigation="yes">
  
     <div id="qrid" style="display: none;">
         <qrcode
-            [qrdata]="data.name + data.surname"
+            [qrdata]="data.name +' '+ data.surname +': '+ 'Acceso permitido'" 
             [width]="300"
             [errorCorrectionLevel]="'M'"
             class="bshadow">

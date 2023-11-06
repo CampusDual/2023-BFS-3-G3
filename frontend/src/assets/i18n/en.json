@@ -58,5 +58,6 @@
   "password": "Password",
   "DELETE": "Delete",
   "GENERATE_QR": "Generate QR",
-  "active": "Activate membership"
+  "active": "Activate membership",
+  "DIALOG_SERVICE": "Logout completed"
 }

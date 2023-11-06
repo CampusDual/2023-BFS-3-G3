@@ -40,7 +40,7 @@ export class AccessCardComponent implements OnInit {
              this.myAngularxQrCode = this.data.name + this.data.surname
           } else {
             this.dialogService.info('QR no generado',
-            'Tienes la membresía caducada')
+            'Tienes la suscripción caducada')
           }
         }
       },

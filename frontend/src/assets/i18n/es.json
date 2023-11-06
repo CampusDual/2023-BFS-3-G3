@@ -58,5 +58,6 @@
   "password": "Contraseña",
   "DELETE": "Borrar",
   "GENERATE_QR": "Generar QR",
-  "active": "Activar membresía"
+  "active": "Activar suscripción",
+  "TABLE.DIALOG.SAVE_FILTER": "Seleccione un nome para o filtro."
 }
