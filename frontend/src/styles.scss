@@ -126,3 +126,12 @@
   margin-top: 3rem;
 }
 
+.application-layout-content-wrapper {
+  height: 100vh;
+  // background-image: linear-gradient(to bottom, rgba(112, 111, 105, 0.2) 0%, rgba(54, 53, 42, 0.56) 100%), url(../../../assets/images/fondo.jpg);
+  background-image: linear-gradient(to bottom, rgba(112, 111, 105, 0.2) 0%, rgba(54, 53, 42, 0.56) 100%), url("^assets/images/fondo-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ECEFF1;
+}
+

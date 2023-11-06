@@ -56,8 +56,9 @@
   "USER_PROFILE": "Perfil de usuario",
   "user_": "Alias",
   "password": "Contraseña",
+  "passwordconfirm": "Confirmar contraseña",
   "DELETE": "Borrar",
   "GENERATE_QR": "Generar QR",
-  "active": "Activar suscripción",
-  "TABLE.DIALOG.SAVE_FILTER": "Seleccione un nome para o filtro."
+  "active": "Estado suscripción",
+  "status" : "status ok"
 }

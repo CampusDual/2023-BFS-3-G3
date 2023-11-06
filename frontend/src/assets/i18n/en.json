@@ -56,8 +56,9 @@
   "USER_PROFILE": "User profile",
   "user_": "Nickname",
   "password": "Password",
+  "passwordconfirm": "Password confirm",
   "DELETE": "Delete",
   "GENERATE_QR": "Generate QR",
-  "active": "Activate membership",
-  "DIALOG_SERVICE": "Logout completed"
+  "active": "Membership state",
+  "status" : "status ok"
 }

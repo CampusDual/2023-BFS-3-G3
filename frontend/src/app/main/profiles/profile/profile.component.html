@@ -23,7 +23,7 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
       </o-row>
       <o-row>   
         <o-text-input class="input-padding" attr="user_"  required="yes" width="180px" read-only="yes"></o-text-input>
-        <o-slide-toggle class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
+        <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
         ></o-slide-toggle>
       </o-row>
       <o-row>

@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CONFIG } from './app.config';
 import { QRCodeModule } from 'angularx-qrcode';
+import { MatSlideToggleModule } from '@angular/material';
+import { CommonModule } from '@angular/common';
 
 // Standard providers...
 // Defining custom providers (if needed)...
@@ -19,6 +21,8 @@ export const customProviders: any = [
     OntimizeWebModule,
     AppRoutingModule,
     QRCodeModule,
+    MatSlideToggleModule,
+    CommonModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [

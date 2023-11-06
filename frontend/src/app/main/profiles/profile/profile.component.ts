@@ -13,9 +13,8 @@ export class ProfileComponent implements OnInit {
   @ViewChild('form',{static:true}) form:OFormComponent;
 
   public validatorArray: ValidatorFn[] = [];
-
-  public admin:number;
-  public user:number;
+  
+  public activeToggle: any;
 
   constructor(
     private auth:AuthService,
@@ -29,6 +28,17 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.validatorArray.push(this.matchValidator);
+
+    this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
+    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['id_rolename'], 'deletableUser').subscribe(
+      res => {
+        if(res.data && res.data.length > 0) {
+          if(res.data[0].id_rolename == 2) {
+            this.activeToggle = document.getElementById('activeid');
+             this.activeToggle.style.display = 'block';
+          }
+        }
+      })
   }
 
   getValue() {
