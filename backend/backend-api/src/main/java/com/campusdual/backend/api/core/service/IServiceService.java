@@ -12,4 +12,7 @@ public interface IServiceService {
     public EntityResult serviceUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult serviceDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult myServiceQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult myServiceInsert(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult myServiceDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult myServiceUpdate(Map<String,  Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 }

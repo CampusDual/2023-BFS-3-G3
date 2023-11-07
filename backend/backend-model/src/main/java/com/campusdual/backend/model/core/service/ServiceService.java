@@ -52,4 +52,23 @@ public class ServiceService implements IServiceService {
         keyMap.put(UserDao.ID,auth.getName());
         return this.daoHelper.query(serviceDao, keyMap, attrList);
     }
+    @Override
+    public EntityResult myServiceInsert(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        keyMap.put(UserDao.ID,auth.getName());
+        return this.daoHelper.insert(this.serviceDao, keyMap);
+    }
+
+    @Override
+    public EntityResult myServiceDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        keyMap.put(UserDao.ID,auth.getName());
+        return this.daoHelper.delete(this.serviceDao, keyMap);
+    }
+    @Override
+    public EntityResult myServiceUpdate(Map<String, Object> attributes, Map<String, Object> keyValues) throws OntimizeJEERuntimeException {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        keyValues.put(UserDao.ID,auth.getName());
+        return this.daoHelper.update(this.serviceDao, attributes, keyValues);
+    }
 }

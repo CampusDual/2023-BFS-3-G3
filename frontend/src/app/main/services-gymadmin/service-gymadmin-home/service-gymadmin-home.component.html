@@ -4,6 +4,7 @@
   mode="tab"
   label-columns="name"
   store-state="no"
+
 >
   <div fxFill>
     <o-table
@@ -12,21 +13,32 @@
       entity="myService"
       keys="serviceid"
       columns="serviceid;name;description;duration;price;categoryid;gymid;categories;user_"
-      visible-columns="name;description;duration;price;categories"
+      visible-columns="name;description;categories"
       delete-button="false"
       refresh-button="false"
-      query-rows="20"
+      query-rows="10"
       store-state="no"
+      virtual-scroll="no"
 
     >
 
-    <o-table-column attr="price" title="price" type="currency"
+    <!-- <o-table-column attr="price" title="price" type="currency"
       currency-symbol="€" currency-symbol-position="right" grouping="yes"
-      thousand-separator="." decimal-separator="," max-decimal-digits="0">
+      thousand-separator="." decimal-separator="," max-decimal-digits="0" virtual-scroll="no"  max-width="25px"auto-adjust="yes">
+
     </o-table-column>
 
     <o-table-column attr="duration" title="duration" type="currency"
-      currency-symbol="min" currency-symbol-position="right" max-decimal-digits="0">
+      currency-symbol="min" currency-symbol-position="right" max-decimal-digits="0"  max-width="10px"auto-adjust="yes">
+    </o-table-column> -->
+
+    <o-table-column attr="description" title="description"type="string"auto-adjust="yes">
+    </o-table-column>
+
+    <o-table-column attr="categories" title="categories" auto-adjust="yes">
+    </o-table-column>
+
+    <o-table-column attr="name" title="name" type="string" auto-adjust="yes">
     </o-table-column>
     </o-table>
   </div>

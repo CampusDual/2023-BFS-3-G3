@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
 
 
+
 @NgModule({
   declarations: [ProfileComponent],
   imports: [
