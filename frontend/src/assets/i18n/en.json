@@ -61,5 +61,6 @@
   "GENERATE_QR": "Generate QR",
   "QR_CODE": "QR code",
   "active": "Membership state",
-  "status" : "status ok"
+  "status" : "status ok",
+  "password_required":"Use 8 or more characters with a mix of letters numbers and symbols"
 }

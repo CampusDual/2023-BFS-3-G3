@@ -34,6 +34,7 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
           <o-validator error-name="mustMatch" error-text="Password must match"></o-validator>
         </o-password-input>
       </o-row>
+      <p>{{'password_required'|oTranslate}}</p>
       <div class="ontimize-buttons">
         <o-button attr="basic1" type="STROKED" label="DELETE" layout-padding color="primary" (click)="deleteUser()"></o-button>
       </div>  
