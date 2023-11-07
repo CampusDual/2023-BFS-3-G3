@@ -1,0 +1,44 @@
+<o-form #form attr="register" service="users" entity="user" fxLayout="column"
+show-header="yes" header-actions="" keys="user_" keys-sql-types="VARCHAR"
+show-header-navigation="yes" (onDataLoaded)="formInit()">
+  
+<o-checkbox attr="id_rolename" boolean-type="number" label="{{ 'INPUT.BUTTON.CHECKBOX' | oTranslate }}"      [data]="getValueBooleanType('number')" read-only="no" false-value="0" true-value="1"></o-checkbox>
+  <o-row>
+    <o-column title="REGISTER"  class="login-column">
+      <o-row>
+        <o-text-input class="input-padding" attr="name" width="375px" required="yes"></o-text-input>
+      </o-row>
+      <o-row>
+        <o-text-input class="input-padding" attr="surname" width="375px" required="yes"></o-text-input>
+      </o-row>
+      <o-row>
+        <o-text-input class="input-padding" attr="address" width="375px" required="no"></o-text-input>
+      </o-row>
+      <o-row>
+
+        <o-phone-input class="input-padding" attr="phone" width="375px" countries="+34" data="+34" read-only="no" required="yes"></o-phone-input>
+        <!-- <o-text-input class="input-padding" attr="phone" width="375px" required="yes"></o-text-input> -->
+      </o-row>
+      <o-row>
+        <o-email-input attr="email" width="375px"></o-email-input>
+      </o-row>
+      <o-row>   
+        <o-text-input class="input-padding" attr="user_"  required="yes" width="180px" ></o-text-input>
+        <!-- <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
+        ></o-slide-toggle> -->
+      </o-row>
+      <o-row>
+        <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes" (onChange)="reviewMatches($event)"></o-password-input>
+      </o-row>
+      <o-row>
+        <o-password-input  class="this.className" attr="passwordconfirm" width="375px" required="yes" show-password-button="yes" [validators]="validatorArray">
+          <o-validator error-name="mustMatch" error-text="Password must match"></o-validator>
+        </o-password-input>
+      </o-row>
+      <p>{{'password_required'|oTranslate}}</p>
+     
+    </o-column>
+    
+  </o-row>
+</o-form>
+
