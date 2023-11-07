@@ -3,8 +3,18 @@
     Ontimize web seed application home component
   </p>
 </div> -->
-<div fxLayout="row" layout-padding fxLayoutAlign="center center">
-  <o-card-menu-layout parent-menu-id="views">
-    <o-card-menu-item button-text="Show" title="Documentation"></o-card-menu-item>
-  </o-card-menu-layout>
+<div  class ="hijo"fxLayout="row" layout-padding fxLayoutAlign="center center">
+  
+  <o-card-menu-item class="admin" button-text="MY_GYMS" title=""
+ icon="fitness_center" route="/main/gyms">
+</o-card-menu-item>
+  <o-card-menu-item  id="service" button-text= "MY_SERVICES" title="" 
+ icon="sports_tennis" route= "/main/gymservices">
+</o-card-menu-item>
+  <o-card-menu-item class="usuario" button-text="GYMS" title=""
+ icon="directions_run" route="/main/gymsuser">
+</o-card-menu-item>
+  <o-card-menu-item id="access" button-text="QR_CODE" title=""
+ icon="qr_code" route="/main/accesscard">
+</o-card-menu-item>
 </div>

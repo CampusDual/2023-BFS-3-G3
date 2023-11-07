@@ -59,6 +59,7 @@
   "passwordconfirm": "Confirmar contraseña",
   "DELETE": "Borrar",
   "GENERATE_QR": "Generar QR",
+  "QR_CODE": "Código QR",
   "active": "Estado suscripción",
   "status" : "status ok"
 }

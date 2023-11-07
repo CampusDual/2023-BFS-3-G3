@@ -59,6 +59,7 @@
   "passwordconfirm": "Password confirm",
   "DELETE": "Delete",
   "GENERATE_QR": "Generate QR",
+  "QR_CODE": "QR code",
   "active": "Membership state",
   "status" : "status ok"
 }
