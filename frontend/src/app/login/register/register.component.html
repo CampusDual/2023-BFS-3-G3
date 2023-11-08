@@ -1,16 +1,15 @@
 <!-- <o-app-layout #layout show-language-selector="yes"> -->
-
-  <o-form #form service="users" entity="user" fxLayout="column" header-actions="R;I;U;D" keys="user_"
-  show-header-navigation="no" (onDataLoaded)="formInit()" show-language-selector="yes" >
   <div class="container-register">
-
     <div class="card-register">
+      <o-form #form service="users" entity="user" fxLayout="column" header-actions="U" keys="user_"
+      show-header-navigation="no">
+      
       <o-row>
           <o-column title="REGISTER"  class="login-column">
           <o-row class="row-especial">
             <div fxLayout="row" class="radio-edit">
-              <o-radio attr="id_rolename" label="Radio" [static-data]="getDataArray()"
-                [data]="getValue()" value-column="key" columns="key;value" visible-columns="value" read-only="no" required="yes"
+              <o-radio attr="id_rolename" label="" [static-data]="getDataArray()"
+                [data]="getValue()" value-column="key" columns="key;value" visible-columns="value" read-only="no"
                 layout="row">
               </o-radio>
             </div>
@@ -34,7 +33,7 @@
               <o-email-input attr="email" width="375px"></o-email-input>
             </o-row>
             <o-row>   
-              <o-text-input class="input-padding" attr="user_"  required="yes" width="180px" ></o-text-input>
+              <o-text-input class="input-padding" attr="user_"  required="yes" width="375px" ></o-text-input>
               <!-- <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
               ></o-slide-toggle> -->
             </o-row>
@@ -51,8 +50,9 @@
           </o-column>
           
         </o-row>
+      </o-form>
       </div>
     </div>
-  </o-form>
+  
 
 <!-- </o-app-layout> -->

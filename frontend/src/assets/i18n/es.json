@@ -68,5 +68,6 @@
   "SUBSCRIPTION_ACTIVE": "Suscripción activa",
   "SUBSCRIPTION_DEACTIVE": "Suscripción inactiva",
   "user": "Soy un usuario",
-  "admin": "Tengo un gimnasio"
+  "admin": "Tengo un gimnasio",
+  "radio": "Quién eres:"
 }

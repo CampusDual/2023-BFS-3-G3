@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, ValidationErrors, ValidatorFn } from '@angular/forms';
-import { OAppLayoutComponent, OFormComponent, OTranslateService } from 'ontimize-web-ngx';
+import { AuthService, OAppLayoutComponent, OFormComponent, OTranslateService } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-register',
@@ -31,18 +31,18 @@ export class RegisterComponent implements OnInit {
     const array: Array<Object> = [];
     array.push({
       'key': 1,
-      'value': this.translateService.get('user')
+      'value': this.translateService.get('admin')
     });
     array.push({
       'key': 2,
-      'value': this.translateService.get('admin')
+      'value': this.translateService.get('user')
     });
    
     return array;
   }
  
   getValue() {
-    return 1;
+    return 2;
   }
 
     public passwordValidator(control: any): any {
@@ -57,10 +57,6 @@ export class RegisterComponent implements OnInit {
       } catch (e) {
         return null;
       }
-    }
-
-    formInit(){
-      this.form.setFieldValue("PASSWORDCONFIRM",this.form.getFieldValue("password"));
     }
 
     public matchValidator(control: FormControl): ValidationErrors {
