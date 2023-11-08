@@ -17,11 +17,13 @@ export class RegisterComponent implements OnInit {
   @ViewChild('form',{static:true}) form:OFormComponent;
   public validatorArray: ValidatorFn[] = [];
 
-  
+  private array: Array<Object>;
 
   constructor(
     private translateService: OTranslateService,
-  ) { }
+  ) {
+    this.array = this.getDataArray();
+  }
 
   ngOnInit() {
     this.validatorArray.push(this.matchValidator);
@@ -42,7 +44,7 @@ export class RegisterComponent implements OnInit {
   }
  
   getValue() {
-    return 2;
+    return this.array[0]['key'];
   }
 
     public passwordValidator(control: any): any {

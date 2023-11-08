@@ -13,6 +13,11 @@
 	</UpdateKeys>
 	<Queries>
 		<Query id="login">
+			<ValidColumns>
+				<Column>user_</Column>
+				<Column>id_rolename</Column>
+				<Column>id_user_role</Column>
+			</ValidColumns>
 			<Sentence>
                 <![CDATA[
                     SELECT
