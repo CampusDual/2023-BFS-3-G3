@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CONFIG } from './app.config';
 import { QRCodeModule } from 'angularx-qrcode';
-import { MatSlideToggleModule } from '@angular/material';
+import { MatRadioModule, MatSlideToggleModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 
 // Standard providers...
@@ -23,6 +23,7 @@ export const customProviders: any = [
     QRCodeModule,
     MatSlideToggleModule,
     CommonModule,
+    MatRadioModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [

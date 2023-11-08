@@ -66,5 +66,7 @@
   "QR.ERROR_TITLE": "QR is not generated",
   "QR.ERROR_TEXT": "Your membership is expired",
   "SUBSCRIPTION_ACTIVE": "Active subscription",
-  "SUBSCRIPTION_DEACTIVE": "Inactive subscription"
+  "SUBSCRIPTION_DEACTIVE": "Inactive subscription",
+  "user": "Soy un usuario",
+  "admin": "I have a gym"
 }

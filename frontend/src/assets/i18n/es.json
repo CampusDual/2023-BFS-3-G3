@@ -66,5 +66,7 @@
   "QR.ERROR_TITLE": "QR no generado",
   "QR.ERROR_TEXT": "Tienes la membresía caducada",
   "SUBSCRIPTION_ACTIVE": "Suscripción activa",
-  "SUBSCRIPTION_DEACTIVE": "Suscripción inactiva"
+  "SUBSCRIPTION_DEACTIVE": "Suscripción inactiva",
+  "user": "Soy un usuario",
+  "admin": "Tengo un gimnasio"
 }

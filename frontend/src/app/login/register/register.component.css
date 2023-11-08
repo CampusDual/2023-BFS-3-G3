@@ -1,3 +1,29 @@
-.o-app-sidenav-sidenav {
+/* .o-app-sidenav-sidenav {
     display: none !important;
+}
+
+.o-app-sidenav-sidenav .o-scroll .mat-drawer .mat-sidenav .ng-tns-c20-0 .ng-trigger .ng-trigger-transform .ng-star-inserted .mat-drawer-closed .mat-drawer-side {
+    visibility: hidden !important;
+} */
+
+.o-radio {
+    width: 100px;
+    height: 10px;
+}
+
+#radio {
+    height: 40px;
+}
+
+.row-especial {
+    height: 70px;
+}
+p{
+    font-size: 0.5rem;
+}
+.radio-edit {
+    display:flex;
+    flex-direction: row;
+    gap: 30px;
+    
 }
