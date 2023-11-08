@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AuthService, DialogService, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
+import { AuthService, DialogService, OFormComponent, OTranslateService, OntimizeService } from 'ontimize-web-ngx';
  
 @Component({
   selector: 'app-access-card',
@@ -14,6 +14,7 @@ export class AccessCardComponent implements OnInit {
   public data: any = {};
   public txt:string
   constructor(
+    private translateService: OTranslateService,
     private auth:AuthService,
     private ontimizeService: OntimizeService,
     protected dialogService: DialogService,
@@ -34,12 +35,13 @@ export class AccessCardComponent implements OnInit {
           if(this.data.active) {
              this.qr = document.getElementById('qrid');
              this.qr.style.display = 'block';
-             document.getElementById('status').textContent = "Suscripción activa";
+             document.getElementById('status').textContent = this.translateService.get('SUBSCRIPTION_ACTIVE');
              this.myAngularxQrCode = this.data.name + this.data.surname
           } else {
-            document.getElementById('status').textContent = "Suscripción inactiva";
-            this.dialogService.info('QR no generado',
-            'Tienes la suscripción caducada')
+            document.getElementById('status').textContent = this.translateService.get('SUBSCRIPTION_DEACTIVE');
+            this.dialogService.info(
+              this.translateService.get('QR.ERROR_TITLE'),
+              this.translateService.get('QR.ERROR_TEXT'));
           }
         }
       },
