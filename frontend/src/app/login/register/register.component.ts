@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { OAppLayoutComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-register',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  @ViewChild('layout', {static: true})
+  layout: OAppLayoutComponent;
 
   constructor() { }
 
   ngOnInit() {
+    // this.layout.appSidenav.sidenav.
   }
   getValue() {
     return true;
