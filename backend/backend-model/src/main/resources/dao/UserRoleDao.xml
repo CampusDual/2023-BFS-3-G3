@@ -12,6 +12,39 @@
 		<Column>id_user_role</Column>
 	</UpdateKeys>
 	<Queries>
+		<Query id="default">
+			<AmbiguousColumns>
+				<AmbiguousColumn name="user_" prefix="tr" databaseName="user_" />
+			</AmbiguousColumns>
+			<ValidColumns>
+				<Column>user_</Column>
+				<Column>id_rolename</Column>
+				<Column>id_user_role</Column>
+				<Column>password</Column>
+				<Column>name</Column>
+				<Column>surname</Column>
+				<Column>email</Column>
+				<Column>nif</Column>
+				<Column>userblocked</Column>
+				<Column>lastpasswordupdate</Column>
+				<Column>firstlogin</Column>
+				<Column>city</Column>
+				<Column>phone</Column>
+				<Column>address</Column>
+				<Column>active</Column>
+			</ValidColumns>
+			<Sentence>
+				<![CDATA[
+                    SELECT
+                        #COLUMNS#
+                    FROM
+                        ${mainschema}.tuser_role tr
+                       JOIN ${mainschema}.tuser t
+                       ON t.user_ = tr.user_
+                    #WHERE#
+                ]]>
+			</Sentence>
+		</Query>
 		<Query id="login">
 			<ValidColumns>
 				<Column>user_</Column>

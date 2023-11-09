@@ -8,13 +8,11 @@
           <o-column title="REGISTER"  class="login-column">
           <o-row class="row-especial">
             <div fxLayout="row" class="radio-edit">
-              <!-- <o-form #form service="userRole" entity="userRole" fxLayout="column" keys="id_user_role"
-              show-header-navigation="no" show-header="no"> -->
-                <o-radio attr="id_rolename" label="" [static-data]="getDataArray()"
+                <o-radio attr="id_rolename" label="" service="userRole" entity="userRole" parent-keys="user_" keys="id_user_role" 
+                  [static-data]="getDataArray()" 
                   [data]="getValue()" value-column="key" columns="key;value" visible-columns="value" read-only="no"
                   layout="row">
                 </o-radio>
-              <!-- </o-form> -->
             </div>
          </o-row>
               <p></p>
@@ -26,6 +24,9 @@
             </o-row>
             <o-row>
               <o-text-input class="input-padding" attr="address" width="375px" required="no"></o-text-input>
+            </o-row>
+            <o-row>
+              <o-text-input class="input-padding" attr="city" width="375px" required="no"></o-text-input>
             </o-row>
             <o-row>
 

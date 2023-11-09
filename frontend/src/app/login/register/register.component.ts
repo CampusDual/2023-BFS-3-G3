@@ -61,6 +61,10 @@ export class RegisterComponent implements OnInit {
       }
     }
 
+    formInit(){
+      this.form.setFieldValue("PASSWORDCONFIRM",this.form.getFieldValue("password"));
+    }
+    
     public matchValidator(control: FormControl): ValidationErrors {
       try {
         const password = control.parent ? control.parent.controls['password'].value : null

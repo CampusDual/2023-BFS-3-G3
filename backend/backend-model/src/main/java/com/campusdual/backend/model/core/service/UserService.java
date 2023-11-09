@@ -1,17 +1,12 @@
 package com.campusdual.backend.model.core.service;
 
-
-import java.sql.Timestamp;
 import java.util.*;
-
 import com.campusdual.backend.model.core.dao.GymDao;
 import com.campusdual.backend.model.core.dao.ReviewDao;
 import com.campusdual.backend.model.core.dao.UserRoleDao;
-import org.assertj.core.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-
 import com.campusdual.backend.api.core.service.IUserService;
 import com.campusdual.backend.model.core.dao.UserDao;
 import com.ontimize.jee.common.dto.EntityResult;
