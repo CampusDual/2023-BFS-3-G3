@@ -1,14 +1,14 @@
 <!-- <o-app-layout #layout show-language-selector="yes"> -->
   <div class="container-register">
     <div class="card-register">
-      <o-form #form service="users" entity="user" fxLayout="column" header-actions="U" keys="user_"
-      show-header-navigation="no">
+      <o-form #form service="userRole" entity="myUserRole" fxLayout="column" header-actions="U" keys="user_"
+      show-header-navigation="no" confirm-exit="no">
       
       <o-row>
           <o-column title="REGISTER"  class="login-column">
           <o-row class="row-especial">
             <div fxLayout="row" class="radio-edit">
-                <o-radio attr="id_rolename" label="" service="userRole" entity="userRole" parent-keys="user_" keys="id_user_role" 
+                <o-radio attr="id_rolename" label="" service="userRole" entity="userRole"  
                   [static-data]="getDataArray()" 
                   [data]="getValue()" value-column="key" columns="key;value" visible-columns="value" read-only="no"
                   layout="row">

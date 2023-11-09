@@ -12,7 +12,7 @@
 		<Column>id_user_role</Column>
 	</UpdateKeys>
 	<Queries>
-		<Query id="default">
+		<Query id="roleuser">
 			<AmbiguousColumns>
 				<AmbiguousColumn name="user_" prefix="tr" databaseName="user_" />
 			</AmbiguousColumns>
