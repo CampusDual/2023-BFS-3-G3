@@ -137,7 +137,7 @@
 
 .o-card-menu-item {
     margin: 2%;
-    padding: 12px;
+    padding: 6px;
 }
 .o-card-menu-item .mat-button {
   background-color:#B2A000 !important;
@@ -151,25 +151,29 @@
   background-image:  url("assets/images/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed; 
+  height: 140vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
 }
 .card-register {
   background-color: #ECEFF1;
   width: 450px;
-  padding: 35px 35px 50px 35px;
+  padding: 10px 35px 50px 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 30px #000;
   display: flex;
   justify-content: center;
   position: relative;
   border:#B2A000 solid 2px;
+  font-size: 14px;
+
   
 }
 
-
+//boton footer
 .card-register .o-form-toolbar {
   flex: none;
   display: block;
@@ -191,6 +195,15 @@
 .o-container-scroll .o-scroll{
   overflow: hidden !important;
 }
+
+
+
+.o-container-title .ng-star-inserted{
+  font-size: 2.2rem !important;
+ padding-left: 35% !important;
+}
+
+
 
 //////////botton grid ver más /////////
 div.o-grid-footer .ng-star-inserted{

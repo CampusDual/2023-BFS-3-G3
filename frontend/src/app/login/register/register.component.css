@@ -16,7 +16,7 @@
 }
 
 .row-especial {
-    height: 70px;
+    height: 45px;
 }
 p{
     font-size: 0.75rem;
@@ -29,17 +29,6 @@ p{
     
 }
 
-.login-column:nth-child(1){
-    font-size: 1rem !important;
-}
-.o-form-toolbar-header .mat-toolbar .mat-toolbar-single-row{
-    background-color: red;
-}
 
-.o-form-toolbar .mat-toolbar,
-.card-register>.o-form-toolbar-header{
-  background-color: #B2A000 !important;
-  width: 40%;
-  margin-top: 20px;
-}
+
 
