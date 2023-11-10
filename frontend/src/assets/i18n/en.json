@@ -69,5 +69,12 @@
   "SUBSCRIPTION_DEACTIVE": "Inactive subscription",
   "user": "I use a gym",
   "admin": "I have a gym",
-  "radio": "Who are you:"
+  "radio": "Who are you:",
+  "title_confirm": "Your data will be deleted",
+  "text_confirm" :"Do you really want to accept?",
+  "delete_data":"Your data has been successfully deleted",
+  "profile_delete_message":"Hope to see you again",
+  "profile_admin_error":"Your data could not be deleted",
+  "profile_admin_message":"Contact WheGym"
+
 }

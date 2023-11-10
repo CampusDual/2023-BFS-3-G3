@@ -69,5 +69,11 @@
   "SUBSCRIPTION_DEACTIVE": "Suscripción inactiva",
   "user": "Voy a un gimnasio",
   "admin": "Tengo un gimnasio",
-  "radio": "Quién eres:"
+  "radio": "Quién eres:",
+  "title_confirm": "Tus datos van a ser borrados ",
+  "text_confirm":"¿Confirmas que quieres eliminar?",
+  "delete_data":"Tus datos han sido borrados con éxito",
+  "profile_delete_message":"Esperamos volver a verte",
+  "profile_admin_error":"Tus datos no han podido ser borrados",
+  "profile_admin_message":"Ponte en contacto con WheGym"
 }

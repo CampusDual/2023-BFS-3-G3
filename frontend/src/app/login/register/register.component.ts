@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   public validatorArray: ValidatorFn[] = [];
 
   private array: Array<Object>;
+  public isPasswordModified: boolean = false;
 
   constructor(
     private translateService: OTranslateService,
@@ -42,7 +43,9 @@ export class RegisterComponent implements OnInit {
    
     return array;
   }
- 
+  onPasswordInput() {
+    this.isPasswordModified = true;
+  }
   getValue() {
     return this.array[0]['key'];
   }
@@ -51,7 +54,7 @@ export class RegisterComponent implements OnInit {
       try {
         const password = control.value;
   
-        if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
+        if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{8,}$/.test(password)) {
           return { passwordNotValid: true };
         } else {
           return null;
@@ -65,7 +68,7 @@ export class RegisterComponent implements OnInit {
       this.form.setFieldValue("PASSWORDCONFIRM",this.form.getFieldValue("password"));
     }
     
-    public matchValidator(control: FormControl): ValidationErrors {
+    public matchValidator(control: FormControl): ValidationErrors | null {
       try {
         const password = control.parent ? control.parent.controls['password'].value : null
         const passwordConfirm = control.parent ? control.parent.controls['PASSWORDCONFIRM'].value : null
@@ -78,6 +81,7 @@ export class RegisterComponent implements OnInit {
         return null;
       }
     }
+
   
     public reviewMatches(event: Event){
       this.form.formGroup.controls['passwordconfirm'].updateValueAndValidity();

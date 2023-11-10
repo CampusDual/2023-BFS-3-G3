@@ -1,7 +1,7 @@
 import { Component, Inject, Injector, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService, DialogService, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
+import { AuthService, DialogService, OFormComponent, OTranslateService, OntimizeService } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-profile',
@@ -22,6 +22,7 @@ export class ProfileComponent implements OnInit {
     protected dialogService: DialogService,
     private router: Router,
     private actRoute: ActivatedRoute,
+    private translateService: OTranslateService,
     @Inject(AuthService) private authService: AuthService,
   ) {
   }
@@ -42,6 +43,9 @@ export class ProfileComponent implements OnInit {
       });
   }
 
+  onPasswordInput() {
+    this.isPasswordModified = true;
+  }
   getValue() {
     return true;
   }
@@ -54,7 +58,7 @@ export class ProfileComponent implements OnInit {
     this.form.setFieldValue("PASSWORDCONFIRM",this.form.getFieldValue("password"));
   }
 
-  public matchValidator(control: FormControl): ValidationErrors {
+  public matchValidator(control: FormControl): ValidationErrors | null{
     try {
       const password = control.parent ? control.parent.controls['password'].value : null
       const passwordConfirm = control.parent ? control.parent.controls['PASSWORDCONFIRM'].value : null
@@ -73,15 +77,13 @@ export class ProfileComponent implements OnInit {
     this.form.formGroup.get('passwordconfirm').markAsTouched();
   }
 
-  onPasswordInput() {
-    this.isPasswordModified = true;
-  }
+ 
 
   public passwordValidator(control: any): any {
     try {
       const password = control.value;
 
-      if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
+      if  (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{8,}$/.test(password)) {
         return { passwordNotValid: true };
       } else {
         return null;
@@ -97,18 +99,29 @@ export class ProfileComponent implements OnInit {
       res => {
         if(res.data && res.data.length > 0) {
           if(res.data[0].id_rolename == 1 && res.data[0].activeGym >0) {
-            this.dialogService.info('Tus datos no han podido ser borrados', 'Ponte en contacto con WheGym');
-          } else {
-            this.ontimizeService.delete({user_:this.auth.getSessionInfo().user}, 'user').subscribe(
-              res => {
-                if(res.code == 0) {
-                  this.dialogService.info('Tus datos han sido borrados con éxito', 'Esperamos volver a verte');
-                  this.authService.logout();
+            this.dialogService.info(this.translateService.get('profile_admin_error'),this.translateService.get( 'profile_admin_message'));
+          }
+          else{
+            this.dialogService.confirm(this.translateService.get('title_confirm'), this.translateService.get('text_confirm'));
+            this.dialogService.dialogRef.afterClosed().subscribe( result => {
+            if(result) {
+              this.ontimizeService.delete({user_:this.auth.getSessionInfo().user}, 'user').subscribe(
+                res => {
+                  if(res.code == 0) {
+                    this.dialogService.info(this.translateService.get('delete_data'),this.translateService.get( 'profile_delete_message'));
+                    this.authService.logout();
+                  } else {
+                    return null;
+                  }  
+                    })
+             
                 }
               }
-            );
+            )
           }
+ 
         }
     });
   }
+
 }
