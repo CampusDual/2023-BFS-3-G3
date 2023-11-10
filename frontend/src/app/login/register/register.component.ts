@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, ValidationErrors, ValidatorFn } from '@angular/forms';
-import { AuthService, OAppLayoutComponent, OFormComponent, OTranslateService } from 'ontimize-web-ngx';
+import { AuthService, OAppLayoutComponent, OFormComponent, OTranslateService, OValidators } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-register',
@@ -19,11 +19,20 @@ export class RegisterComponent implements OnInit {
 
   private array: Array<Object>;
   public isPasswordModified: boolean = false;
-
+  validatorsNewPasswordArray: ValidatorFn[] = [];
   constructor(
     private translateService: OTranslateService,
   ) {
     this.array = this.getDataArray();
+
+    this.validatorsNewPasswordArray.push(OValidators.patternValidator(/\d/, 'hasNumber'));
+    // check whether the entered password has upper case letter
+    this.validatorsNewPasswordArray.push(OValidators.patternValidator(/[A-Z]/, 'hasCapitalCase'));
+    // check whether the entered password has small case letter
+    this.validatorsNewPasswordArray.push(OValidators.patternValidator(/[a-z]/, 'hasSmallCase'));
+    // check whether the entered password has a special character
+    this.validatorsNewPasswordArray.push(OValidators.patternValidator(/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/, 'hasSpecialCharacters'));
+
   }
 
   ngOnInit() {

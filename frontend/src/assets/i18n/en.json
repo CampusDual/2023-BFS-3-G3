@@ -75,6 +75,11 @@
   "delete_data":"Your data has been successfully deleted",
   "profile_delete_message":"Hope to see you again",
   "profile_admin_error":"Your data could not be deleted",
-  "profile_admin_message":"Contact WheGym"
+  "profile_admin_message":"Contact WheGym",
+  "VALIDATOR.HASCAPITALCASE": "Capital letter required",
+  "VALIDATOR.HASNUMBER": "Number required",
+  "VALIDATOR.HASSMALLCASE": "Lowercase letter required",
+  "VALIDATOR.HASSPECIALCHARACTERS": "Special character required"
+
 
 }

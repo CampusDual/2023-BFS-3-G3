@@ -1,62 +1,152 @@
 <!-- <o-app-layout #layout show-language-selector="yes"> -->
-  <div class="container-register">
-    <div class="card-register">
-      <o-form #form service="userRole" entity="myUserRole" fxLayout="column" header-actions="U" keys="user_"
-      show-header-navigation="no" confirm-exit="no">
-      
+<div class="container-register">
+  <div class="card-register">
+    <o-form
+      #form
+      service="userRole"
+      entity="myUserRole"
+      fxLayout="column"
+      header-actions="U"
+      keys="user_"
+      show-header-navigation="no"
+      confirm-exit="no"
+    >
       <o-row>
-          <o-column title="REGISTER"  class="login-column" style="color:rgb(194, 168, 52); font: 2rem;">
+        <o-column
+          title="REGISTER"
+          class="login-column"
+          style="color: rgb(194, 168, 52); font: 2rem"
+        >
           <o-row class="row-especial">
             <div fxLayout="row" class="radio-edit">
-                <o-radio attr="id_rolename" label="" service="userRole" entity="userRole"  
-                  [static-data]="getDataArray()" 
-                  [data]="getValue()" value-column="key" columns="key;value" visible-columns="value" read-only="no"
-                  layout="row">
-                </o-radio>
+              <o-radio
+                attr="id_rolename"
+                label=""
+                service="userRole"
+                entity="userRole"
+                [static-data]="getDataArray()"
+                [data]="getValue()"
+                value-column="key"
+                columns="key;value"
+                visible-columns="value"
+                read-only="no"
+                layout="row"
+              >
+              </o-radio>
             </div>
-         </o-row>
-              <p></p>
+          </o-row>
+          <p></p>
           <o-row>
-              <o-text-input class="input-padding" attr="name" width="375px" required="yes"></o-text-input>
-            </o-row>
-            <o-row>
-              <o-text-input class="input-padding" attr="surname" width="375px" required="yes"></o-text-input>
-            </o-row>
-            <o-row>
-              <o-text-input class="input-padding" attr="address" width="375px" required="no"></o-text-input>
-            </o-row>
-            <o-row>
-              <o-text-input class="input-padding" attr="city" width="375px" required="no"></o-text-input>
-            </o-row>
-            <o-row>
-
-              <o-phone-input class="input-padding" attr="phone" width="375px" countries="+34" data="+34" read-only="no" required="yes"></o-phone-input>
-              <!-- <o-text-input class="input-padding" attr="phone" width="375px" required="yes"></o-text-input> -->
-            </o-row>
-            <o-row>
-              <o-email-input attr="email" width="375px"></o-email-input>
-            </o-row>
-            <o-row>   
-              <o-text-input class="input-padding" attr="user_"  required="yes" width="375px" ></o-text-input>
-              <!-- <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
+            <o-text-input
+              class="input-padding"
+              attr="name"
+              width="375px"
+              required="yes"
+            ></o-text-input>
+          </o-row>
+          <o-row>
+            <o-text-input
+              class="input-padding"
+              attr="surname"
+              width="375px"
+              required="yes"
+            ></o-text-input>
+          </o-row>
+          <o-row>
+            <o-text-input
+              class="input-padding"
+              attr="address"
+              width="375px"
+              required="no"
+            ></o-text-input>
+          </o-row>
+          <o-row>
+            <o-text-input
+              class="input-padding"
+              attr="city"
+              width="375px"
+              required="no"
+            ></o-text-input>
+          </o-row>
+          <o-row>
+            <o-phone-input
+              class="input-padding"
+              attr="phone"
+              width="375px"
+              countries="+34"
+              data="+34"
+              read-only="no"
+              required="yes"
+            ></o-phone-input>
+            <!-- <o-text-input class="input-padding" attr="phone" width="375px" required="yes"></o-text-input> -->
+          </o-row>
+          <o-row>
+            <o-email-input attr="email" width="375px"></o-email-input>
+          </o-row>
+          <o-row>
+            <o-text-input
+              class="input-padding"
+              attr="user_"
+              required="yes"
+              width="375px"
+            ></o-text-input>
+            <!-- <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
               ></o-slide-toggle> -->
-            </o-row>
-            <o-row>
-              <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes" (onChange)="reviewMatches($event)"></o-password-input>
-            </o-row>
-            <o-row>
-              <o-password-input  class="this.className" attr="passwordconfirm" width="375px" required="yes" show-password-button="yes" [validators]="validatorArray">
-                <o-validator error-name="mustMatch" error-text="Password must match"></o-validator>
-              </o-password-input>
-            </o-row>
-            <p>{{'password_required'|oTranslate}}</p>
-          
-          </o-column>
-          
-        </o-row>
-      </o-form>
-      </div>
-    </div>
-  
+          </o-row>
+          <o-row>
+            <!-- <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes" (onChange)="reviewMatches($event)" automatic-registering="yes"></o-password-input> -->
 
-<!-- </o-app-layout> -->
+            <o-password-input
+              #newpassword
+              attr="password"
+              required="yes"
+              min-length="8"
+              [validators]="validatorsNewPasswordArray"
+              read-only="no"
+              width="375px"
+              show-password-button="yes"
+            >
+              <o-validator
+                error-name="hasCapitalCase"
+                error-text="VALIDATOR.HASCAPITALCASE"
+              ></o-validator>
+              <o-validator
+                error-name="hasNumber"
+                error-text="VALIDATOR.HASNUMBER"
+              ></o-validator>
+              <o-validator
+                error-name="hasSmallCase"
+                error-text="VALIDATOR.HASSMALLCASE"
+              ></o-validator>
+              <o-validator
+                error-name="hasSpecialCharacters"
+                error-text="VALIDATOR.HASSPECIALCHARACTERS"
+              ></o-validator>
+            </o-password-input>
+          </o-row>
+          <o-row>
+            <o-password-input
+              class="this.className"
+              attr="passwordconfirm"
+              width="375px"
+              required="yes"
+              show-password-button="yes"
+              automatic-registering="yes"
+              [validators]="validatorArray"
+            >
+              <o-validator
+                error-name="mustMatch"
+                error-text="Password must match"
+              ></o-validator>
+            </o-password-input>
+          </o-row>
+
+          <p>{{ "password_required" | oTranslate }}</p>
+        
+        </o-column>
+      </o-row>
+    </o-form>
+  </div>
+</div>
+
+

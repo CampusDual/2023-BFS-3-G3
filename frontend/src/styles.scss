@@ -25,7 +25,7 @@
   box-shadow: 0px 0px 30px #000;
 }
 
-//botón servicios
+///////////////////botón servicios
 .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
   background-color: #B2A000 ;
  }
@@ -186,22 +186,24 @@
   background-color: transparent;
 
 }
+
+// scroll registro
+.o-container-scroll .o-scroll{
+  overflow: hidden !important;
+}
+
 //////////botton grid ver más /////////
 div.o-grid-footer .ng-star-inserted{
 background-color:#B2A000;
 box-shadow: none;
 margin-left: 45%;
 text-align: center;
-
 }
-
-
 .mat-raised-button .mat-button .mat-button-base{
   padding:15px 15px;
-
- 
 }
 
-div.o-grid-footer .ng-star-inserted  .mat-raised-button .mat-button .mat-button-base       .mat-button-wrapper{
+div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
   color:white !important;
 }
+

@@ -29,7 +29,7 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
         ></o-slide-toggle>
       </o-row>
       <o-row>
-        <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes" (onChange)="reviewMatches($event)"></o-password-input>
+        <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes"  [validators]="validatorArray" (onChange)="reviewMatches($event)"></o-password-input>
       </o-row>
       <o-row>
         <o-password-input  class="this.className" attr="passwordconfirm" width="375px" required="yes" show-password-button="yes" [validators]="validatorArray">

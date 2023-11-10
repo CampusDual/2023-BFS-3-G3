@@ -75,5 +75,9 @@
   "delete_data":"Tus datos han sido borrados con éxito",
   "profile_delete_message":"Esperamos volver a verte",
   "profile_admin_error":"Tus datos no han podido ser borrados",
-  "profile_admin_message":"Ponte en contacto con WheGym"
+  "profile_admin_message":"Ponte en contacto con WheGym",
+  "VALIDATOR.HASCAPITALCASE":"Se necesita mayúscula",
+  "VALIDATOR.HASNUMBER":"Se necesita número",
+  "VALIDATOR.HASSMALLCASE":"Se necesita minúscula",
+  "VALIDATOR.HASSPECIALCHARACTERS":"Se necesita carácter especial"
 }
