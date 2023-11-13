@@ -1,6 +1,7 @@
 <!-- <o-app-layout #layout show-language-selector="yes"> -->
 <div class="container-register">
   <div class="card-register">
+    <img src="../../../assets/images/logo.png" alt="Logo WheGym" class="whegymimg">
     <o-form
       #form
       service="userRole"
@@ -38,13 +39,19 @@
           <p></p>
           <o-row>
             <o-text-input
+            class="input-padding"
+            attr="user_"
+            required="yes"
+            width="375px"
+          ></o-text-input>
+          </o-row>
+          <o-row>
+            <o-text-input
               class="input-padding"
               attr="name"
               width="375px"
               required="yes"
             ></o-text-input>
-          </o-row>
-          <o-row>
             <o-text-input
               class="input-padding"
               attr="surname"
@@ -59,8 +66,6 @@
               width="375px"
               required="no"
             ></o-text-input>
-          </o-row>
-          <o-row>
             <o-text-input
               class="input-padding"
               attr="city"
@@ -78,27 +83,13 @@
               read-only="no"
               required="yes"
             ></o-phone-input>
-            <!-- <o-text-input class="input-padding" attr="phone" width="375px" required="yes"></o-text-input> -->
-          </o-row>
-          <o-row>
             <o-email-input attr="email" width="375px"></o-email-input>
           </o-row>
           <o-row>
-            <o-text-input
-              class="input-padding"
-              attr="user_"
-              required="yes"
-              width="375px"
-            ></o-text-input>
-            <!-- <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="no"
-              ></o-slide-toggle> -->
-          </o-row>
-          <o-row>
-            <!-- <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes" (onChange)="reviewMatches($event)" automatic-registering="yes"></o-password-input> -->
-
             <o-password-input
               #newpassword
               attr="password"
+              class="input-padding"
               required="yes"
               min-length="8"
               [validators]="validatorsNewPasswordArray"
@@ -123,8 +114,6 @@
                 error-text="VALIDATOR.HASSPECIALCHARACTERS"
               ></o-validator>
             </o-password-input>
-          </o-row>
-          <o-row>
             <o-password-input
               class="this.className"
               attr="passwordconfirm"
