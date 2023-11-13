@@ -13,6 +13,10 @@
     </UpdateKeys>
     <Queries>
         <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="gymid" prefix="r" databaseName="gymid" />
+                <AmbiguousColumn name="user_" prefix="r" databaseName="user_" />
+            </AmbiguousColumns>
             <ValidColumns>
                 <Column>reviewid</Column>
                 <Column>content</Column>
@@ -24,10 +28,15 @@
             <Sentence>
                 <![CDATA[
                     SELECT
-                        #COLUMNS#
+                        #COLUMNS#, g.name, g.photo
                     FROM
                         ${mainschema}.reviews r
+                    JOIN
+                        ${mainschema}.gyms g
+                        ON g.gymid = r.gymid
                     #WHERE#
+                    ORDER BY r.rate DESC
+                    LIMIT 5;
                 ]]>
             </Sentence>
         </Query>

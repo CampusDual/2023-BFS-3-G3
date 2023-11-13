@@ -14,14 +14,9 @@ import org.springframework.stereotype.Repository;
 public class ReviewDao extends OntimizeJdbcDaoSupport {
     public static final String ID = "reviewid";
     public static final String CONTENT = "content";
-    public static final String ADDRESS = "address";
-    public static final String  CITY= "city";
-    public static final String  CIF= "cif";
-    public static final String  PHONE= "phone";
-    public static final String  EMAIL= "email";
-    public static final String  SCHEDULE= "schedule";
-    public static final String  DESCRIPTION= "description";
-    public static final String  STATE= "state";
-    public static final String  USER_= "user_";
-    public static final String  ATTR_PHOTO= "photo";
+    public static final String RATE = "rate";
+    public static final String DATE = "date";
+    public static final String USER_ = "user_";
+    public static final String GYMID = "gymid";
+
 }

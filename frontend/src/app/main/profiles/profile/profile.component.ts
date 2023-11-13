@@ -15,7 +15,6 @@ export class ProfileComponent implements OnInit {
   public validatorArray: ValidatorFn[] = [];
   public activeToggle: any;
   public isPasswordModified: boolean = false;
-  public isModified = false;
 
   constructor(
     private auth:AuthService,
@@ -125,7 +124,9 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  showPasswordConfirm = false;
+ 
   onInputChanged() {
-    this.isModified = true;
+    this.showPasswordConfirm = true;
   }
 }

@@ -19,5 +19,8 @@ export const SERVICE_CONFIG: Object = {
   },
   userRole: {
     path:"/userRole"
+  },
+  reviews: {
+    path:"/reviews"
   }
 };

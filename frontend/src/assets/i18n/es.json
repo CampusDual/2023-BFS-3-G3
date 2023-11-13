@@ -79,5 +79,6 @@
   "VALIDATOR.HASCAPITALCASE":"Se necesita mayúscula",
   "VALIDATOR.HASNUMBER":"Se necesita número",
   "VALIDATOR.HASSMALLCASE":"Se necesita minúscula",
-  "VALIDATOR.HASSPECIALCHARACTERS":"Se necesita carácter especial"
+  "VALIDATOR.HASSPECIALCHARACTERS":"Se necesita carácter especial",
+  "BEST_REVIEWS": "Los mejor valorados"
 }

@@ -28,7 +28,7 @@ export const MENU_CONFIG: MenuRootItem[] = [
     id: "servicesgymadmin",
     name: "MY_SERVICES",
     route: "/main/gymservices",
-    icon: "sports_tennis",
+    icon: "edit_document",
     pathMatch: "full"
   },
   {

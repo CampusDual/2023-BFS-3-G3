@@ -79,7 +79,6 @@
   "VALIDATOR.HASCAPITALCASE": "Capital letter required",
   "VALIDATOR.HASNUMBER": "Number required",
   "VALIDATOR.HASSMALLCASE": "Lowercase letter required",
-  "VALIDATOR.HASSPECIALCHARACTERS": "Special character required"
-
-
+  "VALIDATOR.HASSPECIALCHARACTERS": "Special character required",
+  "BEST_REVIEWS": "Top best rated"
 }

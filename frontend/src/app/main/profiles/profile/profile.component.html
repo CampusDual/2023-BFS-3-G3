@@ -24,13 +24,21 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
     
     <o-row>
       <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes"  [validators]="validatorArray" (onChange)="reviewMatches($event)" (input)="onInputChanged()"></o-password-input>
-      <o-password-input  id="confirm" style="display: none;" class="this.className" attr="passwordconfirm" width="375px" required="yes" show-password-button="yes" [validators]="validatorArray">
+      <o-password-input   id="confirm"
+      class="this.className"
+      attr="passwordconfirm"
+      width="375px"
+      required="yes"
+      show-password-button="yes"
+      [validators]="validatorArray"
+      (input)="onInputChanged()"
+      *ngIf="showPasswordConfirm">
         <o-validator error-name="mustMatch" error-text="Password must match"></o-validator>
       </o-password-input>
     </o-row>
     <p>{{'password_required'|oTranslate}}</p>
     <div class="ontimize-buttons">
-      <o-button attr="basic1" type="STROKED" label="DELETE" layout-padding color="primary" (click)="deleteUser()" *ngIf="isModified"></o-button>
+      <o-button attr="basic1" type="STROKED" label="DELETE" layout-padding color="primary" (click)="deleteUser()"></o-button>
     </div>  
   </o-column>
   
