@@ -226,3 +226,17 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
   color:white !important;
 }
 
+.mat-list-base .mat-list-item.mat-3-line, .mat-list-base .mat-list-option.mat-3-line {
+  height: 88px;
+  background-color:#ECEFF1;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 60%;
+  border:1px solid #B2A000; 
+}
+.o-list-container .mat-list .mat-3-line .o-custom-list-item{
+  background-color: transparent;
+  font-size: 1.2rem;
+  color:black;
+}
