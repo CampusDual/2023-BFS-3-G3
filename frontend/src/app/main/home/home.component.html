@@ -31,7 +31,7 @@
       image-type="base64"
       style="height: 200;"
       ></o-image>
-      <o-list-item-text title="{{ row.name }}" primary-text="{{ row.rate }}" secondary-text="{{ row.content }}" class="list-text">
+      <o-list-item-text title="{{ row.name }}" primary-text="{{ getStars(row.rate) }}" secondary-text="{{ row.content }}" class="list-text">
       </o-list-item-text>
     </o-list-item>
 
@@ -40,9 +40,26 @@
 </div>
 
 <div class="footer">
-  <h3>WheGym</h3>
+ 
 
   <div class="grid">
-    <img src="../../../assets/images/logo.png">
+    <div>
+      <h3>WheGym</h3>
+      <img src="../../../assets/images/logo.png">
+    </div>
+    <div></div>
+    <div>
+      <h3>{{'ABOUT_US' | oTranslate}}</h3>
+      <p>{{'TEXT_ABOUT' | oTranslate}}</p>
+    </div>
+    <div></div>
+    <div>
+      <h3>{{'CONTACT' | oTranslate}}</h3>
+      <ul>
+        <li><mat-icon>mail</mat-icon>wheGym@wheGym.com</li>
+        <li><mat-icon>call</mat-icon>+34 645 879 345</li>
+        <li><mat-icon>pin_drop</mat-icon>Edificio Citexvi, Fonte das Abelleiras, s/n · Local 27, 36310 Vigo, Pontevedra</li>
+      </ul>
+    </div>
   </div>
 </div>

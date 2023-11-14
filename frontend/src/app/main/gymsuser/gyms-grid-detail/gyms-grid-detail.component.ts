@@ -16,6 +16,15 @@ export class GymsGridDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  getStars(rate: number): string {
+    const roundedRate = Math.round(rate);
+  if(roundedRate ){
+    return '★'.repeat(roundedRate) + '☆'.repeat(5 - roundedRate)
+  } else{
+    return  '☆'.repeat(5)
+  }
+}
+
   /*@ViewChild('form',{static:true})
    form:OFormComponent;
  public serviceRoute:string;

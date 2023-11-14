@@ -21,6 +21,11 @@ export class HomeComponent implements OnInit {
   ) {
   }
 
+  getStars(rate: number): string {
+    const roundedRate = Math.round(rate);
+    return '★'.repeat(roundedRate) + '☆'.repeat(5 - roundedRate);
+  }
+
   ngOnInit() {
     this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
     this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['id_rolename'], 'deletableUser').subscribe(
