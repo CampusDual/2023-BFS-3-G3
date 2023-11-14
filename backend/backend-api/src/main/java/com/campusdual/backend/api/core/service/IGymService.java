@@ -12,4 +12,6 @@ public interface IGymService {
     public EntityResult gymUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult gymDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult myGymQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult gymReviewQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+
 }

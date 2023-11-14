@@ -32,15 +32,15 @@ export class HomeComponent implements OnInit {
       res => {
         if(res.data && res.data.length > 0) {
           if(res.data[0].id_rolename === 1 ){
-             this.usuario = document.querySelector('.usuario') ;
-                  this.usuario.style.display="none";
+            //  this.usuario = document.querySelector('.usuario') ;
+            //       this.usuario.style.display="none";
             this.access = document.getElementById("access");
             this.access.style.display="none";
 
           }
           if(res.data[0].id_rolename === 2 ){
-            this.admin = document.querySelector('.admin') ;
-            this.admin.style.display="none";  
+            // this.admin = document.querySelector('.admin') ;
+            // this.admin.style.display="none";  
             this.service = document.getElementById("service");
             this.service.style.display="none";  
           }

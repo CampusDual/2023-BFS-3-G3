@@ -19,7 +19,28 @@
   </o-card-menu-item>
 </div> -->
 
-<div class ="hijo">
+<div id="service" class ="hijo">
+  <h2 class=" title_home">{{'BEST_REVIEWS' | oTranslate}}</h2>
+  <o-list #list attr="reviews" service="gyms" entity="gymReview" refresh-button ="no" quick-filter="no"
+  delete-button ="no" keys="gymid" columns="gymid;content;rate;date;user_;name" row-height="large">
+
+
+    <o-list-item *ngFor="let row of list.dataArray">
+      <!-- <o-image class ="image10" attr="photo" data="{{ row.photo }}" read-only = "true" show-controls = "false" 
+      type="image"
+      empty-image="assets/images/no-image.png"
+      image-type="base64"
+      style="height: 200;"
+      ></o-image> -->
+      <o-list-item-text title="{{ row.name }}" primary-text="{{ getStars(row.rate) }}" secondary-text="{{ row.date | date}}: {{ row.content }}" class="list-text">
+      </o-list-item-text>
+    </o-list-item>
+
+  </o-list>
+
+</div>
+
+<div id="access" class ="hijo">
   <h2 class=" title_home">{{'BEST_REVIEWS' | oTranslate}}</h2>
   <o-list #list attr="reviews" service="reviews" entity="review" refresh-button ="no" quick-filter="no"
   delete-button ="no" keys="reviewid" columns="reviewid;content;rate;date;user_;gymid;photo;name" row-height="large">
@@ -32,13 +53,15 @@
       image-type="base64"
       style="height: 200;"
       ></o-image>
-      <o-list-item-text title="{{ row.name }}" primary-text="{{ getStars(row.rate) }}" secondary-text="{{ row.date | date:'dd-MM-yy'}}: {{ row.content }}" class="list-text">
+      <o-list-item-text title="{{ row.name }}" primary-text="{{ getStars(row.rate) }}" secondary-text="{{ row.date | date}}: {{ row.content }}" class="list-text">
       </o-list-item-text>
     </o-list-item>
 
   </o-list>
 
 </div>
+
+
 
 <div class="footer">
  

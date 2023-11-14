@@ -11,4 +11,5 @@ public interface IReviewService {
     public EntityResult reviewInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
     public EntityResult reviewUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult reviewDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult myReviewQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 }

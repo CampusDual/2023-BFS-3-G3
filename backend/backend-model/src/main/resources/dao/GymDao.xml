@@ -50,5 +50,28 @@
                 ]]>
             </Sentence>
         </Query>
+        <Query id="gymReview">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="gymid" prefix="g" databaseName="gymid" />
+                <AmbiguousColumn name="user_" prefix="g" databaseName="user_" />
+            </AmbiguousColumns>
+            <ValidColumns>
+                <Column>gymid</Column>
+                <Column>name</Column>
+                <Column>user_</Column>
+                <Column>rate</Column>
+                <Column>content</Column>
+                <Column>date</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+                    select #COLUMNS#
+                    from ${mainschema}.gyms g
+                    join ${mainschema}.reviews r
+                    on g.gymid = r.gymid
+                    #WHERE#
+                ]]>
+            </Sentence>
+        </Query>
     </Queries>
 </JdbcEntitySetup>

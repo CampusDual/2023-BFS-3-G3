@@ -58,4 +58,9 @@ public class GymService implements IGymService {
         return this.daoHelper.query(gymDao, keyMap, attrList);
     }
 
+    @Override
+    public EntityResult gymReviewQuery(Map<String, Object> keyMap, List<String> attrList) {
+        return this.daoHelper.query(gymDao, keyMap, attrList, "gymReview");
+    }
+
 }

@@ -15,7 +15,7 @@
         <Query id="default">
             <AmbiguousColumns>
                 <AmbiguousColumn name="gymid" prefix="r" databaseName="gymid" />
-                <AmbiguousColumn name="user_" prefix="r" databaseName="user_" />
+                <AmbiguousColumn name="user_" prefix="g" databaseName="user_" />
             </AmbiguousColumns>
             <ValidColumns>
                 <Column>reviewid</Column>
@@ -24,11 +24,12 @@
                 <Column>date</Column>
                 <Column>user_</Column>
                 <Column>gymid</Column>
+                <Column>user_admin</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[
                     SELECT
-                        #COLUMNS#, g.name, g.photo
+                        #COLUMNS#, g.name, g.photo, g.user_ as user_admin
                     FROM
                         ${mainschema}.reviews r
                     JOIN
