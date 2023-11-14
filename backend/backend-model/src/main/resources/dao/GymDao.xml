@@ -58,6 +58,7 @@
             <ValidColumns>
                 <Column>gymid</Column>
                 <Column>name</Column>
+                <Column>photo</Column>
                 <Column>user_</Column>
                 <Column>rate</Column>
                 <Column>content</Column>
@@ -70,6 +71,8 @@
                     join ${mainschema}.reviews r
                     on g.gymid = r.gymid
                     #WHERE#
+                    ORDER BY r.date DESC
+                    LIMIT 5;
                 ]]>
             </Sentence>
         </Query>

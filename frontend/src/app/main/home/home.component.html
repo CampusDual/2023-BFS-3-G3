@@ -19,25 +19,25 @@
   </o-card-menu-item>
 </div> -->
 
+<!--Admin-->
 <div id="service" class ="hijo">
   <h2 class=" title_home">{{'BEST_REVIEWS' | oTranslate}}</h2>
-  <o-list #list attr="reviews" service="gyms" entity="gymReview" refresh-button ="no" quick-filter="no"
-  delete-button ="no" keys="gymid" columns="gymid;content;rate;date;user_;name" row-height="large">
+  <o-list #list2 service="gyms" entity="gymReview" refresh-button ="no" quick-filter="no"
+  delete-button ="no" keys="gymid" columns="gymid;content;rate;date;user_;name;photo" row-height="large">
 
 
-    <o-list-item *ngFor="let row of list.dataArray">
-      <!-- <o-image class ="image10" attr="photo" data="{{ row.photo }}" read-only = "true" show-controls = "false" 
+    <o-list-item *ngFor="let row of list2.dataArray">
+      <o-image class ="image10" attr="photo" data="{{ row.photo }}" read-only = "true" show-controls = "false" 
       type="image"
       empty-image="assets/images/no-image.png"
       image-type="base64"
       style="height: 200;"
-      ></o-image> -->
+      ></o-image>
       <o-list-item-text title="{{ row.name }}" primary-text="{{ getStars(row.rate) }}" secondary-text="{{ row.date | date}}: {{ row.content }}" class="list-text">
       </o-list-item-text>
     </o-list-item>
 
   </o-list>
-
 </div>
 
 <div id="access" class ="hijo">
@@ -61,11 +61,7 @@
 
 </div>
 
-
-
 <div class="footer">
- 
-
   <div class="grid">
     <div>
       <div class="image_logo"><img src="../../../assets/images/logo.png"></div>
