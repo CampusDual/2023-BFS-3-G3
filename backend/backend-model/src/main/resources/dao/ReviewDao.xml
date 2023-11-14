@@ -35,7 +35,7 @@
                         ${mainschema}.gyms g
                         ON g.gymid = r.gymid
                     #WHERE#
-                    ORDER BY r.rate DESC
+                    ORDER BY r.rate DESC, r.date DESC
                     LIMIT 5;
                 ]]>
             </Sentence>
