@@ -60,6 +60,8 @@ public class GymService implements IGymService {
 
     @Override
     public EntityResult gymReviewQuery(Map<String, Object> keyMap, List<String> attrList) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        keyMap.put(UserDao.ID,auth.getName());
         return this.daoHelper.query(gymDao, keyMap, attrList, "gymReview");
     }
 
