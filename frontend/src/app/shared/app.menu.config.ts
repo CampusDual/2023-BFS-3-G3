@@ -17,6 +17,13 @@ export const MENU_CONFIG: MenuRootItem[] = [
     pathMatch: "full"
   },
   {
+    id: "reviews",
+    name: "REVIEWS",
+    route: "/main/reviews",
+    icon: "reviews",
+    pathMatch: "full"
+  },
+  {
     id: "accesscard",
     name: "ACCESS_CARD",
     route: "/main/accesscard",

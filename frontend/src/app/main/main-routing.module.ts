@@ -40,6 +40,11 @@ export const routes: Routes = [
         path: "profile",
         loadChildren: () =>
           import("./profiles/profiles.module").then((m) => m.ProfilesModule), data: { oPermission: { permissionId: 'profile'}}
+      },
+      {
+        path: "reviews",
+        loadChildren: () =>
+          import("./reviews/reviews.module").then((m) => m.ReviewsModule), data: { oPermission: { permissionId: 'reviews', restrictedPermissionsRedirect: '/main/home'}}
       }
     ],
   },
