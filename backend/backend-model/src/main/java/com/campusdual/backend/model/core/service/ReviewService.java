@@ -35,8 +35,10 @@ public class ReviewService implements IReviewService {
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public EntityResult reviewInsert(Map<String, Object> attributes) throws OntimizeJEERuntimeException {
-        return this.daoHelper.insert(this.reviewDao, attributes);
+    public EntityResult reviewInsert(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        keyMap.put(UserDao.ID,auth.getName());
+        return this.daoHelper.insert(this.reviewDao, keyMap);
     }
 
     @Override

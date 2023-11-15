@@ -24,12 +24,11 @@
                 <Column>date</Column>
                 <Column>user_</Column>
                 <Column>gymid</Column>
-                <Column>user_admin</Column>
             </ValidColumns>
             <Sentence>
                 <![CDATA[
                     SELECT
-                        #COLUMNS#, g.name, g.photo, g.user_ as user_admin
+                        #COLUMNS#, g.name, g.photo
                     FROM
                         ${mainschema}.reviews r
                     JOIN

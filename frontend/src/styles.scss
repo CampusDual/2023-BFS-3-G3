@@ -246,3 +246,49 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
 .o-app-sidenav .o-app-sidenav-container .o-app-sidenav-content{
   overflow: hidden !important;
 }
+
+//reviews
+
+.form-reviews , .form__review{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  
+}
+
+.container_reviews{
+  background-color: #ECEFF1;
+  width: 800px;
+  padding: 10px 35px 50px 45px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  border:#B2A000 solid 2px;
+  font-size: 14px;
+
+}
+.o-form-toolbar {
+  flex: none;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.o-form-toolbar .o-form-toolbar-header {
+  padding: 0 50px 0 16px !important;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+
+}
+
+
+.o-container-scroll .o-scroll{
+  overflow: hidden !important;
+}

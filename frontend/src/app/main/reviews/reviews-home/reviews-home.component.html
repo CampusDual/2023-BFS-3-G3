@@ -1,1 +1,45 @@
-<p>reviews-home works!</p>
+<div class="form-reviews">
+  <o-form
+    #form
+    class="form__review"
+    service="reviews"
+    entity="review"
+    keys="reviewid"
+    header-actions="U;D"
+    show-header-navigation="no"
+  >
+    
+    <div class="container_reviews">
+      <h2>{{ "REVIEWS" | oTranslate }}</h2>
+      <o-combo
+        attr="gymid"
+        label="gym"
+        fxFlex="50"
+        service="gyms"
+        entity="gym"
+        keys="gymid"
+        columns="gymid;name"
+        visible-columns="name"
+        value-column="gymid"
+        class="input-padding"
+      >
+    </o-combo>
+      <div>
+        <mat-icon color="primary">star</mat-icon>
+        <o-slider
+          id="star"
+          attr="rate"
+          read-only="no"
+          thumb-label="true"
+          tick-interval="auto"
+          max="5"
+          min="1"
+          color="primary"
+        >
+        </o-slider>
+      </div>
+      <!-- Description Column -->
+      <o-textarea-input attr="content" fxFlex></o-textarea-input>
+    </div>
+  </o-form>
+</div>
