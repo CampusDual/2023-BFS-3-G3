@@ -21,7 +21,7 @@
 
 <!--Admin-->
 <div id="service" class ="hijo">
-  <h2 class=" title_home">{{'BEST_REVIEWS' | oTranslate}}</h2>
+  <h2 class=" title_home">{{'BEST_REVIEWS_ADMIN' | oTranslate}}</h2>
   <o-list #list2 service="gyms" entity="gymReview" refresh-button ="no" quick-filter="no"
   delete-button ="no" keys="gymid" columns="gymid;content;rate;date;user_;name;photo" row-height="large">
 
@@ -76,6 +76,11 @@
     <div>
       <h4>{{'ABOUT_US' | oTranslate}}</h4>
       <p>{{'TEXT_ABOUT' | oTranslate}}</p>
+      <p class="copy">
+        <span>{{ 'FOOTER_CREATED_BY' | oTranslate }}</span>
+        <span> &copy; 2023 </span>
+        <span>{{ 'FOOTER_RIGHTS' | oTranslate }}</span>
+      </p>
     </div>
     <div></div>
     <div>
@@ -87,4 +92,5 @@
       </ul>
     </div>
   </div>
+ 
 </div>
