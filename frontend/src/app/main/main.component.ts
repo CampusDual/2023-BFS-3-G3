@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  private actRoute: ActivatedRoute;
+  router: Router;
+  public serviceRoute:string;
+ myAction(){
+
+  this.router.navigate(['/main/payment/new'], { relativeTo: this.actRoute });
+ }
 
 
 }
-

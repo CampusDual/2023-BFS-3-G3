@@ -84,5 +84,14 @@
   "BEST_REVIEWS_ADMIN":"Últimas valoraciones",
   "ABOUT_US": "Sobre WheGym",
   "TEXT_ABOUT": "Bienvenido a WheGym, tu socio de confianza en la búsqueda de bienestar y salud. En WheGym, estamos comprometidos en cambiar la forma en que experimentas el fitness, brindándote acceso a una red diversa de gimnasios bajo una única y conveniente suscripción.",
-  "CONTACT": "Contacto"
+  "CONTACT": "Contacto",
+  "REVIEWS": "Reseñas",
+  "REVIEW": "Deja tu valoración",
+  "INFO_REVIEW0":"En",
+  "INFO_REVIEW1":" no solo valoramos tu opinión,",
+  "INFO_REVIEW2":" ¡la convertimos en el combustible que impulsa nuestra evolución!",
+  "INFO_REVIEW3":"Tu feedback es la chispa que enciende el motor de nuestras mejoras constantes.",
+  "INFO_REVIEW4":"Juntos, esculpimos el futuro de WheGym..",
+
+  "INFO_REVIEW":", no solo valoramos tu opinión, ¡la convertimos en el combustible que impulsa nuestra evolución! <br>Tu feedback es la chispa que enciende el motor de nuestras mejoras constantes. <br>Juntos, esculpimos el futuro de WheGym. "
 }

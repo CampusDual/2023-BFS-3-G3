@@ -28,5 +28,5 @@ public class UserDao extends OntimizeJdbcDaoSupport {
     public static final String PHONE = "phone";
     public static final String ADDRESS = "address";
     public static final String ACTIVE = "active";
-
+    public static final String RENOVATIONDATE = "renovationdate";
 }

@@ -249,12 +249,15 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
 
 //reviews
 
-.form-reviews , .form__review{
+.form-reviews {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   font-size: 14px;
+  flex-direction: column;
+  margin: 40px;
+  gap: 50px;
+
   
 }
 
@@ -271,6 +274,16 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
   border:#B2A000 solid 2px;
   font-size: 14px;
 
+}
+.info__reviews{
+  font-size: 2rem;
+  font-weight: bold;
+  color:grey;
+  text-shadow:1px 1px 3px  #B2A000;
+}
+.title__reviews{
+ color:#B2A000;
+ font-size: 2.2rem;
 }
 .o-form-toolbar {
   flex: none;

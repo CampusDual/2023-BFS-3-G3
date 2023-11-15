@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JdbcEntitySetup
+        xmlns="http://www.ontimize.com/schema/jdbc"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
+        catalog="" schema="${mainschema}" table="payments"
+        datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
+    <DeleteKeys>
+        <Column>paymentid</Column>
+    </DeleteKeys>
+    <UpdateKeys>
+        <Column>paymentid</Column>
+    </UpdateKeys>
+    <Queries>
+        <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="user_" prefix="p" databaseName="user_" />
+            </AmbiguousColumns>
+            <ValidColumns>
+                <Column>paymentid</Column>
+                <Column>holder</Column>
+                <Column>cardnumber</Column>
+                <Column>expiration</Column>
+                <Column>cvv</Column>
+                <Column>initialdate</Column>
+                <Column>user_</Column>
+                <Column>renovationdate</Column>
+                <Column>active</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+                    SELECT
+                        #COLUMNS#
+                    FROM
+                        ${mainschema}.payments p
+                        JOIN  ${mainschema}.tuser t
+                        on p.user_ = t.user_
+                    #WHERE#
+                ]]>
+            </Sentence>
+        </Query>
+    </Queries>
+</JdbcEntitySetup>

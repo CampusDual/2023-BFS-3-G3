@@ -1,4 +1,14 @@
 <div class="form-reviews">
+  <p class ="info__reviews">
+    {{"INFO_REVIEW0" | oTranslate }},
+    <span class="title__reviews">WheGym</span>
+    {{"INFO_REVIEW1" | oTranslate }} <br>
+    {{"INFO_REVIEW2" | oTranslate }}<br>
+    {{"INFO_REVIEW3" | oTranslate }}
+    
+    
+    💪✨</p>
+  <div class="container_reviews">
   <o-form
     #form
     class="form__review"
@@ -9,8 +19,8 @@
     show-header-navigation="no"
   >
     
-    <div class="container_reviews">
-      <h2>{{ "REVIEWS" | oTranslate }}</h2>
+  
+      <h2>{{ "REVIEW" | oTranslate }}</h2>
       <o-combo
         attr="gymid"
         label="gym"
@@ -40,6 +50,7 @@
       </div>
       <!-- Description Column -->
       <o-textarea-input attr="content" fxFlex></o-textarea-input>
-    </div>
+
   </o-form>
+</div>
 </div>
