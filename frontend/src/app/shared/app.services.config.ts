@@ -22,5 +22,8 @@ export const SERVICE_CONFIG: Object = {
   },
   reviews: {
     path:"/reviews"
+  },
+  payments: {
+    path:"/payments"
   }
 };

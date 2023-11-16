@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { Router } from '@angular/router';
+import { PaymentNewComponent } from '../payment-new/payment-new.component';
 
 @Component({
   selector: 'app-payment-home',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {
   }
 
+  public openPaymentPage() {
+    // let customerId = this.form.getFieldValue('CUSTOMERID');
+    // let date = new Date().getTime();
+    this.dialog.open(PaymentNewComponent, {
+      data: {
+      }, disableClose: false
+    })
+  }
 }

@@ -6,10 +6,10 @@
         catalog="" schema="${mainschema}" table="payments"
         datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
     <DeleteKeys>
-        <Column>paymentid</Column>
+        <Column>user_</Column>
     </DeleteKeys>
     <UpdateKeys>
-        <Column>paymentid</Column>
+        <Column>user_</Column>
     </UpdateKeys>
     <Queries>
         <Query id="default">

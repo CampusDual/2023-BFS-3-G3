@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { OTextInputComponent } from 'ontimize-web-ngx';
 
 
 @Component({
@@ -13,6 +14,24 @@ export class ReviewsHomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  @ViewChild('inputrate', {static: true}) inputrate: OTextInputComponent;
+
+  currentRate = 0; // Valoración actual del usuario
+  stars = [1, 2, 3, 4, 5]; // Array de estrellas
+  public rate:any;
+ 
+  rates(value: any): void {
+    this.currentRate = value;
+    // this.rate = value;
+    // const rateInput = document.getElementById('rateInput');
+    //   rateInput.setAttribute('rate', this.rate);
+
+      this.inputrate.setValue(value);
+      console.log(this.currentRate);
+  }
+  // getRate() {
+
+  // }
 
   // starsArray: number[] = [];
 

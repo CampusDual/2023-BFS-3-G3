@@ -12,7 +12,7 @@ export class MainComponent {
   public serviceRoute:string;
  myAction(){
 
-  this.router.navigate(['/main/payment/new'], { relativeTo: this.actRoute });
+  this.router.navigate(['/main/payment'], { relativeTo: this.actRoute });
  }
 
 

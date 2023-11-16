@@ -47,7 +47,7 @@ export const routes: Routes = [
           import("./reviews/reviews.module").then((m) => m.ReviewsModule), data: { oPermission: { permissionId: 'reviews', restrictedPermissionsRedirect: '/main/home'}}
       },
       {
-        path: "payment/new",
+        path: "payment",
         loadChildren: () =>
           import("./payment/payment.module").then((m) => m.PaymentModule), data: { oPermission: { permissionId: 'payment', restrictedPermissionsRedirect: '/main/home'}}
       }

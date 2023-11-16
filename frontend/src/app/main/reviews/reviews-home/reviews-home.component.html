@@ -15,6 +15,7 @@
       keys="reviewid"
       header-actions="U;D"
       show-header-navigation="no"
+      confirm-exit="no"
     >
       <h2>{{ "REVIEW" | oTranslate }}</h2>
       <o-combo
@@ -28,9 +29,20 @@
         visible-columns="name"
         value-column="gymid"
         class="input-padding"
+        sort="ASC"
+        required="yes"
       >
       </o-combo>
-        <div class="slider">
+      <div>
+        <div class="rating" >
+        <mat-icon *ngFor="let star of stars; let i = index" (click)="rates(i + 1)">
+                  {{ i < currentRate ? 'star' : 'star_border' }}
+        </mat-icon>
+        <!-- <input type="hidden" id="rateInput" [attr.rate]="rate" /> -->
+        <o-text-input #inputrate attr="rate" id="rateInput" oHidden required="yes"></o-text-input>
+        </div>
+      </div>
+        <!-- <div class="slider">
           <mat-icon color="primary">star</mat-icon>
           <o-slider
             id="star"
@@ -41,9 +53,11 @@
             max="5"
             min="1"
             color="primary"
+            required="yes"
+            [data] = "getRate()"
           >
           </o-slider>
-        </div>
+        </div> -->
       <o-textarea-input attr="content" label="content" fxFlex></o-textarea-input>
     </o-form>
   </div>
