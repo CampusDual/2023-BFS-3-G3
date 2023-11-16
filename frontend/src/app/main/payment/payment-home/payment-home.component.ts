@@ -22,8 +22,10 @@ export class PaymentHomeComponent implements OnInit {
     // let customerId = this.form.getFieldValue('CUSTOMERID');
     // let date = new Date().getTime();
     this.dialog.open(PaymentNewComponent, {
+      height: '35%',
+      width: '70%',
       data: {
-      }, disableClose: false
+      }, disableClose: true
     })
   }
 }

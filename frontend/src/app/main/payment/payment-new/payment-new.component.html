@@ -1,1 +1,50 @@
-<p>hola</p>
+<div class="container-payment">
+    <o-form fxFill #form service="payments" entity="payment" keys="user_" header-actions="I"
+    show-header-navigation="no">
+   <o-row>
+      <o-column
+        title="PAYMENT"
+        class="payment-column"
+        style="color: rgb(194, 168, 52); font: 2rem"
+        >
+        <o-row>
+          <o-text-input
+            class="input-padding"
+            attr="holder"
+            width="375px"
+            required="yes"
+          ></o-text-input>
+        </o-row>
+        <o-row>
+        <o-integer-input
+        class="input-padding"
+        attr="cardnumber"
+        width="375px"
+        required="yes"
+        ></o-integer-input>
+        <o-integer-input
+            class="input-padding"
+            attr="cvv"
+            min="0"
+            max="3"
+            width="150px"
+            required="yes"
+          ></o-integer-input>
+        </o-row>
+        <o-row>
+          <mat-form-field>
+              <mat-label>{{'expiration_date' | oTranslate}}</mat-label>
+              <input matInput [matDatepicker]="dp" [formControl]="date" attr ="expiration">
+              <mat-hint>MM/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+              <mat-datepicker #dp
+                              startView="multi-year"
+                              (monthSelected)="setMonthAndYear($event, dp)"
+                              panelClass="example-month-picker">
+              </mat-datepicker>
+            </mat-form-field>
+        </o-row>
+      </o-column>
+    </o-row>
+  </o-form>
+</div>
