@@ -1,29 +1,25 @@
 <div class="form-reviews">
   <p class ="info__reviews">
-    {{"INFO_REVIEW0" | oTranslate }},
+    {{"INFO_REVIEW0" | oTranslate }}
     <span class="title__reviews">WheGym</span>
     {{"INFO_REVIEW1" | oTranslate }} <br>
     {{"INFO_REVIEW2" | oTranslate }}<br>
-    {{"INFO_REVIEW3" | oTranslate }}
-    
-    
-    💪✨</p>
+    {{"INFO_REVIEW3" | oTranslate }} 💪✨
+  </p>
   <div class="container_reviews">
-  <o-form
-    #form
-    class="form__review"
-    service="reviews"
-    entity="review"
-    keys="reviewid"
-    header-actions="U;D"
-    show-header-navigation="no"
-  >
-    
-  
+    <o-form
+      #form
+      class="form__review"
+      service="reviews"
+      entity="review"
+      keys="reviewid"
+      header-actions="U;D"
+      show-header-navigation="no"
+    >
       <h2>{{ "REVIEW" | oTranslate }}</h2>
       <o-combo
         attr="gymid"
-        label="gym"
+        label="select"
         fxFlex="50"
         service="gyms"
         entity="gym"
@@ -33,24 +29,22 @@
         value-column="gymid"
         class="input-padding"
       >
-    </o-combo>
-      <div>
-        <mat-icon color="primary">star</mat-icon>
-        <o-slider
-          id="star"
-          attr="rate"
-          read-only="no"
-          thumb-label="true"
-          tick-interval="auto"
-          max="5"
-          min="1"
-          color="primary"
-        >
-        </o-slider>
-      </div>
-      <!-- Description Column -->
-      <o-textarea-input attr="content" fxFlex></o-textarea-input>
-
-  </o-form>
-</div>
+      </o-combo>
+        <div class="slider">
+          <mat-icon color="primary">star</mat-icon>
+          <o-slider
+            id="star"
+            attr="rate"
+            read-only="no"
+            thumb-label="true"
+            tick-interval="5"
+            max="5"
+            min="1"
+            color="primary"
+          >
+          </o-slider>
+        </div>
+      <o-textarea-input attr="content" label="content" fxFlex></o-textarea-input>
+    </o-form>
+  </div>
 </div>
