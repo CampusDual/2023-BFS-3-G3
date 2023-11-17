@@ -21,28 +21,36 @@
         attr="cardnumber"
         width="375px"
         required="yes"
-        ></o-integer-input>
-        <o-integer-input
+        thousand-separator=""
+        [validators]="validatorsErrorEventCard"
+        >
+        <o-validator
+            error-name="hasMoreThan16"
+            error-text="VALIDATOR.HASMORETHAN16"
+        ></o-validator>
+        </o-integer-input>
+        <o-integer-input #cvvchild
             class="input-padding"
             attr="cvv"
-            min="0"
-            max="3"
             width="150px"
             required="yes"
-          ></o-integer-input>
+            id="cvvinput"
+            [validators]="validatorsErrorEventCvv"
+            thousand-separator=""
+          >
+            <o-validator
+                error-name="hasMoreThan3"
+                error-text="VALIDATOR.HASMORETHAN3"
+            ></o-validator>
+        </o-integer-input>
         </o-row>
         <o-row>
-          <mat-form-field>
-              <mat-label>{{'expiration_date' | oTranslate}}</mat-label>
-              <input matInput [matDatepicker]="dp" [formControl]="date" attr ="expiration">
-              <mat-hint>MM/YYYY</mat-hint>
-              <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
-              <mat-datepicker #dp
-                              startView="multi-year"
-                              (monthSelected)="setMonthAndYear($event, dp)"
-                              panelClass="example-month-picker">
-              </mat-datepicker>
-            </mat-form-field>
+            <o-date-input
+                attr="expiration"
+                label="Fecha"
+                format="MM/YYYY"
+                onClick="event.preventDefault()">
+            </o-date-input>
         </o-row>
       </o-column>
     </o-row>

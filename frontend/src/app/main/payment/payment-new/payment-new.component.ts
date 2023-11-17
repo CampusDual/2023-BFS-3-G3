@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { MatDatepicker } from '@angular/material';
-import * as moment from 'moment';
-import { Moment } from 'moment';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ValidatorFn } from '@angular/forms';
+import { OIntegerInputComponent, OValidators } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-payment-new',
@@ -11,18 +9,13 @@ import { Moment } from 'moment';
 })
 export class PaymentNewComponent implements OnInit {
 
+  validatorsErrorEventCard: ValidatorFn[] = [];
+  validatorsErrorEventCvv: ValidatorFn[] = [];
   constructor() { }
 
   ngOnInit() {
+    this.validatorsErrorEventCard.push(OValidators.patternValidator(/^\d{16}$/, 'hasMoreThan16'));
+    this.validatorsErrorEventCvv.push(OValidators.patternValidator(/^\d{3}$/, 'hasMoreThan3'));
   }
-  date = new FormControl(moment());
-
-  setMonthAndYear(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>) {
-    const ctrlValue = this.date.value!;
-    ctrlValue.month(normalizedMonthAndYear.month());
-    ctrlValue.year(normalizedMonthAndYear.year());
-    this.date.setValue(ctrlValue);
-    datepicker.close();
-  }
-
+  
 }

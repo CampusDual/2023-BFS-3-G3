@@ -80,6 +80,8 @@
   "VALIDATOR.HASNUMBER":"Se necesita número",
   "VALIDATOR.HASSMALLCASE":"Se necesita minúscula",
   "VALIDATOR.HASSPECIALCHARACTERS":"Se necesita carácter especial",
+  "VALIDATOR.HASMORETHAN3": "Debe tener 3 dígitos",
+  "VALIDATOR.HASMORETHAN16": "Debe tener 16 dígitos",
   "BEST_REVIEWS": "Top 5 WheGym",
   "BEST_REVIEWS_ADMIN":"Últimas valoraciones",
   "ABOUT_US": "Sobre WheGym",

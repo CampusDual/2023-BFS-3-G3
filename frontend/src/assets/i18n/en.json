@@ -80,6 +80,8 @@
   "VALIDATOR.HASNUMBER": "Number required",
   "VALIDATOR.HASSMALLCASE": "Lowercase letter required",
   "VALIDATOR.HASSPECIALCHARACTERS": "Special character required",
+  "VALIDATOR.HASMORETHAN3": "Must have 3 digits",
+  "VALIDATOR.HASMORETHAN16": "Must have 16 digits",
   "BEST_REVIEWS": "WheGym top 5",
   "BEST_REVIEWS_ADMIN":"The last reviews",
   "ABOUT_US": "About WheGym",
