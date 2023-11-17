@@ -1,12 +1,15 @@
 <div class="container-payment">
     <o-form fxFill #form service="payments" entity="payment" keys="user_" header-actions="I"
-    show-header-navigation="no">
+    show-header-navigation="no" (onFormModeChange)="forceInsertMode($event)">
    <o-row>
       <o-column
         title="PAYMENT"
         class="payment-column"
         style="color: rgb(194, 168, 52); font: 2rem"
         >
+        <o-row>
+          <o-integer-input oHidden attr="user_"></o-integer-input>
+        </o-row>
         <o-row>
           <o-text-input
             class="input-padding"

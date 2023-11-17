@@ -10,8 +10,8 @@ export class MainComponent {
   private actRoute: ActivatedRoute;
   router: Router;
   public serviceRoute:string;
- myAction(){
 
+ myAction(){
   this.router.navigate(['/main/payment'], { relativeTo: this.actRoute });
  }
 

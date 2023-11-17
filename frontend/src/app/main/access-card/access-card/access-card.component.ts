@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService, DialogService, OFormComponent, OTranslateService, OntimizeService } from 'ontimize-web-ngx';
  
 @Component({
@@ -13,6 +14,9 @@ export class AccessCardComponent implements OnInit {
   public activeMessage: any;
   public data: any = {};
   public txt:string
+  private actRoute: ActivatedRoute;
+  router: Router;
+
   constructor(
     private translateService: OTranslateService,
     private auth:AuthService,
@@ -21,6 +25,21 @@ export class AccessCardComponent implements OnInit {
   ) {
    
   }
+
+  // showConfirm() {
+  //   if (this.dialogService) {
+  //     this.dialogService.confirm(
+  //       this.translateService.get('QR.ERROR_TITLE'),
+  //       this.translateService.get('QR.ERROR_TEXT'));
+
+  //     this.dialogService.dialogRef.afterClosed().subscribe( result => {
+  //       if(result) {
+  //         this.router.navigate(['../../payment'], { relativeTo: this.actRoute });
+  //       }
+  //     })
+  //   }
+  // }
+
  
   ngOnInit() {
 
@@ -39,14 +58,28 @@ export class AccessCardComponent implements OnInit {
              this.myAngularxQrCode = this.data.name + this.data.surname
           } else {
             document.getElementById('status').textContent = this.translateService.get('SUBSCRIPTION_DEACTIVE');
-            this.dialogService.info(
+            this.dialogService.confirm(
               this.translateService.get('QR.ERROR_TITLE'),
               this.translateService.get('QR.ERROR_TEXT'));
+      
+            this.dialogService.dialogRef.afterClosed().subscribe( result => {
+              if(result) {
+                console.log("hola2");
+                this.router.navigate(['http://localhost:4299/main/payment'], { relativeTo: this.actRoute });
+                
+              } else{
+                console.log("hola");
+              }
+            })
+      
+            
           }
         }
       },
     )
   }
+  
+
   ngAfterViewInit(){
     this.form.queryData({user_:this.auth.getSessionInfo().user});
   }

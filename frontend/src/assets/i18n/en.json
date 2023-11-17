@@ -64,7 +64,7 @@
   "status" : "status ok",
   "password_required":"Use 8 or more characters with a mix of letters numbers and symbols",
   "QR.ERROR_TITLE": "QR is not generated",
-  "QR.ERROR_TEXT": "Your membership is expired",
+  "QR.ERROR_TEXT": "Your membership is expired, Do you want to active it?",
   "SUBSCRIPTION_ACTIVE": "Active subscription",
   "SUBSCRIPTION_DEACTIVE": "Inactive subscription",
   "user": "I use a gym",
