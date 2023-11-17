@@ -312,3 +312,7 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
 .container-payment {
   position: relative;
 }
+
+.mat-form-field.icon-field .mat-form-field-suffix .icon-btn, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon-button, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon:not([svgicon]) {
+  display: none;
+}

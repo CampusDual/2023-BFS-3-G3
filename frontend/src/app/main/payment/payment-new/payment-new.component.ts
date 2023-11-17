@@ -12,6 +12,7 @@ export class PaymentNewComponent implements OnInit {
 
   validatorsErrorEventCard: ValidatorFn[] = [];
   validatorsErrorEventCvv: ValidatorFn[] = [];
+  validatorsErrorDateFormat: ValidatorFn[] = [];
 
   @ViewChild('form', { static: false }) form: OFormComponent;
   constructor(
@@ -19,8 +20,9 @@ export class PaymentNewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //this.validatorsErrorEventCard.push(OValidators.patternValidator(/^\d{16}$/, 'hasMoreThan16'));
+    this.validatorsErrorEventCard.push(OValidators.patternValidator(/^\d{16}$/, 'hasMoreThan16'));
     this.validatorsErrorEventCvv.push(OValidators.patternValidator(/^\d{3}$/, 'hasMoreThan3'));
+    this.validatorsErrorDateFormat.push(OValidators.patternValidator(/^(0[1-9]|1[0-2])\/\d{4}$/, 'errorDateFormat'));
   }
 
   public forceInsertMode(event: any) {
@@ -29,5 +31,4 @@ export class PaymentNewComponent implements OnInit {
       this.form.setFieldValues(this.data)
     }
   }
-  
 }

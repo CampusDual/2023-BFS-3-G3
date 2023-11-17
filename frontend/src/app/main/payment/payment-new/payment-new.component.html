@@ -27,15 +27,17 @@
           required="yes"
           thousand-separator=""
           [validators]="validatorsErrorEventCard"
+          sql-type="INT"
           >
           <o-validator
               error-name="hasMoreThan16"
               error-text="VALIDATOR.HASMORETHAN16"
           ></o-validator>
           </o-integer-input>
-          <o-integer-input #cvvchild
+          <o-integer-input
               class="input-padding"
               attr="cvv"
+              label="CVV"
               width="150px"
               required="yes"
               id="cvvinput"
@@ -49,12 +51,13 @@
           </o-integer-input>
           </o-row>
           <o-row>
-              <o-date-input
-                  attr="expiration"
-                  label="Fecha"
-                  format="MM/YYYY"
-                  onClick="event.preventDefault()">
-              </o-date-input>
+            <o-date-input
+                attr="expiration"
+                class="fecha"
+                placeholder="MM/YYYY"
+                format="MM/YYYY"
+                onClick="event.preventDefault()">
+            </o-date-input>
           </o-row>
         </o-column>
       </o-row>

@@ -98,8 +98,12 @@
   "payment": "Quota",
   "MEMBERSHIP_WHEGYM": "Membership WheGym",
   "INFO_PAYMENT0":"At",
-  "INFO_PAYMENT1":"entendemos que cada persona tiene necesidades y metas diferentes,",
-  "INFO_PAYMENT2":" por lo que ofrecemos tres emocionantes tipos de membresía para adaptarse a tu estilo de vida y objetivos. ",
-  "INFO_PAYMENT3":" ¡Descubre cuál es perfecto para ti!",
-  "SUBSCRIBE_BUTTON": "Activate" 
+  "INFO_PAYMENT1":"we understand that each person has different needs and goals,",
+  "INFO_PAYMENT2":" so we offer three exciting membership types to suit your lifestyle and goals. ",
+  "INFO_PAYMENT3":" Find out which one is perfect for you!",
+  "SUBSCRIBE_BUTTON": "Activate",
+  "expiration": "Fecha de expiración",
+  "cardnumber": "Card number",
+  "quota": "Quota",
+  "holder": "Card name"
 }

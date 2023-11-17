@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -14,6 +14,5 @@ export class MainComponent {
  myAction(){
   this.router.navigate(['/main/payment'], { relativeTo: this.actRoute });
  }
-
 
 }
