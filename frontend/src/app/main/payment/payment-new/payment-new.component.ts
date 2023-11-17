@@ -19,7 +19,7 @@ export class PaymentNewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.validatorsErrorEventCard.push(OValidators.patternValidator(/^\d{16}$/, 'hasMoreThan16'));
+    //this.validatorsErrorEventCard.push(OValidators.patternValidator(/^\d{16}$/, 'hasMoreThan16'));
     this.validatorsErrorEventCvv.push(OValidators.patternValidator(/^\d{3}$/, 'hasMoreThan3'));
   }
 

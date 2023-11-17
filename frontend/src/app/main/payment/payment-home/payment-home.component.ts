@@ -27,15 +27,17 @@ export class PaymentHomeComponent implements OnInit {
     this.form.queryData({user_:this.auth.getSessionInfo().user});
   }
 
-  public openPaymentPage() {
+  public openPaymentPage(buttonValue: string) {
     let user = this.auth.getSessionInfo().user;
-    // let date = new Date().getTime();
+    
     this.dialog.open(PaymentNewComponent, {
       height: '70%',
       width: '60%',
       data: {
-        user_: user
+        user_: user,
+        quota: buttonValue,
       }, disableClose: false
     })
   }
+  
 }

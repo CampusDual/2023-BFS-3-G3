@@ -1,5 +1,5 @@
 <div mat-dialog-content class="container-payment">
-    <o-form fxFill #form service="payments" entity="payment" header-actions="I"
+    <o-form fxFill #form service="payments" entity="payment" keys="user_" header-actions="I"
     show-header-navigation="no" (onFormModeChange)="forceInsertMode($event)">
     <o-row>
         <o-column
@@ -9,6 +9,7 @@
           >
           <o-row>
             <o-text-input oHidden attr="user_"></o-text-input>
+            <o-text-input  attr="quota" read-only="yes"></o-text-input>
           </o-row>
           <o-row>
             <o-text-input
