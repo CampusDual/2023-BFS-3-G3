@@ -95,5 +95,11 @@
   "INFO_REVIEW1":"no solo valoramos tu opinión,",
   "INFO_REVIEW2":" ¡la convertimos en el combustible que impulsa nuestra evolución!",
   "INFO_REVIEW3":"Tu feedback es la chispa que enciende el motor de nuestras mejoras constantes.",
-  "payment": "Cuota"
+  "payment": "Cuota",
+  "MEMBERSHIP_WHEGYM": "Suscripción WheGym",
+  "INFO_PAYMENT0":"En",
+  "INFO_PAYMENT1":"entendemos que cada persona tiene necesidades y metas diferentes,",
+  "INFO_PAYMENT2":" por lo que ofrecemos tres emocionantes tipos de membresía para adaptarse a tu estilo de vida y objetivos. ",
+  "INFO_PAYMENT3":" ¡Descubre cuál es perfecto para ti!",
+  "SUBSCRIBE_BUTTON": "Activar"
 }

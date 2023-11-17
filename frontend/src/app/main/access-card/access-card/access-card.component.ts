@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService, DialogService, OFormComponent, OTranslateService, OntimizeService } from 'ontimize-web-ngx';
+import { AuthService, DialogService, ODialogConfig, OFormComponent, OTranslateService, OntimizeService } from 'ontimize-web-ngx';
  
 @Component({
   selector: 'app-access-card',
@@ -15,15 +15,17 @@ export class AccessCardComponent implements OnInit {
   public data: any = {};
   public txt:string
   private actRoute: ActivatedRoute;
-  router: Router;
-
+   
   constructor(
     private translateService: OTranslateService,
     private auth:AuthService,
     private ontimizeService: OntimizeService,
     protected dialogService: DialogService,
+    private activatedRoute: ActivatedRoute, // Inyectar ActivatedRoute
+    private router: Router // Inyectar Router
   ) {
-   
+    this.actRoute = activatedRoute;
+    this.router = router;
   }
 
   // showConfirm() {
@@ -58,21 +60,22 @@ export class AccessCardComponent implements OnInit {
              this.myAngularxQrCode = this.data.name + this.data.surname
           } else {
             document.getElementById('status').textContent = this.translateService.get('SUBSCRIPTION_DEACTIVE');
+            const config: ODialogConfig = {
+              okButtonText: this.translateService.get('SUBSCRIBE_BUTTON')
+            };
             this.dialogService.confirm(
               this.translateService.get('QR.ERROR_TITLE'),
-              this.translateService.get('QR.ERROR_TEXT'));
-      
-            this.dialogService.dialogRef.afterClosed().subscribe( result => {
+              this.translateService.get('QR.ERROR_TEXT'), config);
+
+             this.dialogService.dialogRef.afterClosed().subscribe( result => {
               if(result) {
                 console.log("hola2");
-                this.router.navigate(['http://localhost:4299/main/payment'], { relativeTo: this.actRoute });
+                this.router.navigate(['../../payment'], { relativeTo: this.actRoute });
                 
               } else{
                 console.log("hola");
               }
             })
-      
-            
           }
         }
       },

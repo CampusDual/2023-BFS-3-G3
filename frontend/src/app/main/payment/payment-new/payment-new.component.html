@@ -1,61 +1,61 @@
-<div class="container-payment">
-    <o-form fxFill #form service="payments" entity="payment" keys="user_" header-actions="I"
+<div mat-dialog-content class="container-payment">
+    <o-form fxFill #form service="payments" entity="payment" header-actions="I"
     show-header-navigation="no" (onFormModeChange)="forceInsertMode($event)">
-   <o-row>
-      <o-column
-        title="PAYMENT"
-        class="payment-column"
-        style="color: rgb(194, 168, 52); font: 2rem"
-        >
-        <o-row>
-          <o-integer-input oHidden attr="user_"></o-integer-input>
-        </o-row>
-        <o-row>
-          <o-text-input
-            class="input-padding"
-            attr="holder"
-            width="375px"
-            required="yes"
-          ></o-text-input>
-        </o-row>
-        <o-row>
-        <o-integer-input
-        class="input-padding"
-        attr="cardnumber"
-        width="375px"
-        required="yes"
-        thousand-separator=""
-        [validators]="validatorsErrorEventCard"
-        >
-        <o-validator
-            error-name="hasMoreThan16"
-            error-text="VALIDATOR.HASMORETHAN16"
-        ></o-validator>
-        </o-integer-input>
-        <o-integer-input #cvvchild
-            class="input-padding"
-            attr="cvv"
-            width="150px"
-            required="yes"
-            id="cvvinput"
-            [validators]="validatorsErrorEventCvv"
-            thousand-separator=""
+    <o-row>
+        <o-column
+          title="PAYMENT"
+          class="payment-column"
+          style="color: rgb(194, 168, 52); font: 2rem"
           >
-            <o-validator
-                error-name="hasMoreThan3"
-                error-text="VALIDATOR.HASMORETHAN3"
-            ></o-validator>
-        </o-integer-input>
-        </o-row>
-        <o-row>
-            <o-date-input
-                attr="expiration"
-                label="Fecha"
-                format="MM/YYYY"
-                onClick="event.preventDefault()">
-            </o-date-input>
-        </o-row>
-      </o-column>
-    </o-row>
+          <o-row>
+            <o-text-input oHidden attr="user_"></o-text-input>
+          </o-row>
+          <o-row>
+            <o-text-input
+              class="input-padding"
+              attr="holder"
+              width="375px"
+              required="yes"
+            ></o-text-input>
+          </o-row>
+          <o-row>
+          <o-integer-input
+          class="input-padding"
+          attr="cardnumber"
+          width="375px"
+          required="yes"
+          thousand-separator=""
+          [validators]="validatorsErrorEventCard"
+          >
+          <o-validator
+              error-name="hasMoreThan16"
+              error-text="VALIDATOR.HASMORETHAN16"
+          ></o-validator>
+          </o-integer-input>
+          <o-integer-input #cvvchild
+              class="input-padding"
+              attr="cvv"
+              width="150px"
+              required="yes"
+              id="cvvinput"
+              [validators]="validatorsErrorEventCvv"
+              thousand-separator=""
+            >
+              <o-validator
+                  error-name="hasMoreThan3"
+                  error-text="VALIDATOR.HASMORETHAN3"
+              ></o-validator>
+          </o-integer-input>
+          </o-row>
+          <o-row>
+              <o-date-input
+                  attr="expiration"
+                  label="Fecha"
+                  format="MM/YYYY"
+                  onClick="event.preventDefault()">
+              </o-date-input>
+          </o-row>
+        </o-column>
+      </o-row>
   </o-form>
 </div>

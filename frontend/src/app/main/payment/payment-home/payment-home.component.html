@@ -1,6 +1,6 @@
-<h1>WheGym suscripcion</h1>
+<h1>{{ 'MEMBERSHIP_WHEGYM' | oTranslate }}</h1>
 <o-form #form attr="payment_detail" service="users" entity="user" fxLayout="column"
-show-header="no" header-actions="R;I;U;D" keys="user_" keys-sql-types="VARCHAR"
+show-header="no" header-actions="I" keys="user_" keys-sql-types="VARCHAR"
 show-header-navigation="no">
 
     <!-- <o-row>
@@ -13,7 +13,11 @@ show-header-navigation="no">
 </o-form>
 
 <p>
-    En WheGym, entendemos que cada persona tiene necesidades y metas diferentes, por lo que ofrecemos tres emocionantes tipos de membresía para adaptarse a tu estilo de vida y objetivos. ¡Descubre cuál es perfecto para ti!
+    {{"INFO_PAYMENT0" | oTranslate }}
+    <span class="title__reviews">WheGym</span>
+    {{"INFO_PAYMENT1" | oTranslate }} <br>
+    {{"INFO_PAYMENT2" | oTranslate }}<br>
+    {{"INFO_PAYMENT3" | oTranslate }}
 </p>
 <div class="container-text">
     <div class="box-text1">

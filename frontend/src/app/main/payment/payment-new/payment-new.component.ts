@@ -15,7 +15,7 @@ export class PaymentNewComponent implements OnInit {
 
   @ViewChild('form', { static: false }) form: OFormComponent;
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
   ngOnInit() {

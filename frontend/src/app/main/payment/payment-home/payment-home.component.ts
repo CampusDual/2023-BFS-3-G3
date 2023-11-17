@@ -28,7 +28,7 @@ export class PaymentHomeComponent implements OnInit {
   }
 
   public openPaymentPage() {
-    let user = this.form.getFieldValue('user_');
+    let user = this.auth.getSessionInfo().user;
     // let date = new Date().getTime();
     this.dialog.open(PaymentNewComponent, {
       height: '70%',

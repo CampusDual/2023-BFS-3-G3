@@ -64,7 +64,7 @@
   "status" : "status ok",
   "password_required":"Use 8 or more characters with a mix of letters numbers and symbols",
   "QR.ERROR_TITLE": "QR is not generated",
-  "QR.ERROR_TEXT": "Your membership is expired, Do you want to active it?",
+  "QR.ERROR_TEXT": "Your membership is expired, Do you want to activate it?",
   "SUBSCRIPTION_ACTIVE": "Active subscription",
   "SUBSCRIPTION_DEACTIVE": "Inactive subscription",
   "user": "I use a gym",
@@ -95,5 +95,11 @@
   "INFO_REVIEW1":"we don't just value your opinion,",
   "INFO_REVIEW2":" we turn it into the fuel that drives our evolution!",
   "INFO_REVIEW3":"Your feedback is the spark that ignites the engine of our constant improvements.",
-  "payment": "Quota"  
+  "payment": "Quota",
+  "MEMBERSHIP_WHEGYM": "Membership WheGym",
+  "INFO_PAYMENT0":"At",
+  "INFO_PAYMENT1":"entendemos que cada persona tiene necesidades y metas diferentes,",
+  "INFO_PAYMENT2":" por lo que ofrecemos tres emocionantes tipos de membresía para adaptarse a tu estilo de vida y objetivos. ",
+  "INFO_PAYMENT3":" ¡Descubre cuál es perfecto para ti!",
+  "SUBSCRIBE_BUTTON": "Activate" 
 }
