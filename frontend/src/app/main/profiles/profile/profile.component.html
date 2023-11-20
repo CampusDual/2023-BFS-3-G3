@@ -45,8 +45,23 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
     </div>  
   </o-column>
  
-</o-row>
  
+</o-row>
+
 </o-form>
   </div>
 </div>
+
+<o-column title="Darse de baja" appearance='outline' class="column-subscribe">
+  <o-row fxFlex="100">
+    <div class="column-subscribe">
+      <p>
+        Al hacer clic en este botón, confirmarás la cancelación de tu suscripción a WheGym. Ten en cuenta que al cancelar, perderás acceso a todas las funciones premium y beneficios asociados con tu suscripción actual. Tu cuenta seguirá siendo gratuita con funciones limitadas.
+        Si estás seguro de tu decisión, por favor, haz clic en el botón "Cancelar Suscripción" a continuación. Si has cambiado de opinión, puedes cerrar esta ventana o seleccionar "Mantener Suscripción" para seguir disfrutando de los beneficios premium.
+        Botón cancelación
+      </p>
+      <o-button attr="basic1" type="STROKED" label="DELETE" layout-padding color="primary" (click)="deleteUser()"></o-button>
+    </div>
+    
+  </o-row>
+</o-column>

@@ -14,3 +14,8 @@ p{
 .input-date {
     margin-left: 21px;
 }
+
+.column-subscribe {
+    display: flex;
+    flex-direction: column;
+}
