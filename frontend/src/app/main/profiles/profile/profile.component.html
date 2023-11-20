@@ -55,7 +55,7 @@ show-header-navigation="no" (onDataLoaded)="formInit()">
 <o-column title="{{'CANCEL_TITLE' | oTranslate }}" appearance='outline' class="column-subscribe">
   <o-form #form attr="profile_detail" service="payments" entity="payment" fxLayout="column"
     show-header="yes" header-actions="D" undo-button="no" keys-sql-types="VARCHAR"
-    show-header-navigation="no" show-header-actions-text="no">
+    show-header-navigation="no" show-header-actions-text="no" (onDelete)="deleteRedirect()">
   <o-row fxFlex="100">
     <div class="column-subscribe">
       <p class="subs-txt">

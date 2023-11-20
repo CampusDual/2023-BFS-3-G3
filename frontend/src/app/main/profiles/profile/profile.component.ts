@@ -15,16 +15,18 @@ export class ProfileComponent implements OnInit {
   public validatorArray: ValidatorFn[] = [];
   public activeToggle: any;
   public isPasswordModified: boolean = false;
-
+  private actRoute: ActivatedRoute;
   constructor(
     private auth:AuthService,
     private ontimizeService: OntimizeService,
     protected dialogService: DialogService,
     private router: Router,
-    private actRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private translateService: OTranslateService,
     @Inject(AuthService) private authService: AuthService,
   ) {
+    this.actRoute = activatedRoute;
+    this.router = router;
   }
 
   ngOnInit() {
@@ -130,40 +132,13 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-
-  public deletePayment(){
-    this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
-    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['id_rolename', 'activeGym'], 'deletableUser').subscribe(
-      res => {
-        if(res.data && res.data.length > 0) {
-          if(res.data[0].id_rolename == 1 && res.data[0].activeGym >0) {
-            this.dialogService.info(this.translateService.get('profile_admin_error'),this.translateService.get( 'profile_admin_message'));
-          }
-          else{
-            this.dialogService.confirm(this.translateService.get('title_confirm'), this.translateService.get('text_confirm'));
-            this.dialogService.dialogRef.afterClosed().subscribe( result => {
-            if(result) {
-              this.ontimizeService.delete({user_:this.auth.getSessionInfo().user}, 'payment').subscribe(
-                res => {
-                  if(res.code == 0) {
-                    this.dialogService.info(this.translateService.get('delete_data'),this.translateService.get( 'profile_delete_message'));
-                    this.authService.logout();
-                  } else {
-                    return null;
-                  }  
-                    })
-             
-                }
-              }
-            )
-          }
- 
-        }
-    });
-  }
   showPasswordConfirm = false;
  
   onInputChanged() {
     this.showPasswordConfirm = true;
+  }
+
+  deleteRedirect(event:any) {
+    this.router.navigate(['../../home'], { relativeTo: this.actRoute });
   }
 }
