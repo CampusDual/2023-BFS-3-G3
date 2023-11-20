@@ -13,6 +13,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.*;
 
 @Lazy
@@ -68,11 +69,20 @@ import java.util.*;
         @Override
         @Transactional(rollbackFor = Exception.class)
         public EntityResult paymentUpdate(Map<String, Object> attributes, Map<String, Object> keyValues) throws OntimizeJEERuntimeException {
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            keyValues.put(UserDao.ID,auth.getName());
+
             return this.daoHelper.update(this.paymentDao, attributes, keyValues);
         }
 
         @Override
         public EntityResult paymentDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            keyMap.put(UserDao.ID,auth.getName());
+
+            Map<String,Object>attrMap = new HashMap<>();
+            attrMap.put(UserDao.ACTIVE, false);
+
             return this.daoHelper.delete(this.paymentDao, keyMap);
         }
 

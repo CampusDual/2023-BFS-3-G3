@@ -1,18 +1,18 @@
-<h1>{{ 'MEMBERSHIP_WHEGYM' | oTranslate }}</h1>
+<h1 class="title_pay_home">{{ 'MEMBERSHIP_WHEGYM' | oTranslate }}</h1>
 <o-form #form attr="payment_detail" service="users" entity="user" fxLayout="column"
 show-header="no" header-actions="I" keys="user_" keys-sql-types="VARCHAR"
 show-header-navigation="no">
-
+ 
     <!-- <o-row>
-      <o-text-input class="input-padding" attr="user_" width="375px" required="no" enabled="no"></o-text-input>
+      <o-text-input class="input-padding" attr="user_" width="375px" required="no" enabled="no"></o-text-inpu t>
       <o-text-input class="input-padding" attr="active" width="375px" required="no" enabled="no"></o-text-input>
       <o-text-input class="input-padding" attr="renovationdate" width="375px" required="no" enabled="no"></o-text-input>
     </o-row> -->
-  
-
+ 
+ 
 </o-form>
-
-<p>
+ 
+<p class="info__payment">
     {{"INFO_PAYMENT0" | oTranslate }}
     <span class="title__reviews">WheGym</span>
     {{"INFO_PAYMENT1" | oTranslate }} <br>
@@ -47,8 +47,8 @@ show-header-navigation="no">
 </div>
 <br>
 <br>
-<p>
-    {{"INFO_PAYMENT4" | oTranslate }} 
+<p class="info__payment">
+    {{"INFO_PAYMENT4" | oTranslate }}
 </p>
 <ul>
     <li style="--accent-color:#0B374D">
@@ -68,6 +68,5 @@ show-header-navigation="no">
         <div class="descr">49'99€</div>
         <button (click)="openPaymentPage('integral')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
     </li>
-
+ 
 </ul>
-     

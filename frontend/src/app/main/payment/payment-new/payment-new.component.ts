@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { ValidatorFn } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { OFormComponent, OIntegerInputComponent, OValidators } from 'ontimize-web-ngx';
 
 @Component({
@@ -16,7 +16,8 @@ export class PaymentNewComponent implements OnInit {
 
   @ViewChild('form', { static: false }) form: OFormComponent;
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private dialogRef: MatDialogRef<PaymentNewComponent>
   ) { }
 
   ngOnInit() {
@@ -30,5 +31,9 @@ export class PaymentNewComponent implements OnInit {
       this.form.setInsertMode();
       this.form.setFieldValues(this.data)
     }
+  }
+
+  public closeDialog(event: any) {
+    this.dialogRef.close();
   }
 }

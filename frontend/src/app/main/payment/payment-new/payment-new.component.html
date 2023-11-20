@@ -1,12 +1,16 @@
 <div mat-dialog-content class="container-payment">
     <o-form fxFill #form service="payments" entity="payment" keys="user_" header-actions="I"
-    show-header-navigation="no" (onFormModeChange)="forceInsertMode($event)">
+    show-header-navigation="no" (onFormModeChange)="forceInsertMode($event)" (onInsert)="closeDialog($event)" ignore-default-navigation="yes"
+    (onCancel)="closeDialog($event)" undo-button="no">
     <o-row>
         <o-column
           title="PAYMENT"
           class="payment-column"
           style="color: rgb(194, 168, 52); font: 2rem"
           >
+
+          <img src="../../../../assets/images/visa.png" alt="" class="cardpng">
+          
           <o-row>
             <o-text-input oHidden attr="user_"></o-text-input>
             <o-text-input  attr="quota" read-only="yes"></o-text-input>

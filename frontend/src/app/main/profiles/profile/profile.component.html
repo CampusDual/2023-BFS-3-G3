@@ -1,14 +1,16 @@
-<o-form #form attr="profile_detail" service="users" entity="user" fxLayout="column"
+<div class="container_profile">
+  <div class="card-profile">
+  <o-form #form attr="profile_detail" service="users" entity="user" fxLayout="column"
 show-header="yes" header-actions="U" keys="user_" keys-sql-types="VARCHAR"
 show-header-navigation="yes" (onDataLoaded)="formInit()">
-  
+ 
 <o-row>
   <o-column title="USER_PROFILE"  class="login-column">
-    <o-row>   
+    <o-row>  
       <o-text-input class="input-padding" attr="user_"  required="yes" width="180px" read-only="yes" (input)="onInputChanged()"></o-text-input>
       <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="yes" (input)="onInputChanged()"
       ></o-slide-toggle>
-      <o-date-input class="input-padding" attr="renovationdate" read-only="yes" label="{{'RENOVATION_DATE' | oTranslate }}"></o-date-input>
+      <o-date-input class="input-date" attr="renovationdate" read-only="yes" label="{{'RENOVATION_DATE' | oTranslate }}"></o-date-input>
     </o-row>
     <o-row>
       <o-text-input class="input-padding" attr="name" width="375px" required="yes" (input)="onInputChanged()"></o-text-input>
@@ -22,7 +24,7 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
       <o-phone-input class="input-padding" attr="phone" width="375px" countries="+34" data="+34" read-only="no" required="yes" (input)="onInputChanged()"></o-phone-input>
       <o-email-input attr="email" width="375px"></o-email-input>
     </o-row>
-    
+   
     <o-row>
       <o-password-input  class="input-padding" attr="password"  required="yes" width="375px" show-password-button="yes"  [validators]="validatorArray" (onChange)="reviewMatches($event)" (input)="onInputChanged()"></o-password-input>
       <o-password-input   id="confirm"
@@ -42,8 +44,9 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
       <o-button attr="basic1" type="STROKED" label="DELETE" layout-padding color="primary" (click)="deleteUser()"></o-button>
     </div>  
   </o-column>
-  
+ 
 </o-row>
-
+ 
 </o-form>
-
+  </div>
+</div>

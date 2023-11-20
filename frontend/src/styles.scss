@@ -313,9 +313,9 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
   position: relative;
 }
 
-.mat-form-field.icon-field .mat-form-field-suffix .icon-btn, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon-button, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon:not([svgicon]) {
-  display: none;
-}
+// .mat-form-field.icon-field .mat-form-field-suffix .icon-btn, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon-button, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon:not([svgicon]) {
+//   display: none;
+// }
 
  
 ////////// payment css///////////////
@@ -324,11 +324,7 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
   position: relative;
   height: 100%;
   width: 100%;
-   background-image: linear-gradient(45deg, rgba(209, 195, 89, 0.5), #e5e4dd98);
-  //  , url('./assets/images/risas.webp');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: 30% 30%;
+  background-image: linear-gradient(45deg, rgba(209, 195, 89, 0.5), #e5e4dd98);
   margin:0;
   padding: 0;
 }
@@ -371,13 +367,35 @@ border: 1px solid rgba(255, 255, 255, 0.19);
 }
 //image visa
 .cardpng{
-  width: 50px;
+  width: 150px;
   position: absolute;
-  bottom:3px;
-  right: 10px;
+  bottom:20px;
+  right: 50px;
 }
  
 // icono fecha
  .mat-form-field.icon-field .mat-form-field-suffix .mat-icon:not([svgicon]){
   display: none;
  }
+
+ ////////////PROFILE/////////////
+.container_profile {
+    background-color: #ECEFF1;
+    width: 800px;
+    padding: 10px 35px 50px 45px;
+    border-radius: 10px;
+   // box-shadow: 0px 0px 30px #000;
+    display: flex;
+    justify-content: center;
+    position: relative;
+   // border:#B2A000 solid 2px;
+    font-size: 14px;
+   
+  }
+  .card-profile .o-form-toolbar {
+    flex: none;
+    display: block;
+    position: absolute;
+    bottom:58px;
+    right: 396px
+  }

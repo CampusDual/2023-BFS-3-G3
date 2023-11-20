@@ -46,14 +46,15 @@ export class AccessCardComponent implements OnInit {
   ngOnInit() {
 
     this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
-    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['active','name','surname'], 'user').subscribe(
+    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['active','name','surname', 'renovationdate'], 'user').subscribe(
       res=> {
        
         if(res.data && res.data.length) {
           this.data = res.data[0];
           console.log('Datos recibidos:', this.data);
          
-          if(this.data.active) {
+          const now = new Date();
+          if(this.data.renovationdate > now) {
              this.qr = document.getElementById('qrid');
              this.qr.style.display = 'block';
              document.getElementById('status').textContent = this.translateService.get('SUBSCRIPTION_ACTIVE');
