@@ -399,3 +399,18 @@ border: 1px solid rgba(255, 255, 255, 0.19);
     bottom:58px;
     right: 396px
   }
+
+ .column-subscribe .o-form-toolbar button:last-child{
+    display: none;
+  }
+
+  .column-subscribe .o-form-toolbar .o-form-toolbar-header .mat-toolbar-tools span{
+    color: rgb(204, 0, 0);
+  }
+
+#service o-list-item {
+    cursor: context-menu !important;
+}
+#access o-list-item {
+    cursor: context-menu !important;
+}

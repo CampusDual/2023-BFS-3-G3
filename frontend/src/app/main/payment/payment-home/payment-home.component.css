@@ -142,7 +142,11 @@ ul li .descr {
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
 }
- 
+
+.container-text-admin {
+  display: flex;
+  justify-content: center;
+}
  
 .title-text1 {
     color: #0B374D;

@@ -1,70 +1,102 @@
-<h1 class="title_pay_home">{{ 'MEMBERSHIP_WHEGYM' | oTranslate }}</h1>
-<o-form #form attr="payment_detail" service="users" entity="user" fxLayout="column"
-show-header="no" header-actions="I" keys="user_" keys-sql-types="VARCHAR"
-show-header-navigation="no">
- 
-    <!-- <o-row>
-      <o-text-input class="input-padding" attr="user_" width="375px" required="no" enabled="no"></o-text-inpu t>
-      <o-text-input class="input-padding" attr="active" width="375px" required="no" enabled="no"></o-text-input>
-      <o-text-input class="input-padding" attr="renovationdate" width="375px" required="no" enabled="no"></o-text-input>
-    </o-row> -->
- 
- 
-</o-form>
- 
-<p class="info__payment">
-    {{"INFO_PAYMENT0" | oTranslate }}
-    <span class="title__reviews">WheGym</span>
-    {{"INFO_PAYMENT1" | oTranslate }} <br>
-    {{"INFO_PAYMENT2" | oTranslate }}<br>
-    {{"INFO_PAYMENT3" | oTranslate }}
-</p>
-<div class="container-text">
-    <div class="box-text1">
-        <h2 class="title-text1">{{"QUOTA_ACTIVE" | oTranslate }}</h2>
-        <ol>
-            <li><i style="color: #0B374D;">✔</i> {{"INFO_ACTIVE0" | oTranslate }}</li>
-            <li><i style="color: #0B374D;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
-            <li><i style="color: #0B374D;">✔</i> {{"INFO_ACTIVE1" | oTranslate }}</li>
-        </ol>
+<div id="user">
+    <h1 class="title_pay_home">{{ 'MEMBERSHIP_WHEGYM' | oTranslate }}</h1>
+    <o-form #form attr="payment_detail" service="users" entity="user" fxLayout="column"
+    show-header="no" header-actions="I" keys="user_" keys-sql-types="VARCHAR"
+    show-header-navigation="no">
+     
+    </o-form>
+     
+    <p class="info__payment">
+        {{"INFO_PAYMENT0" | oTranslate }}
+        <span class="title__reviews">WheGym</span>
+        {{"INFO_PAYMENT1" | oTranslate }} <br>
+        {{"INFO_PAYMENT2" | oTranslate }}<br>
+        {{"INFO_PAYMENT3" | oTranslate }}
+    </p>
+    <div class="container-text">
+        <div class="box-text1">
+            <h2 class="title-text1">{{"QUOTA_ACTIVE" | oTranslate }}</h2>
+            <ol>
+                <li><i style="color: #0B374D;">✔</i> {{"INFO_ACTIVE0" | oTranslate }}</li>
+                <li><i style="color: #0B374D;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
+                <li><i style="color: #0B374D;">✔</i> {{"INFO_ACTIVE1" | oTranslate }}</li>
+            </ol>
+        </div>
+        <div class="box-text2">
+            <h2 class="title-text2">{{"QUOTA_VITAL" | oTranslate }}</h2>
+            <ol>
+                <li><i style="color: #1286A8;">✔</i> {{"INFO_VITAL0" | oTranslate }}</li>
+                <li><i style="color: #1286A8;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
+                <li><i style="color: #1286A8;">✔</i> {{"INFO_VITAL1" | oTranslate }}</li>
+            </ol>
+        </div>
+        <div class="box-text3">
+            <h2 class="title-text3">{{"QUOTA_INTEGRAL" | oTranslate }}</h2>
+            <ol>
+                <li><i style="color: #D2B53B;">✔</i> {{"INFO_INTEGRAL0" | oTranslate }}</li>
+                <li><i style="color: #D2B53B;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
+                <li><i style="color: #D2B53B;">✔</i> {{"INFO_INTEGRAL1" | oTranslate }}</li>
+            </ol>
+        </div>
     </div>
-    <div class="box-text2">
-        <h2 class="title-text2">{{"QUOTA_VITAL" | oTranslate }}</h2>
-        <ol>
-            <li><i style="color: #1286A8;">✔</i> {{"INFO_VITAL0" | oTranslate }}</li>
-            <li><i style="color: #1286A8;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
-            <li><i style="color: #1286A8;">✔</i> {{"INFO_VITAL1" | oTranslate }}</li>
-        </ol>
-    </div>
-    <div class="box-text3">
-        <h2 class="title-text3">{{"QUOTA_INTEGRAL" | oTranslate }}</h2>
-        <ol>
-            <li><i style="color: #D2B53B;">✔</i> {{"INFO_INTEGRAL0" | oTranslate }}</li>
-            <li><i style="color: #D2B53B;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
-            <li><i style="color: #D2B53B;">✔</i> {{"INFO_INTEGRAL1" | oTranslate }}</li>
-        </ol>
-    </div>
+    <p class="info__payment">
+        {{"INFO_PAYMENT4" | oTranslate }}
+    </p>
+    <ul>
+        <li style="--accent-color:#0B374D">
+            <div class="icon"><i class="fa fa-play" aria-hidden="true"></i></div>
+            <div class="title">Activa</div>
+            <div class="descr">19'99€</div>
+            <button (click)="openPaymentPage('activa')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
+        </li>
+        <li style="--accent-color:#1286A8">
+            <div class="icon"><i class="fa fa-forward" aria-hidden="true"></i></div>
+            <div class="title">Vital</div>
+            <div class="descr">27'99€</div>
+            <button (click)="openPaymentPage('vital')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
+        <li style="--accent-color:#D2B53B">
+            <div class="icon"><i class="fa fa-fast-forward" aria-hidden="true"></i></div>
+            <div class="title">Integral</div>
+            <div class="descr">49'99€</div>
+            <button (click)="openPaymentPage('integral')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
+        </li>
+     
+    </ul>
 </div>
-<p class="info__payment">
-    {{"INFO_PAYMENT4" | oTranslate }}
-</p>
-<ul>
-    <li style="--accent-color:#0B374D">
-        <div class="icon"><i class="fa fa-play" aria-hidden="true"></i></div>
-        <div class="title">Activa</div>
-        <div class="descr">19'99€</div>
-        <button (click)="openPaymentPage('activa')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
-    </li>
-    <li style="--accent-color:#1286A8">
-        <div class="icon"><i class="fa fa-forward" aria-hidden="true"></i></div>
-        <div class="title">Vital</div>
-        <div class="descr">27'99€</div>
-        <button (click)="openPaymentPage('vital')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
-    <li style="--accent-color:#D2B53B">
-        <div class="icon"><i class="fa fa-fast-forward" aria-hidden="true"></i></div>
-        <div class="title">Integral</div>
-        <div class="descr">49'99€</div>
-        <button (click)="openPaymentPage('integral')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
-    </li>
- 
-</ul>
+
+<div id="admin">
+    <h1 class="title_pay_home">{{ 'MEMBERSHIP_WHEGYM' | oTranslate }}</h1>
+    <o-form #form attr="payment_detail" service="users" entity="user" fxLayout="column"
+    show-header="no" header-actions="I" keys="user_" keys-sql-types="VARCHAR"
+    show-header-navigation="no">
+     
+    </o-form>
+     
+    <p class="info__payment">
+        {{"INFO_PAYMENT0_ADMIN" | oTranslate }}
+        <span class="title__reviews">WheGym</span>,<br>
+        {{"INFO_PAYMENT1_ADMIN" | oTranslate }} <br>
+        {{"INFO_PAYMENT2_ADMIN" | oTranslate }}<br>
+    </p>
+    <div class="container-text-admin">
+        <div class="box-text2">
+            <ol>
+                <li><i style="color: #1286A8;">✔ </i><b>{{"INFO_ADMIN_TITLE0" | oTranslate }}</b>{{"INFO_ADMIN0" | oTranslate }}</li>
+                <li><i style="color: #1286A8;">✔ </i><b>{{"INFO_ADMIN_TITLE1" | oTranslate }}</b> {{"INFO_ADMIN1" | oTranslate }}</li>
+                <li><i style="color: #1286A8;">✔ </i> <b>{{"INFO_ADMIN_TITLE2" | oTranslate }}</b> {{"INFO_ADMIN2" | oTranslate }}</li>
+            </ol>
+        </div>
+    </div>
+    <p class="info__payment">
+        {{"INFO_PAYMENT4_ADMIN" | oTranslate }}
+    </p>
+    <ul>
+        <li style="--accent-color:#1286A8">
+            <div class="icon"><i class="fa fa-forward" aria-hidden="true"></i></div>
+            <div class="title">WhePlus</div>
+            <div class="descr">87'99€</div>
+            <button (click)="openPaymentPage('wheplus')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
+        </li>
+     
+    </ul>
+</div>

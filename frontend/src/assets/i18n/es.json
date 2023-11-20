@@ -119,5 +119,19 @@
   "cardnumber": "Número de tarjeta",
   "quota": "Cuota",
   "holder": "Titular de la tarjeta",
-  "PAYMENT": "Pago"
+  "PAYMENT": "Pago",
+  "INFO_CANCEL0": "Al hacer clic en este botón, confirmarás la cancelación de tu suscripción a WheGym.",
+  "INFO_CANCEL1": " Ten en cuenta que al cancelar, perderás los beneficios asociados con tu suscripción actual. Tu cuenta seguirá siendo gratuita con funciones limitadas.",
+  "INFO_CANCEL2": "Si estás seguro de tu decisión, por favor, haz clic en el botón a continuación.",
+  "CANCEL_TITLE": "Darse de baja",
+  "INFO_PAYMENT0_ADMIN": "Amplía tu Alcance con",
+  "INFO_PAYMENT1_ADMIN": "la plataforma líder para conectar gimnasios con entusiastas del fitness en todo el mundo",
+  "INFO_PAYMENT2_ADMIN": "¿Por qué unirte a WheGym?",
+  "INFO_ADMIN_TITLE0": "Visibilidad Global: ",
+  "INFO_ADMIN0": "Convierte tu gimnasio en una atracción global al mostrarlo en WheGym. Llega a una audiencia más amplia y atrae a nuevos miembros.",
+  "INFO_ADMIN_TITLE1": "Gestión Simplificada: ",
+  "INFO_ADMIN1": "Administra tus clases, horarios y membresías de manera fácil y eficiente desde la comodidad de tu dispositivo. ¡Más tiempo para centrarte en lo que amas, el fitness!",
+  "INFO_ADMIN_TITLE2": "Comunicación Directa: ",
+  "INFO_ADMIN2": "Mantente en contacto directo con tus miembros a través de la plataforma. Anuncia eventos, promociones especiales y comparte actualizaciones importantes en tiempo real.",
+  "INFO_PAYMENT4_ADMIN": "¡Únete a WheGym hoy y lleva la experiencia de fitness de tu gimnasio al siguiente nivel!"
 }

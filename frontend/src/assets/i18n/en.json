@@ -119,5 +119,9 @@
   "cardnumber": "Card number",
   "quota": "Quota",
   "holder": "Card name",
-  "PAYMENT": "Payment"
+  "PAYMENT": "Payment",
+  "INFO_CANCEL0": "By clicking this button, you will confirm the cancellation of your WheGym subscription.",
+  "INFO_CANCEL1": "Please note that when you cancel, you will lose the benefits associated with your current subscription. Your account will remain free with limited features.",
+  "INFO_CANCEL2": "If you are sure of your decision, please click the button below.",
+  "CANCEL_TITLE": "Unsubscribe"
 }

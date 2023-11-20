@@ -80,8 +80,15 @@ import java.util.*;
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             keyMap.put(UserDao.ID,auth.getName());
 
+            Map<String,Object>updateMap = new HashMap<>();
             Map<String,Object>attrMap = new HashMap<>();
             attrMap.put(UserDao.ACTIVE, false);
+
+            updateMap.put(UserDao.ID,auth.getName());
+            EntityResult updateResult = this.daoHelper.update(this.userDao,attrMap,updateMap);
+            if(updateResult.isWrong()) {
+                return updateResult;
+            }
 
             return this.daoHelper.delete(this.paymentDao, keyMap);
         }

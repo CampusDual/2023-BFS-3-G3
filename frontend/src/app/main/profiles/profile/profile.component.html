@@ -2,7 +2,7 @@
   <div class="card-profile">
   <o-form #form attr="profile_detail" service="users" entity="user" fxLayout="column"
 show-header="yes" header-actions="U" keys="user_" keys-sql-types="VARCHAR"
-show-header-navigation="yes" (onDataLoaded)="formInit()">
+show-header-navigation="no" (onDataLoaded)="formInit()">
  
 <o-row>
   <o-column title="USER_PROFILE"  class="login-column">
@@ -52,21 +52,19 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
   </div>
 </div>
 
-<o-column title="Darse de baja" appearance='outline' class="column-subscribe">
+<o-column title="{{'CANCEL_TITLE' | oTranslate }}" appearance='outline' class="column-subscribe">
   <o-form #form attr="profile_detail" service="payments" entity="payment" fxLayout="column"
     show-header="yes" header-actions="D" undo-button="no" keys-sql-types="VARCHAR"
-    show-header-navigation="yes" (onDataLoaded)="formInit()">
+    show-header-navigation="no" show-header-actions-text="no">
   <o-row fxFlex="100">
     <div class="column-subscribe">
       <p class="subs-txt">
-        Al hacer clic en este botón, confirmarás la cancelación de tu suscripción a WheGym. Ten en cuenta que al cancelar, perderás acceso a todas las funciones premium y beneficios asociados con tu suscripción actual. Tu cuenta seguirá siendo gratuita con funciones limitadas.
-        Si estás seguro de tu decisión, por favor, haz clic en el botón "Cancelar Suscripción" a continuación. Si has cambiado de opinión, puedes cerrar esta ventana o seleccionar "Mantener Suscripción" para seguir disfrutando de los beneficios premium.
-        Botón cancelación
+        {{"INFO_CANCEL0" | oTranslate }}
+        {{"INFO_CANCEL1" | oTranslate }}
+        {{"INFO_CANCEL2" | oTranslate }}
       </p>
-      
-      <button (click)="deletePayment()" class="subs-button">{{"Darse de baja" | oTranslate }}</button>
-     </div>
-    
+      <br>
+    </div>
   </o-row>
 </o-form>
 </o-column>
