@@ -130,6 +130,37 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+
+  public deletePayment(){
+    this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
+    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['id_rolename', 'activeGym'], 'deletableUser').subscribe(
+      res => {
+        if(res.data && res.data.length > 0) {
+          if(res.data[0].id_rolename == 1 && res.data[0].activeGym >0) {
+            this.dialogService.info(this.translateService.get('profile_admin_error'),this.translateService.get( 'profile_admin_message'));
+          }
+          else{
+            this.dialogService.confirm(this.translateService.get('title_confirm'), this.translateService.get('text_confirm'));
+            this.dialogService.dialogRef.afterClosed().subscribe( result => {
+            if(result) {
+              this.ontimizeService.delete({user_:this.auth.getSessionInfo().user}, 'payment').subscribe(
+                res => {
+                  if(res.code == 0) {
+                    this.dialogService.info(this.translateService.get('delete_data'),this.translateService.get( 'profile_delete_message'));
+                    this.authService.logout();
+                  } else {
+                    return null;
+                  }  
+                    })
+             
+                }
+              }
+            )
+          }
+ 
+        }
+    });
+  }
   showPasswordConfirm = false;
  
   onInputChanged() {

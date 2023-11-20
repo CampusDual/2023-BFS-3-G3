@@ -53,15 +53,20 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
 </div>
 
 <o-column title="Darse de baja" appearance='outline' class="column-subscribe">
+  <o-form #form attr="profile_detail" service="payments" entity="payment" fxLayout="column"
+    show-header="yes" header-actions="D" undo-button="no" keys-sql-types="VARCHAR"
+    show-header-navigation="yes" (onDataLoaded)="formInit()">
   <o-row fxFlex="100">
     <div class="column-subscribe">
-      <p>
+      <p class="subs-txt">
         Al hacer clic en este botón, confirmarás la cancelación de tu suscripción a WheGym. Ten en cuenta que al cancelar, perderás acceso a todas las funciones premium y beneficios asociados con tu suscripción actual. Tu cuenta seguirá siendo gratuita con funciones limitadas.
         Si estás seguro de tu decisión, por favor, haz clic en el botón "Cancelar Suscripción" a continuación. Si has cambiado de opinión, puedes cerrar esta ventana o seleccionar "Mantener Suscripción" para seguir disfrutando de los beneficios premium.
         Botón cancelación
       </p>
-      <o-button attr="basic1" type="STROKED" label="DELETE" layout-padding color="primary" (click)="deleteUser()"></o-button>
-    </div>
+      
+      <button (click)="deletePayment()" class="subs-button">{{"Darse de baja" | oTranslate }}</button>
+     </div>
     
   </o-row>
+</o-form>
 </o-column>

@@ -18,4 +18,24 @@ p{
 .column-subscribe {
     display: flex;
     flex-direction: column;
+    background-color: rgb(240, 234, 234);
+    border-radius: 4px;
+}
+
+.subs-button {
+    width: 180px;
+    height: 35px;
+    color: rgb(189, 10, 10);
+    background-color: transparent;
+    border: 1px solid rgb(189, 10, 10);
+    margin-bottom: 18px;
+}
+
+.subs-button:hover {
+    background-color: rgba(189, 10, 10, 0.105);
+    border:1px inset white;
+}
+
+.subs-txt {
+    font-size: 0.8rem;
 }
