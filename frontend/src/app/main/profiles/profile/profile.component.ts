@@ -139,6 +139,6 @@ export class ProfileComponent implements OnInit {
   }
 
   deleteRedirect(event:any) {
-    this.router.navigate(['../../home'], { relativeTo: this.actRoute });
+    this.router.navigate(['../../../home'], { relativeTo: this.actRoute });
   }
 }
