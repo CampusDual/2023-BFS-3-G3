@@ -29,6 +29,7 @@
                 <Column>city</Column>
                 <Column>phone</Column>
                 <Column>address</Column>
+                <Column>renovationdate</Column>
                 <Column>id_rolename</Column>
                 <Column>active</Column>
             </ValidColumns>

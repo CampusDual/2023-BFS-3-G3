@@ -316,3 +316,68 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
 .mat-form-field.icon-field .mat-form-field-suffix .icon-btn, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon-button, .mat-form-field.icon-field .mat-form-field-suffix .mat-icon:not([svgicon]) {
   display: none;
 }
+
+ 
+////////// payment css///////////////
+.mat-dialog-container:has(.container-payment),
+.container-payment {
+  position: relative;
+  height: 100%;
+  width: 100%;
+   background-image: linear-gradient(45deg, rgba(209, 195, 89, 0.5), #e5e4dd98);
+  //  , url('./assets/images/risas.webp');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 30% 30%;
+  margin:0;
+  padding: 0;
+}
+ 
+ 
+ .o-form-content-wrapper:has(.container_card){
+display: flex;
+align-items: center !important;
+justify-content: center !important;
+place-content:center !important
+ }
+.pay_titel{
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.container_card{
+ 
+background: rgba(255, 255, 255, 0.72);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(7.7px);
+border: 1px solid rgba(255, 255, 255, 0.19);
+ padding:20px 35px ;
+  border-radius: 20px;
+  width: 50%;
+    height: 65%;
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+  flex-direction: column !important;
+  box-sizing: border-box;
+  margin:70px 0 14px 0;
+ 
+ 
+}
+ 
+.numberCard_cvv{
+  display: flex;
+  flex-wrap: nowrap;
+}
+//image visa
+.cardpng{
+  width: 50px;
+  position: absolute;
+  bottom:3px;
+  right: 10px;
+}
+ 
+// icono fecha
+ .mat-form-field.icon-field .mat-form-field-suffix .mat-icon:not([svgicon]){
+  display: none;
+ }

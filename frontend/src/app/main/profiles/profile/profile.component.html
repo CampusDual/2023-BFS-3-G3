@@ -8,6 +8,7 @@ show-header-navigation="yes" (onDataLoaded)="formInit()">
       <o-text-input class="input-padding" attr="user_"  required="yes" width="180px" read-only="yes" (input)="onInputChanged()"></o-text-input>
       <o-slide-toggle color= "primary" id="activeid" style="display: none;" class="input-padding" attr="active" label="{{ 'active' | oTranslate }}" [data]="getValue()" read-only="yes" (input)="onInputChanged()"
       ></o-slide-toggle>
+      <o-date-input class="input-padding" attr="renovationdate" read-only="yes" label="{{'RENOVATION_DATE' | oTranslate }}"></o-date-input>
     </o-row>
     <o-row>
       <o-text-input class="input-padding" attr="name" width="375px" required="yes" (input)="onInputChanged()"></o-text-input>

@@ -19,6 +19,7 @@ public class PaymentDao extends OntimizeJdbcDaoSupport {
         public static final String CVV = "cvv";
         public static final String INITIALDATE = "initialdate";
         public static final String USER_ = "user_";
+        public static final String QUOTA = "quota";
 
     }
 

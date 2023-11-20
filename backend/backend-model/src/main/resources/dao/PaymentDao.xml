@@ -24,6 +24,7 @@
                 <Column>cvv</Column>
                 <Column>initialdate</Column>
                 <Column>user_</Column>
+                <Column>quota</Column>
                 <Column>renovationdate</Column>
                 <Column>active</Column>
             </ValidColumns>

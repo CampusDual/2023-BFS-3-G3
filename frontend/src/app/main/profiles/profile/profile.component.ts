@@ -52,7 +52,13 @@ export class ProfileComponent implements OnInit {
 
   ngAfterViewInit(){
     this.form.queryData({user_:this.auth.getSessionInfo().user});
+    // this.ontimizeService.query({user_:this.auth.getSessionInfo().user}).subscribe(
+    //   res => {
+    //     console.log('Datos cargados:', res);
+    //   }
+    // )
   }
+  
 
   formInit(){
     this.form.setFieldValue("PASSWORDCONFIRM",this.form.getFieldValue("password"));

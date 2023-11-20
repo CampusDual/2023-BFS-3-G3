@@ -21,51 +21,53 @@ show-header-navigation="no">
 </p>
 <div class="container-text">
     <div class="box-text1">
-        <h2 class="title-text1">Cuota Activa</h2>
+        <h2 class="title-text1">{{"QUOTA_ACTIVE" | oTranslate }}</h2>
         <ol>
-            <li><i style="color: #0B374D;">✔</i> Sin comprometer tu presupuesto</li>
-            <li><i style="color: #0B374D;">✔</i> Acceso completo a los gimnasios</li>
-            <li><i style="color: #0B374D;">✔</i> ¡Las mañanas son tuyas!</li>
+            <li><i style="color: #0B374D;">✔</i> {{"INFO_ACTIVE0" | oTranslate }}</li>
+            <li><i style="color: #0B374D;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
+            <li><i style="color: #0B374D;">✔</i> {{"INFO_ACTIVE1" | oTranslate }}</li>
         </ol>
     </div>
     <div class="box-text2">
-        <h2 class="title-text2">Cuota Vital</h2>
+        <h2 class="title-text2">{{"QUOTA_VITAL" | oTranslate }}</h2>
         <ol>
-            <li><i style="color: #1286A8;">✔</i> Tu entrenamiento, tu horario</li>
-            <li><i style="color: #1286A8;">✔</i> Acceso completo a los gimnasios</li>
-            <li><i style="color: #1286A8;">✔</i> También de tardeo</li>
+            <li><i style="color: #1286A8;">✔</i> {{"INFO_VITAL0" | oTranslate }}</li>
+            <li><i style="color: #1286A8;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
+            <li><i style="color: #1286A8;">✔</i> {{"INFO_VITAL1" | oTranslate }}</li>
         </ol>
     </div>
     <div class="box-text3">
-        <h2 class="title-text3">Cuota Integral</h2>
+        <h2 class="title-text3">{{"QUOTA_INTEGRAL" | oTranslate }}</h2>
         <ol>
-            <li><i style="color: #D2B53B;">✔</i> El límite lo pones tú</li>
-            <li><i style="color: #D2B53B;">✔</i> Acceso completo a los gimnasios</li>
-            <li><i style="color: #D2B53B;">✔</i> Horario ilimitado</li>
+            <li><i style="color: #D2B53B;">✔</i> {{"INFO_INTEGRAL0" | oTranslate }}</li>
+            <li><i style="color: #D2B53B;">✔</i> {{"INFO_ACCESS" | oTranslate }}</li>
+            <li><i style="color: #D2B53B;">✔</i> {{"INFO_INTEGRAL1" | oTranslate }}</li>
         </ol>
     </div>
 </div>
+<br>
+<br>
 <p>
-    En WheGym, creemos que la diversidad es clave, ¡así que elige la cuota que mejor se adapte a ti y comienza a alcanzar tus objetivos hoy mismo!
+    {{"INFO_PAYMENT4" | oTranslate }} 
 </p>
 <ul>
     <li style="--accent-color:#0B374D">
         <div class="icon"><i class="fa fa-play" aria-hidden="true"></i></div>
         <div class="title">Activa</div>
         <div class="descr">19'99€</div>
-        <button (click)="openPaymentPage('active')" class="button-pay">acceder</button>
+        <button (click)="openPaymentPage('activa')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
     </li>
     <li style="--accent-color:#1286A8">
         <div class="icon"><i class="fa fa-forward" aria-hidden="true"></i></div>
         <div class="title">Vital</div>
         <div class="descr">27'99€</div>
-        <button (click)="openPaymentPage('vital')" class="button-pay">acceder</button>
+        <button (click)="openPaymentPage('vital')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
     <li style="--accent-color:#D2B53B">
         <div class="icon"><i class="fa fa-fast-forward" aria-hidden="true"></i></div>
         <div class="title">Integral</div>
         <div class="descr">49'99€</div>
-        <button (click)="openPaymentPage('integral')" class="button-pay">acceder</button>
+        <button (click)="openPaymentPage('integral')" class="button-pay">{{"BUTTON_ACCESS" | oTranslate }}</button>
     </li>
-    <!--  -->
+
 </ul>
      

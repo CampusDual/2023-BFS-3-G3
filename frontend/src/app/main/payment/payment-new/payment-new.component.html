@@ -63,3 +63,65 @@
       </o-row>
   </o-form>
 </div>
+<!-- <div class="container-payment">
+ 
+  <o-form class="container_form_pay" #form service="payments" entity="payment" keys="user_" header-actions="I"
+  show-header-navigation="no" (onFormModeChange)="forceInsertMode($event)">
+  <h3 class="pay_title">payment</h3>
+        <div class="container_card">
+         
+     <img src="../../../../assets/images/visa.png" alt="" class="cardpng">
+          <o-text-input oHidden attr="user_"></o-text-input>
+          <o-text-input  attr="quota" read-only="yes"></o-text-input>
+       
+          <o-text-input
+            class="input-padding"
+            attr="holder"
+            width="375px"
+            required="yes"
+          ></o-text-input>
+     
+        <o-integer-input
+        class="input-padding"
+        attr="cardnumber"
+       
+        required="yes"
+        thousand-separator=""
+        [validators]="validatorsErrorEventCard"
+        sql-type ="INT"
+        >
+        <o-validator
+            error-name="hasMoreThan16"
+            error-text="VALIDATOR.HASMORETHAN16"
+        ></o-validator>
+        </o-integer-input>
+        <div class="numberCard_cvv">
+          <o-date-input
+                attr="expiration"
+                label="Fecha"
+                class="input-padding"
+                format="MM/YYYY"
+                onClick="event.preventDefault()">
+               
+            </o-date-input>
+        <o-integer-input #cvvchild
+            class="input-padding"
+            attr="cvv"
+           
+            required="yes"
+            id="cvvinput"
+            [validators]="validatorsErrorEventCvv"
+            thousand-separator=""
+          >
+            <o-validator
+                error-name="hasMoreThan3"
+                error-text="VALIDATOR.HASMORETHAN3"
+            ></o-validator>
+        </o-integer-input>
+     
+           
+          </div>
+        </div>
+ 
+</o-form>
+</div> -->
