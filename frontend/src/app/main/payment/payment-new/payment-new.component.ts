@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { ValidatorFn } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { OFormComponent, OIntegerInputComponent, OValidators } from 'ontimize-web-ngx';
+import { DialogService, ODialogConfig, OFormComponent, OIntegerInputComponent, OTranslateService, OValidators } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-payment-new',
@@ -17,7 +17,10 @@ export class PaymentNewComponent implements OnInit {
   @ViewChild('form', { static: false }) form: OFormComponent;
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
+    private dialogService: DialogService,
+    private translateService: OTranslateService,
     private dialogRef: MatDialogRef<PaymentNewComponent>
+    
   ) { }
 
   ngOnInit() {
@@ -34,6 +37,12 @@ export class PaymentNewComponent implements OnInit {
   }
 
   public closeDialog(event: any) {
+    const config: ODialogConfig = {
+      icon: 'task'
+    };
+    
     this.dialogRef.close();
+    this.dialogService.info(this.translateService.get('SUBSCRIBE_SUCCESS_TITLE'),
+    this.translateService.get('SUBSCRIBE_SUCCESS_TXT'), config);
   }
 }

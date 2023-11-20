@@ -124,5 +124,7 @@
   "INFO_CANCEL0": "By clicking this button, you will confirm the cancellation of your WheGym subscription.",
   "INFO_CANCEL1": "Please note that when you cancel, you will not be able to access our partner gyms. Your user profile will remain valid to re-subscribe at any time.",
   "INFO_CANCEL2": "If you are sure of your decision, please click the button below.",
-  "CANCEL_TITLE": "Unsubscribe"
+  "CANCEL_TITLE": "Unsubscribe",
+  "SUBSCRIBE_SUCCESS_TITLE": "You have successfully subscribed!",
+  "SUBSCRIBE_SUCCESS_TXT": "Thanks for trusting WheGym"
 }
