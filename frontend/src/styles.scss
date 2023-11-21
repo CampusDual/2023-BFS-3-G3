@@ -414,3 +414,10 @@ border: 1px solid rgba(255, 255, 255, 0.19);
 #access o-list-item {
     cursor: context-menu !important;
 }
+
+.container-payment .o-form-toolbar .o-form-toolbar-header .mat-toolbar-tools{
+  position: absolute;
+  bottom: 20%;
+  margin-right: 80%;
+
+ }

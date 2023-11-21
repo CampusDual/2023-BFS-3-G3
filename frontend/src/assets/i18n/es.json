@@ -136,5 +136,7 @@
   "INFO_ADMIN2": "Mantente en contacto directo con tus miembros a través de la plataforma. Anuncia eventos, promociones especiales y comparte actualizaciones importantes en tiempo real.",
   "INFO_PAYMENT4_ADMIN": "¡Únete a WheGym hoy y lleva la experiencia de fitness de tu gimnasio al siguiente nivel!",
   "SUBSCRIBE_SUCCESS_TITLE": "¡Te has suscrito con éxito!",
-  "SUBSCRIBE_SUCCESS_TXT": "Gracias por confiar en WheGym"
+  "SUBSCRIBE_SUCCESS_TXT": "Gracias por confiar en WheGym",
+  "UNSUBSCRIBE_SUCCESS_TITLE": "Has cancelado tu suscripción",
+  "UNSUBSCRIBE_SUCCESS_TXT": "Esperamos volver a verte pronto"
 }

@@ -89,16 +89,25 @@
       <div class="nameform">
 
         <!-- Phone Column -->
-      <o-integer-input
+      <!-- <o-integer-input
       attr="phone"
       class="input-padding"
       step="0"
       grouping="no"
       fxFlex="40"
-    ></o-integer-input>
+    ></o-integer-input> -->
+    <o-phone-input
+        class="input-padding"
+        attr="phone"
+        label="phone"
+        countries="+34"
+        data="+34"
+        read-only="no"
+        required="yes">
+      </o-phone-input>
 
       <o-text-input
-       
+        class="input-padding" 
         attr="schedule"
         fxFlex="40"
       ></o-text-input>

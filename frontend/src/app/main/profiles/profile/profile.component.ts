@@ -140,5 +140,8 @@ export class ProfileComponent implements OnInit {
 
   deleteRedirect(event:any) {
     this.router.navigate(['../../../home'], { relativeTo: this.actRoute });
+
+    this.dialogService.info(this.translateService.get('UNSUBSCRIBE_SUCCESS_TITLE'),
+    this.translateService.get('UNSUBSCRIBE_SUCCESS_TXT'));
   }
 }
