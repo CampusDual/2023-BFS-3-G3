@@ -38,7 +38,7 @@
       </o-combo>
       <div>
         <div class="rating" >
-        <mat-icon *ngFor="let star of stars; let i = index" (click)="rates(i + 1)">
+        <mat-icon style="cursor: pointer" *ngFor="let star of stars; let i = index" (click)="rates(i + 1)">
                   {{ i < currentRate ? 'star' : 'star_border' }}
         </mat-icon>
         <!-- <input type="hidden" id="rateInput" [attr.rate]="rate" /> -->
