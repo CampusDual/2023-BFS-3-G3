@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService, OAppLayoutComponent, OFormComponent, OTranslateService, OValidators } from 'ontimize-web-ngx';
 
 @Component({
@@ -20,9 +21,15 @@ export class RegisterComponent implements OnInit {
   private array: Array<Object>;
   public isPasswordModified: boolean = false;
   validatorsNewPasswordArray: ValidatorFn[] = [];
+  private actRoute: ActivatedRoute;
+ 
   constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
     private translateService: OTranslateService,
   ) {
+    this.actRoute = activatedRoute;
+    this.router = router;
     this.array = this.getDataArray();
 
     this.validatorsNewPasswordArray.push(OValidators.patternValidator(/\d/, 'hasNumber'));
@@ -95,5 +102,9 @@ export class RegisterComponent implements OnInit {
     public reviewMatches(event: Event){
       this.form.formGroup.controls['passwordconfirm'].updateValueAndValidity();
       this.form.formGroup.get('passwordconfirm').markAsTouched();
+    }
+
+    redirectLogin(){
+      this.router.navigate(['../../../login'], { relativeTo: this.actRoute });
     }
 }

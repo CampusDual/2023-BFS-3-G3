@@ -250,7 +250,7 @@ div.o-grid-footer .ng-star-inserted  .mat-button-wrapper{
 //reviews
 
 .form-reviews {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -393,6 +393,7 @@ border: 1px solid rgba(255, 255, 255, 0.19);
    
   }
   .card-profile .o-form-toolbar {
+    z-index: 10;
     flex: none;
     display: block;
     position: absolute;

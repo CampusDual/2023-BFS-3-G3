@@ -63,7 +63,7 @@
   "QR_CODE": "Código QR",
   "active": "Autorrenovación",
   "status" : "status ok",
-  "password_required": "Usa 8 o más caracteres con una mezcla de números, letras y símbolos",
+  "password_required": "Usa 8 o más caracteres con una mezcla de números, letras y símbolos para la contraseña",
   "QR.ERROR_TITLE": "QR no generado",
   "QR.ERROR_TEXT": "Tienes la suscripción inactiva, ¿quieres activarla?",
   "SUBSCRIPTION_ACTIVE": "Suscripción activa",

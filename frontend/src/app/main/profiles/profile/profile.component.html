@@ -16,6 +16,9 @@ show-header-navigation="no" (onDataLoaded)="formInit()">
       <o-text-input class="input-padding" attr="name" width="375px" required="yes" (input)="onInputChanged()"></o-text-input>
       <o-text-input class="input-padding" attr="surname" width="375px" required="yes" (input)="onInputChanged()"></o-text-input>
     </o-row>
+    <o-row>
+      <o-nif-input class="input-padding"attr="nif" label="NIF" data="53780330M" width="375px" required="yes" (input)="onInputChanged()"></o-nif-input>
+    </o-row>
     <o-row class="row-elements">
       <o-text-input class="input-padding" attr="address" width="375px" required="no" (input)="onInputChanged()"></o-text-input>
       <o-text-input class="input-padding" attr="city" width="375px" required="no" (input)="onInputChanged()"></o-text-input>

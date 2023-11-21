@@ -1,14 +1,12 @@
 package com.campusdual.backend.model.core.service;
 
 import java.util.*;
-import com.campusdual.backend.model.core.dao.GymDao;
-import com.campusdual.backend.model.core.dao.ReviewDao;
-import com.campusdual.backend.model.core.dao.UserRoleDao;
+
+import com.campusdual.backend.model.core.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import com.campusdual.backend.api.core.service.IUserService;
-import com.campusdual.backend.model.core.dao.UserDao;
 import com.ontimize.jee.common.dto.EntityResult;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 
@@ -28,6 +26,10 @@ public class UserService implements IUserService {
 
 	@Autowired
 	private ReviewDao reviewDao;
+
+	@Autowired
+	private PaymentDao paymentDao;
+
 
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
@@ -60,6 +62,10 @@ public class UserService implements IUserService {
 		attrReview.add("reviewid");
 		EntityResult queryResultReview = this.daoHelper.query(this.reviewDao, keyMap, attrReview);
 
+		List<String> attrPayment = new ArrayList<>();
+		attrReview.add("paymentid");
+		EntityResult queryResultPayment = this.daoHelper.query(this.paymentDao, keyMap, attrPayment);
+
 		if(!queryResult.isWrong() && !queryResult.isEmpty()) {
 			for (int i = 0; i < queryResult.calculateRecordNumber(); i++) {
 				Object id_user_role = queryResult.getRecordValues(i).get("id_user_role");
@@ -74,6 +80,15 @@ public class UserService implements IUserService {
 				Map<String, Object> kVReview = new HashMap<>();
 				kVReview.put("reviewid", reviewid);
 				this.daoHelper.delete(this.reviewDao, kVReview);
+			}
+		}
+
+		if (!queryResultPayment.isWrong() && !queryResultPayment.isEmpty()) {
+			for (int i = 0; i < queryResultPayment.calculateRecordNumber(); i++) {
+				Object paymentid = queryResultPayment.getRecordValues(i).get("paymentid");
+				Map<String, Object> kVPayment = new HashMap<>();
+				kVPayment.put("paymentid", paymentid);
+				this.daoHelper.delete(this.paymentDao, kVPayment);
 			}
 		}
 

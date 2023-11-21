@@ -50,8 +50,8 @@ export class PaymentHomeComponent implements OnInit {
     let user = this.auth.getSessionInfo().user;
     
     this.dialog.open(PaymentNewComponent, {
-      height: '70%',
-      width: '60%',
+      height: '60%',
+      width: '40%',
       data: {
         user_: user,
         quota: buttonValue,

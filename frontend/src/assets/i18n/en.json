@@ -63,7 +63,7 @@
   "QR_CODE": "QR code",
   "active": "Autorenovation",
   "status" : "status ok",
-  "password_required":"Use 8 or more characters with a mix of letters numbers and symbols",
+  "password_required":"Use 8 or more characters with a mix of letters numbers and symbols for the password",
   "QR.ERROR_TITLE": "QR is not generated",
   "QR.ERROR_TEXT": "Your membership is inactive, Do you want to activate it?",
   "SUBSCRIPTION_ACTIVE": "Active subscription",

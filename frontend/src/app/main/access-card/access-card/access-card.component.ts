@@ -46,7 +46,7 @@ export class AccessCardComponent implements OnInit {
   ngOnInit() {
 
     this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('users'));
-    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['active','name','surname', 'renovationdate'], 'user').subscribe(
+    this.ontimizeService.query({user_:this.auth.getSessionInfo().user}, ['active','name','surname', 'nif', 'renovationdate'], 'user').subscribe(
       res=> {
        
         if(res.data && res.data.length) {

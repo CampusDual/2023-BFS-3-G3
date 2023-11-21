@@ -11,6 +11,7 @@
       keys="user_"
       show-header-navigation="no"
       confirm-exit="no"
+      (onCancel)="redirectLogin()"
     >
       <o-row>
         <o-column
@@ -58,6 +59,15 @@
               width="375px"
               required="yes"
             ></o-text-input>
+          </o-row>
+          <o-row>
+            <o-nif-input 
+            class="input-padding"
+            attr="nif" 
+            label="NIF" 
+            data="53780330M" 
+            width="375px" 
+            required="yes" ></o-nif-input>
           </o-row>
           <o-row>
             <o-text-input

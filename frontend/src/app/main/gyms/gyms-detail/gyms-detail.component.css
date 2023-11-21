@@ -19,3 +19,6 @@ h2 {
 .columndetails {
     gap: 20px;
 }
+.input-padding {
+    margin-right: 20px;
+}

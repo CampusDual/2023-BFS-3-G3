@@ -4,7 +4,7 @@
   keys="gymid"
   header-actions="U;D"
   show-header-navigation="no"
-  >
+>
   <div style="display: none">
     <o-text-input
       attr="gymid"
@@ -16,15 +16,14 @@
   </div>
  
   <div class="containerform">
-    <!-- <o-column title="{{ 'name' | oTranslate }}"></o-column> -->
-  <div class="logoform">
-      <o-image
-        id="photo"
-        attr="photo"
-        label=""
-        empty-image="assets/images/no-image.png"
-        sql-type="OTHER"
-      ></o-image>
+    <div class="logoform">
+        <o-image
+          id="photo"
+          attr="photo"
+          label=""
+          empty-image="assets/images/no-image.png"
+          sql-type="OTHER"
+        ></o-image>
     </div>
   
     <!-- datos -->
@@ -34,41 +33,27 @@
       <!-- Name Column -->
       <div class="nameform">
         <o-text-input
-        class="input-padding"
+          class="input-padding"
           attr="name"
           fxFlex="40"
           required="yes"
         ></o-text-input>
 
-        <!-- cif Column -->
-        <!-- <o-text-input
-        class="input-padding"
-          attr="cif"
-          fxFlex="40"
-          required="yes"
-        ></o-text-input> -->
-
-        <!-- <o-nif-input
-          attr="cif"
-          class="input-padding"
-          fxFlex="40"
-          required="yes">
-        </o-nif-input> -->
-
         <!-- State Column -->
         <o-slide-toggle
-        class="input-padding"
-        color="primary"
-        attr="state"
-        label="{{ 'state' | oTranslate }}"
-        [data]="getValue()"
-        read-only="no"
+          class="input-padding"
+          color="primary"
+          attr="state"
+          label="{{ 'state' | oTranslate }}"
+          [data]="getValue()"
+          read-only="no"
         ></o-slide-toggle>
       </div>
+
       <div class="contactform">
         <!-- Address Column -->
         <o-text-input
-        class="input-padding"
+          class="input-padding"
           attr="address"
           fxFlex="40"
           required="yes"
@@ -80,39 +65,43 @@
           attr="city"
           fxFlex="20"
         ></o-text-input>
-
-        </div>
+      </div>
         
-        <div class="nameform">
-
-          <!-- Phone Column -->
-        <!-- <o-integer-input
-        attr="phone"
-        class="input-padding"
-        step="0"
-        grouping="no"
-        fxFlex="40"
-      ></o-integer-input> -->
-
-      <o-phone-input
-        attr="phone"
-        label="phone"
-        countries="+34"
-        data="+34"
-        read-only="no"
-        required="yes">
-      </o-phone-input>
-
+      <div class="nameform">
       <!-- Schedule Column -->
         <o-text-input
           attr="schedule"
-          fxFlex="40"
+          fxFlex="61.7"
         ></o-text-input>
-        </div>
+      </div>
         
+      <div class="nameform">
+      <!-- Phone Column -->
+        <!-- <o-integer-input
+          attr="phone"
+          class="input-padding"
+          step="0"
+          grouping="no"
+          fxFlex="40"
+        ></o-integer-input> -->
+
+        <o-phone-input
+          attr="phone"
+          label="phone"
+          countries="+34"
+          data="+34"
+          read-only="no"
+          required="yes"
+          class="input-padding"
+        ></o-phone-input>
+
         <!-- Email Column -->
-        <div class="nameform">
-        <o-email-input attr="email" fxFlex></o-email-input>
+        <o-email-input
+          attr="email"
+          fxFlex
+          fxFlex="26"
+        ></o-email-input>
+
         </div>
         <!-- Description Column -->
         <div class="nameform">
