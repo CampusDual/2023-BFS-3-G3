@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   ) {
   }
 
+ 
   getStars(rate: number): string {
     const roundedRate = Math.round(rate);
     return '★'.repeat(roundedRate) + '☆'.repeat(5 - roundedRate);
