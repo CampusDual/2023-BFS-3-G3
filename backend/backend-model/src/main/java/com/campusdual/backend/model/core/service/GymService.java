@@ -31,6 +31,8 @@ public class GymService implements IGymService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public EntityResult gymInsert(Map<String, Object> attributes) throws OntimizeJEERuntimeException {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        attributes.put(UserDao.ID,auth.getName());
         return this.daoHelper.insert(this.gymDao, attributes);
     }
 

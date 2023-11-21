@@ -209,3 +209,11 @@ ul li .descr {
 ol li {
   list-style-type:none;
 }
+
+.banderola{
+  cursor:pointer;
+}
+.banderola:hover{
+  filter: brightness(1.3);
+  transform: scale(1.2);
+}

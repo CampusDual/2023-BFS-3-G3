@@ -36,6 +36,11 @@ export class PaymentNewComponent implements OnInit {
     }
   }
 
+  public closeDialogCancel(event: any) {
+    this.dialogRef.close();
+  }
+
+
   public closeDialog(event: any) {
     const config: ODialogConfig = {
       icon: 'task'
@@ -45,4 +50,6 @@ export class PaymentNewComponent implements OnInit {
     this.dialogService.info(this.translateService.get('SUBSCRIBE_SUCCESS_TITLE'),
     this.translateService.get('SUBSCRIBE_SUCCESS_TXT'), config);
   }
+
+  
 }

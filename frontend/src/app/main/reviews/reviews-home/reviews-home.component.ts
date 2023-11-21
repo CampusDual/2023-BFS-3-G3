@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OTextInputComponent } from 'ontimize-web-ngx';
-
 
 @Component({
   selector: 'app-reviews-home',
@@ -9,7 +9,14 @@ import { OTextInputComponent } from 'ontimize-web-ngx';
 })
 export class ReviewsHomeComponent implements OnInit {
 
-  constructor() { }
+  private actRoute: ActivatedRoute;
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.actRoute = activatedRoute;
+    this.router = router;
+  }
 
   ngOnInit() {
   }
@@ -22,24 +29,11 @@ export class ReviewsHomeComponent implements OnInit {
  
   rates(value: any): void {
     this.currentRate = value;
-    // this.rate = value;
-    // const rateInput = document.getElementById('rateInput');
-    //   rateInput.setAttribute('rate', this.rate);
-
       this.inputrate.setValue(value);
       console.log(this.currentRate);
   }
-  // getRate() {
 
-  // }
-
-  // starsArray: number[] = [];
-
-  // onRateChange(value: number): void {
-  //   this.starsArray = []; // Reiniciar el array de estrellas
-
-  //   for (let i = 0; i < value; i++) {
-  //     this.starsArray.push(i); // Agregar el número de estrellas según la puntuación
-  //   }
-  // }
+  insertRedirect(event:any) {
+    this.router.navigate(['../../../home'], { relativeTo: this.actRoute }); //ESTO NO VA, pero sino se redirige a una ventana de administrador:(
+  }
 }

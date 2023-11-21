@@ -16,7 +16,10 @@
       header-actions="U;D"
       show-header-navigation="no"
       confirm-exit="no"
+      (onInsert)="insertRedirect($event)"
+      ignore-default-navigation="yes"
     >
+
       <h2>{{ "REVIEW" | oTranslate }}</h2>
       <o-combo
         attr="gymid"
