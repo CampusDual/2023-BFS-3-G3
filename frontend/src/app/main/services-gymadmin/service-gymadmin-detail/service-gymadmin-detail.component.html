@@ -4,7 +4,8 @@
   keys="serviceid"
   header-actions="U;D"
   show-header-navigation="no"
-  ><div style="display: none">
+>
+  <div style="display: none">
     <!-- Id Column -->
     <!-- <o-integer-input
           attr="serviceid"
@@ -29,7 +30,6 @@
           fxFlex="40"
           required="yes"
         ></o-text-input>
-      
       </o-row>
       <o-row>
         <!-- Price -->
@@ -38,33 +38,57 @@
           label="pricelabel"
           class="input-padding"
           grouping="no"
-          fxFlex="40"
+          fxFlex="19.5"
         ></o-integer-input>
         <!-- Duration -->
         <o-integer-input
           class="input-padding"
           attr="duration"
           label="durationlabel"
-          fxFlex="40"
+          fxFlex="19.5"
         ></o-integer-input>        
       </o-row>
       <o-row>
         <!-- Description Column -->
-        <o-textarea-input attr="description" fxFlex></o-textarea-input>
+        <o-textarea-input
+          attr="description"
+          fxFlex
+        ></o-textarea-input>
       </o-row>
         <!-- Category -->
       <o-row>
-        <o-combo attr="categoryid" label="category" fxFlex="50" service="categories" entity="category" keys="categoryid" columns="categoryid;name"
-                visible-columns="name" value-column="categoryid" class="input-padding"></o-combo>
+        <o-combo
+          attr="categoryid"
+          appearance="outline"
+          label="category"
+          fxFlex="50"
+          service="categories"
+          entity="category"
+          keys="categoryid"
+          columns="categoryid;name"
+          visible-columns="name"
+          value-column="categoryid"
+          class="input-padding"
+        ></o-combo>
       </o-row>
-
       <o-row>
-        <o-combo attr="gymid" label="gym" fxFlex="50" service="gyms" entity="myGym" keys="gymid" columns="gymid;name"
-                visible-columns="name" value-column="gymid" class="input-padding"></o-combo>
+        <o-combo
+          attr="gymid"
+          appearance="outline"
+          label="gym"
+          fxFlex="50"
+          service="gyms"
+          entity="myGym"
+          keys="gymid"
+          columns="gymid;name"
+          visible-columns="name"
+          value-column="gymid"
+          class="input-padding"
+        ></o-combo>
       </o-row>
-    
     </o-column>
   </o-row>
-  
 </o-form>
+
+
 
