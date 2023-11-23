@@ -25,7 +25,7 @@ show-header-navigation="no" (onDataLoaded)="formInit()">
     </o-row>
     <o-row>
       <o-phone-input class="input-padding" attr="phone" width="375px" countries="+34" data="+34" read-only="no" required="yes" (input)="onInputChanged()"></o-phone-input>
-      <o-email-input attr="email" width="375px"></o-email-input>
+      <o-email-input attr="email" width="375px" (input)="onInputChanged()"></o-email-input>
     </o-row>
    
     <o-row>
