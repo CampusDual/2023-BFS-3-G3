@@ -57,8 +57,7 @@ public class UserRoleService implements IUserRoleService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public EntityResult myUserRoleInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-        Map<String, Object> userData = extractNonRelatedData(attrMap, UserDao.ID, UserDao.CITY, UserDao.ADDRESS, UserDao.EMAIL, UserDao.NAME, UserDao.SURNAME, UserDao.PHONE, UserDao.PASSWORD);
-        EntityResult userResult = this.daoHelper.insert(userDao, userData);
+        Map<String, Object> userData = extractNonRelatedData(attrMap, UserDao.ID, UserDao.NIF, UserDao.CITY, UserDao.ADDRESS, UserDao.EMAIL, UserDao.NAME, UserDao.SURNAME, UserDao.PHONE, UserDao.PASSWORD);EntityResult userResult = this.daoHelper.insert(userDao, userData);
         if (userResult.isWrong()) {
             return userResult;
         }
